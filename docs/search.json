@@ -1,0 +1,512 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "python",
+    "section": "",
+    "text": "Home\nPython is a great language for scientific computing, most of the programming done by our group is in python. We provide below some links for learning this language, and below we offer many python code examples. You are invited to download these codes, tweak with them, break them, hack them as you wish!\nMost codes focus on plotting, but other algorithms such as numerical integration and Fourier transforms can also be found.\nSome useful links for learning python:\nStart by downloading Anaconda, a package manager application that will help you get started with python in all platforms.\nMake sure you are acquainted with ipython (interactive python, try it here), and with Jupyter notebook. ​\nI recommend Sublime Text for writing code, and you can install the Anaconda package to it to have a smooth IDE. [not the same anaconda as mentioned above! Yes, it’s confusing, I know.]",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#fitzhugh-nagumo-labyrinthine-patterns",
+    "href": "index.html#fitzhugh-nagumo-labyrinthine-patterns",
+    "title": "python",
+    "section": "Fitzhugh-Nagumo — Labyrinthine Patterns",
+    "text": "Fitzhugh-Nagumo — Labyrinthine Patterns\nJupyter notebook\nMain features: how to make a movie, time-integration methods (semi-spectral and Euler)",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#conways-game-of-life-acorn-initial-condition",
+    "href": "index.html#conways-game-of-life-acorn-initial-condition",
+    "title": "python",
+    "section": "Conway’s Game of Life, acorn initial condition",
+    "text": "Conway’s Game of Life, acorn initial condition\nJupyter notebook\nThis is a (slightly) modified version of Glowing Python’s code. I make it available here because it features a few nice things:\n\nhow to make a movie using matplotlib.animation\nhow to write a generator (function with yield)\nhow to plot a sparce array (spy)\n\nMain features: matplotlib.animation, yield, with, matplotlib.pyplot.spy",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#least-squares-fit-of-nonlinear-function",
+    "href": "index.html#least-squares-fit-of-nonlinear-function",
+    "title": "python",
+    "section": "Least squares fit of nonlinear function",
+    "text": "Least squares fit of nonlinear function\nJupyter notebook\nMain features: LaTeX text, scipy.optimize.curve_fit, matplotlib.patches",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#fun-with-histograms",
+    "href": "index.html#fun-with-histograms",
+    "title": "python",
+    "section": "Fun with histograms",
+    "text": "Fun with histograms\nJupyter notebook\nMain features: np.histogram, plt.hist, plt.bar, plt.barh, gridspec, least squares fit of nonlinear function, plt.hist2d",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#fancy-subplot-grid",
+    "href": "index.html#fancy-subplot-grid",
+    "title": "python",
+    "section": "Fancy subplot grid",
+    "text": "Fancy subplot grid\nJupyter notebook\nHighly customizable subplot structure. Also, figure contains several axis configurations and labeling options.\nMain features: gridspec subplots; numpy-compatible heaviside; label, ticks and axis manipulations; log scale",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#streamplot",
+    "href": "index.html#streamplot",
+    "title": "python",
+    "section": "Streamplot",
+    "text": "Streamplot\nJupyter notebook\nStreamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.\nMain features: meshgrid, streamplot, contour, legend, LaTeX",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#palette",
+    "href": "index.html#palette",
+    "title": "python",
+    "section": "Palette",
+    "text": "Palette\nJupyter notebook\nGiven a named color, returns palettes with varying hue, lightness, and saturation.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#the-time-dependent-ginzburg-landau-equation",
+    "href": "index.html#the-time-dependent-ginzburg-landau-equation",
+    "title": "python",
+    "section": "The time dependent Ginzburg-Landau equation",
+    "text": "The time dependent Ginzburg-Landau equation\nJupyter notebook\nNumerical integration of a parabolic partial differential equation, using finite differences: Euler step to advance time, and a 5-point stencil to approximate the Laplacian.\nMain features: imshow, colorbar, set_data",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#the-double-pendulum",
+    "href": "index.html#the-double-pendulum",
+    "title": "python",
+    "section": "The double pendulum",
+    "text": "The double pendulum\nJupyter notebook\nNumerical integration of the equations of motion of the double pendulum. This time, scipy’s ode itegrator was used. Nice example of how to make a movie.\nMain features: scipy.integrate.ode, set_data, set_aspect('equal'), remove plot, movie",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#the-hilbert-curve",
+    "href": "index.html#the-hilbert-curve",
+    "title": "python",
+    "section": "The Hilbert curve",
+    "text": "The Hilbert curve\nJupyter notebook\nConstruction of the Hilbert curve as a Lindenmayer system (L-system).\nMain features: string operations, movie",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#a-hysteresis-mechanism",
+    "href": "index.html#a-hysteresis-mechanism",
+    "title": "python",
+    "section": "A hysteresis mechanism",
+    "text": "A hysteresis mechanism\nJupyter notebook\nHysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional f=u^4-2u^2+hu. The parameter h is ramped down and up during this simulation.\nMain features: sympy analytical calculations, numpy dtypes, movie",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#contour-plot",
+    "href": "index.html#contour-plot",
+    "title": "python",
+    "section": "Contour plot",
+    "text": "Contour plot\nJupyter notebook\nContour plot with many customizable options. Also, a nice way to truncate a colormap so it gives the color range that you want.\nMain features: truncate_colormap, contour, contourf (fill), clabel (contour label)",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#least-action-principle-on-the-beach",
+    "href": "index.html#least-action-principle-on-the-beach",
+    "title": "python",
+    "section": "Least action principle on the beach",
+    "text": "Least action principle on the beach\nJupyter notebook\nHow should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell’s law of refraction!\nThis is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, “annotations” are used, where things can be labeled with the help of arrows.\nMain features: spines, matplotlib.patches.Rectangle, annotate",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#this-websites-logo",
+    "href": "index.html#this-websites-logo",
+    "title": "python",
+    "section": "This website’s logo",
+    "text": "This website’s logo\nJupyter notebook\nSimple example of how to make a figure without any visible axes.\nMain features: set_axis_off, fill_between, matplotlib inline plot on Jupyter",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#bars",
+    "href": "index.html#bars",
+    "title": "python",
+    "section": "Bars",
+    "text": "Bars\nJupyter notebook\nHorizontal and vertical bars, with numeric legends. Unicode support.\nMain features: unicode, bar, barh, grid\n\n\n“The comments aren’t there to explain the code to the programmers, the code is there to explain the comments to the computer.”\n—Andy Harris, How to begin thinking like a programmer",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "jupyter/fhn.html",
+    "href": "jupyter/fhn.html",
+    "title": "1  Fitzhugh-Nagumo Equation",
+    "section": "",
+    "text": "1.1 Introduction\nWe simulate the Fitzhugh-Nagumo equations \nu_t = u - u^3 - v + \\nabla^2 u\\\\\nv_t = \\epsilon(u - a_1 v - a_0) + \\delta \\nabla^2 v,\n using the semi-spectral time integration method.\nThis simultation was heavily inspired by Aric Hagberg’s simulation in “From Labyrinthine Patterns to Spiral Turbulence”, PRL 1994.\nThe code below provides 3 initial conditions, “squiggle, blocks, and random”. For time integration, besides the spectral method, we also provide the Euler method. Details about the semi-spectral method can be found after the code.\nParameters: \\epsilon=0.3, \\delta=2.0, a_1=1.4, and a_0=0.\nOther simulations and Python examples can be found on my website: yairmau.com.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fitzhugh-Nagumo Equation</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/fhn.html#the-code",
+    "href": "jupyter/fhn.html#the-code",
+    "title": "1  Fitzhugh-Nagumo Equation",
+    "section": "1.2 The code",
+    "text": "1.2 The code\n\n1.2.1 import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport os\nfrom matplotlib import rcParams\nrcParams['font.family'] = 'monospace'\n\n\n\n1.2.2 define class with all the methods\n\nclass FitzHughNagumo(object):\n    def __init__(self, epsilon=0.3, delta=2.0, a1=1.4, a0=0.0,\n                 n=(256, 256), l=(400, 400),\n                 start=0.0, step=1.0, finish=2000.0, dt=0.1,\n                 integration_type=\"spectral\"):\n        self.epsilon = epsilon\n        self.delta = delta\n        self.a1 = a1\n        self.a0 = a0\n        self.n = n\n        self.l = l\n        self.start = start\n        self.step = step\n        self.finish = finish\n        self.dt = dt\n        self.integration_type = integration_type\n        self.rhs_a = np.zeros((2, self.n[0], self.n[1]))\n\n    def spectral_multiplier(self):\n        dx = float(self.l[0]) / self.n[0]\n        dy = float(self.l[1]) / self.n[1]\n        # wave numbers\n        fx = 2.0 * np.pi * np.fft.fftfreq(self.n[0], dx)\n        fy = 2.0 * np.pi * np.fft.fftfreq(self.n[1], dy)\n        kx = np.outer(fx, np.ones(self.n[0]))\n        ky = np.outer(np.ones(self.n[1]), fy)\n        # multiplier\n        mult_a = np.zeros((2, self.n[0], self.n[1]))\n        mult_a[0] = np.exp(-(kx ** 2 + ky ** 2) * self.dt)  # u\n        mult_a[1] = np.exp(-self.delta * (kx ** 2 + ky ** 2) * self.dt)  # v\n        return mult_a\n\n    def rhs_reaction(self, a):\n        u = a[0]  # alias\n        v = a[1]  # alias\n        # FHN right hand side\n        self.rhs_a[0] = u - u ** 3 - v\n        self.rhs_a[1] = self.epsilon * (u - self.a1 * v - self.a0)\n        return self.rhs_a\n\n    def rhs_euler(self, a):\n        # boundary conditions in laplacian\n        laplacian = self.periodic_laplacian\n        u = a[0]  # alias\n        v = a[1]  # alias\n        dx = float(self.l[0]) / self.n[0]\n        # FHN right hand side\n        self.rhs_a[0] = u - u ** 3 - v + laplacian(u, dx=dx)\n        self.rhs_a[1] = self.epsilon * (u - self.a1 * v - self.a0) + \\\n                        self.delta * laplacian(v, dx=dx)\n        return self.rhs_a\n\n    def draw(self, a, t):\n        u = a[0]\n        self.im = plt.imshow(u.real, cmap=\"Greys_r\", origin='lower',\n                             vmin=-0.534522, vmax=0.534522,\n                             interpolation=\"gaussian\")\n        self.title = plt.title('time = {:&gt;4.0f}'.format(0))\n        plt.xticks([])\n        plt.yticks([])\n        self.im.figure.canvas.draw()\n\n    def draw_update(self, a, t):\n        u = a[0]\n        self.title.set_text('time = {:&gt;4.0f}'.format(t))\n        self.im.set_data(u.real)\n        self.im.figure.canvas.draw()\n\n    def save_frame(self, i):\n        fname = \"_tmp{:05d}.png\".format(i)\n        self.frame_names.append(fname)\n        self.fig.savefig(fname, bbox_inches='tight', dpi=300)\n\n    def periodic_laplacian(self, u, dx=1):\n        \"\"\"Return finite difference Laplacian approximation of 2d array.\n        Uses periodic boundary conditions and a 2nd order approximation.\"\"\"\n        laplacian = (np.roll(u, -1, axis=0) +\n                     np.roll(u, +1, axis=0) +\n                     np.roll(u, -1, axis=1) +\n                     np.roll(u, +1, axis=1) - 4.0 * u) / (dx ** 2)\n        return laplacian\n\n    def random_ic(self):\n        return 0.5 * (np.random.random((2, self.n[0], self.n[1])) - 0.5)\n\n    def blocks_ic(self):\n        a = np.ones((2, self.n[0], self.n[1]))\n        a[0] = 0.534522\n        a[1] = 0.381802\n        n = self.n\n        p = n[0] / 8\n        a[0][3 * p - 4:3 * p + 4, 5 * p - 4:5 * p + 4] = -0.534522\n        a[0][6 * p - 4:6 * p + 4, 3 * p - 4:3 * p + 4] = -0.534522\n        return a\n\n    def squiggle_ic(self):\n        a = np.ones((2, self.n[0], self.n[1]))\n        l = self.l\n        uplus = 0.534522\n        vplus = 0.381802\n        uminus = -uplus\n        X, Y = np.meshgrid(np.linspace(0, self.l[0], self.n[0]),\n                           np.linspace(0, self.l[0], self.n[0]))\n        cos_term = 0.05 * l[0] * np.sin(10 * (2 * np.pi) * Y / l[1] + np.pi * 0.3)\n        exp_term = np.exp(-((Y - l[1] / 2) / (0.1 * l[1])) ** 2)\n        width = 0.05 * l[0]\n        Z = np.exp(-((X - l[0] / 2 + cos_term * exp_term) / width) ** 2)\n        a[0] = uplus\n        a[1] = vplus\n        a[0][Z &gt; 0.8] = uminus\n        return a\n\n\n\n1.2.3 run simulation, save snapshots\n\nplt.ion()\nplt.clf()\nfoo = FitzHughNagumo()\nfoo.fig = plt.figure(1)\nax = foo.fig.add_subplot(111)\na = foo.squiggle_ic()\nmult_a = foo.spectral_multiplier()\nfft_a = np.fft.fftn(a, axes=(1, 2))\nt = foo.start\nfoo.draw(a, t)\nfoo.frame_names = []\nfoo.save_frame(0)\nfor i, tout in enumerate(np.arange(foo.start + foo.step,\n                                   foo.finish + foo.step,\n                                   foo.step)):\n    while t &lt; tout:\n        if foo.integration_type == \"spectral\":\n            rhs_a = foo.rhs_reaction(a)\n            fft_a = mult_a * (fft_a + foo.dt * np.fft.fftn(rhs_a, axes=(1, 2)))\n            a = np.fft.ifftn(fft_a, axes=(1, 2))\n        if foo.integration_type == \"euler\":\n            a = a + foo.dt * foo.rhs_euler(a)\n        t += foo.dt\n    foo.draw_update(a, t)\n    foo.save_frame(i + 1)\n\n\n\n1.2.4 make movie, delete snapshots\n\nfps = 24\nframes = \"_tmp%5d.png\"\nmovie_command = \"ffmpeg -y -r {:} -i {:} fhn.mp4\".format(fps, frames)\nos.system(movie_command)\nfor fname in foo.frame_names:\n    os.remove(fname)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fitzhugh-Nagumo Equation</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/fhn.html#the-semi-spectral-method",
+    "href": "jupyter/fhn.html#the-semi-spectral-method",
+    "title": "1  Fitzhugh-Nagumo Equation",
+    "section": "1.3 The semi-spectral method",
+    "text": "1.3 The semi-spectral method\nThe explanation below was taken from my thesis: “Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration”.\nThe semi-spectral method is extremely useful when working with reaction-diffusion systems, and with parabolic PDEs in general. This was the method used to run all the simulations of the Swift-Hohenberg model in this thesis, and it proved to be reliable and fast. The explanation below is a summary of “Spectral algorithms for reaction-diffusion equations”, by Richard V. Craster and Roberto Sassi, with a step by step recipe, so the reader can easily apply the method to any suitable problem.\n\n1.3.1 the method\nThe semi-spectral transform method is very useful when we have to integrate a system that evolves really slowly. Let us say we have a (parabolic) system of the form: \n   u_t=\\epsilon u + f(u)+D\\nabla^2u,\n   \\tag{1}\n\nwhere f(u) is a nonlinear function. First, we compute the Fourier transform of : \n   \\hat{u}_t=\\epsilon \\hat{u} + \\hat{f}(u)-k^2D\\hat{u},\n   \\tag{2}\n where the hat denotes the Fourier transform.\nWe rearrange in the following way: \n   \\hat{u}_t+a\\hat{u}=\\hat{f}(u),\n   \\tag{3}\n where a=-\\epsilon +k^2D, and now we make a variable substitution\n\\begin{align}\n   \\hat{v}(k,t)&=\\;\\hat{u}(k,t)\\,e^{at} \\tag{4a}\\\\\n   \\hat{v}_t&=\\;\\hat{u}_te^{at}+a\\hat{u}\\,e^{at}. \\tag{4b}\n\\end{align}\nWe multiply by e^{at} and we finally get \n   \\hat{v}_t=e^{at}\\hat{f}(u).\n   \\tag{5}\n\nWe can now advance \\hat{v} in time using a simple Euler step \n   \\hat{v}^{t_{n+1}}=\\hat{v}^{t_n}+\\Delta t\\left( e^{at_n}\\hat{f}(u) \\right).\n   \\tag{6}\n\nWhat we really want is \\hat{u}, which, according to , is given by\n\\begin{align}\n\\displaystyle\\hat{u}^{t_{n+1}}=&\\;\\hat{v}^{t_{n+1}}e^{-at_{n+1}} \\tag{7a}\\\\\n   =&\\;\\hat{v}^{t_{n+1}}e^{-at_{n}}e^{-a\\Delta t} \\tag{7b}\\\\\n   =&\\;\\left(\\hat{v}^{t_n}+\\Delta t\\; e^{a t_n}\\hat{f}(u)\\right)e^{-at_{n}}e^{-a\\Delta t} \\tag{7c}\\\\\n   =&\\;\\left(\\hat{v}^{t_n}e^{-at_{n}}+\\Delta t \\;{e^{a t_n}}\\hat{f}(u) {e^{-at_{n}}}\\right)e^{-a\\Delta t} \\tag{7d}\\\\\n   =&\\;\\left( \\hat{u}^{t_n}+\\Delta t \\hat{f}(u) \\right)e^{-a\\Delta t} \\tag{7e}.\n\\end{align}\nThere is actually no need to use the variable substitution in . We now have an expression for \\hat{u}^{t_{n+1}}: \n   \\hat{u}^{t_{n+1}}=\\left( \\hat{u}^{t_n}+\\Delta t \\hat{f}(u) \\right)e^{-a\\Delta t}.\n   \\tag{8}\n\nNow it is time to go back from the Fourier space to the real space, and for that we use an inverse Fourier transform \n   u^{t_{n+1}}=\\mathcal{F}^{-1}[\\hat{u}^{t_{n+1}}].\n   \\tag{9}\n\n\n\n1.3.2 step by step\nTo implement this technique, one just has to follow the steps below:\n\nCalculate the Fourier transform of u: \\hat{u}=\\mathcal{F}[u].\nHave f(u) calculated and then take its Fourier transform: \\hat{f}(u)=\\mathcal{F}[f(u)].\nFor a given lattice with N points, and \\delta x being the distance between them, make the frequency bin vector (matrix) k for your one (two) dimensional system. In python the command would be\n\nnumpy.fft.fftfreq(N, dx).\nThe frequency bin vector k looks like:\n\\begin{align}\n   k&=2\\pi\\cdot\\left[ 0,1,\\cdots,\\tfrac{N}{2}-1,-\\tfrac{N}{2},\\cdots,-1 \\right]/(N\\, \\delta x), \\quad \\text{if N is even;} \\tag{10a}\\\\\n   k&=2\\pi\\cdot\\left[ 0,1,\\cdots,\\tfrac{N-1}{2},-\\tfrac{N-1}{2},\\cdots,-1 \\right]/(N\\, \\delta x), \\quad \\text{if N is odd.} \\tag{10b}\n\\end{align}\nRemember that the domain size is given by L=N\\, \\delta x, which means that the denominator in the expressions above can be written simply as L. It is clear from that fact that \\delta k, the tiniest slice of the Fourier space is \\delta k=2\\pi/L. Corollary: if you want to divide the Fourier space into very many parts, simply have a huge domain.\nIf the system is two-dimensional, then have k_x and k_y calculated separately. The domain might not be square (L_x\\neq L_y), and you might want to divide the domain into a different number of points (N_x\\neq N_y). Anyway, prepare one-dimensional arrays of k_x and k_y as explained above, and then make an outer product of these arrays with a ones array of length N, as following:\n\nk_{x,2d} = \\begin{pmatrix}\n             1 \\\\ 1 \\\\ \\vdots \\\\ 1\n            \\end{pmatrix}\n            \\begin{pmatrix}\n             k_{x1} & k_{x2} & ... & k_{xN}\n            \\end{pmatrix}\n            =\n            \\begin{pmatrix}\n             k_{x1} & k_{x2} & ... & k_{xN}\\\\\n             k_{x1} & k_{x2} & ... & k_{xN}\\\\\n                    & \\vdots &        &       \\\\\n             k_{x1} & k_{x2} & ... & k_{xN}\n            \\end{pmatrix}\n\\tag{11}\n\nand\n\nk_{y,2d} = \\begin{pmatrix}\n             k_{x1} \\\\ k_{x2} \\\\ \\vdots \\\\ k_{xN}\n            \\end{pmatrix}\n            \\begin{pmatrix}\n             1 & 1 & ... & 1\n            \\end{pmatrix}\n            =\n            \\begin{pmatrix}\n             k_{y1} & k_{y1} &        & k_{y1}\\\\\n             k_{y2} & k_{y2} & ... & k_{y2}\\\\\n             \\vdots & \\vdots &        & \\vdots\\\\\n             k_{yN} & k_{yN} &        & k_{yN}\n            \\end{pmatrix}.\n  \\tag{12}\n\nThen factor e^{-a\\Delta t} equals\n\n   e^{-a\\Delta t}= e^{\\left[\\epsilon-D(k_x^2+k_y^2)\\right]\\Delta t},\n   \\tag{13}\n\nwhere k_x^2 is the element-wise exponentiation of the 2d array k_{x,2d}.\n\nNow that we have all the factors we need, we simply calculate\n\n\n\\hat{u}^{t_{n+1}}=\\left( \\hat{u}^{t_n}+\\Delta t \\hat{f}(u) \\right)e^{\\left[\\epsilon-D(k_x^2+k_y^2)\\right]\\Delta t}.\n\\tag{14}\n\n\nWe finally go back to the real space by applying the inverse Fourier transform: u^{t_{n+1}}=\\mathcal{F}^{-1}[\\hat{u}^{t_{n+1}}].\n\n\n\n1.3.3 example\nFor the parametrically forced Swift-Hohenberg equation \n\\frac{\\partial u}{\\partial t} = [\\epsilon + \\gamma \\cos(k_f x)]u - u^3 -(\\nabla^2+k_0^2)^2 u,\n\\tag{15}\n we have \nf(u)= -u^3 + \\gamma u \\cos(k_f x),\\qquad a = \\epsilon - \\left(k_0- k_x^2 - k_y^2 \\right)^2.\n  \\tag{16}",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fitzhugh-Nagumo Equation</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/game-of-life.html",
+    "href": "jupyter/game-of-life.html",
+    "title": "2  Conway’s Game of Life",
+    "section": "",
+    "text": "2.1 Introduction\nThis is a (slightly) modified version of Glowing Python’s code. I make it available here because it features a few nice things:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conway's Game of Life</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/game-of-life.html#introduction",
+    "href": "jupyter/game-of-life.html#introduction",
+    "title": "2  Conway’s Game of Life",
+    "section": "",
+    "text": "how to make a movie using matplotlib.animation\nhow to write a generator (function with yield)\nhow to plot a sparce array (spy)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conway's Game of Life</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/game-of-life.html#the-code",
+    "href": "jupyter/game-of-life.html#the-code",
+    "title": "2  Conway’s Game of Life",
+    "section": "2.2 The code",
+    "text": "2.2 The code\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nimport matplotlib.animation as manimation\n\n\ndef life(X, steps):\n    \"\"\"\n     Conway's Game of Life.\n     - X, matrix with the initial state of the game.\n     - steps, number of generations.\n    \"\"\"\n    def roll_it(x, y):\n        # rolls the matrix X in a given direction\n        # x=1, y=0 left;  x=-1, y=0 right;\n        return np.roll(np.roll(X, y, axis=0), x, axis=1)\n\n    for _ in range(steps):\n        # count the number of neighbours\n        # the universe is considered toroidal\n        Y = roll_it(1, 0) + roll_it(0, 1) + \\\n            roll_it(-1, 0) + roll_it(0, -1) + \\\n            roll_it(1, 1) + roll_it(-1, -1) + \\\n            roll_it(1, -1) + roll_it(-1, 1)\n        # game of life rules\n        X = np.logical_or(np.logical_and(X, Y == 2), Y == 3)\n        X = X.astype(int)\n        yield X\n\n\ndimensions = (90, 160)  # height, width\nX = np.zeros(dimensions)  # Y by X dead cells\nmiddle_y = dimensions[0] / 2\nmiddle_x = dimensions[1] / 2\n\nN_iterations = 600\n\n# acorn initial condition\n# http://www.conwaylife.com/w/index.php?title=Acorn\nX[middle_y, middle_x:middle_x+2] = 1\nX[middle_y, middle_x+4:middle_x+7] = 1\nX[middle_y+1, middle_x+3] = 1\nX[middle_y+2, middle_x+1] = 1\n\n\nFFMpegWriter = manimation.writers['ffmpeg']\nmetadata = dict(title='Game of life', artist='Acorn initial condition')\nwriter = FFMpegWriter(fps=10, metadata=metadata)\n\nfig = plt.figure()\nfig.patch.set_facecolor('black')\nwith writer.saving(fig, \"game_of_life.mp4\", 300):  # last argument: dpi\n    plt.spy(X, origin='lower')\n    plt.axis('off')\n    writer.grab_frame()\n    plt.clf()\n    for i, x in enumerate(life(X, N_iterations)):\n        plt.title(\"iteration: {:03d}\".format(i + 1))\n        plt.spy(x, origin='lower')\n        plt.axis('off')\n        writer.grab_frame()\n        plt.clf()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conway's Game of Life</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/least-squares.html",
+    "href": "jupyter/least-squares.html",
+    "title": "3  Least Squares",
+    "section": "",
+    "text": "3.1 Introduction\nThis code produces the figure above. It’s main tool is the curve_fit method, that allows us to fit any function to data, and get optimal parameter values.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Least Squares</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/least-squares.html#the-code",
+    "href": "jupyter/least-squares.html#the-code",
+    "title": "3  Least Squares",
+    "section": "3.2 The code",
+    "text": "3.2 The code\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport matplotlib.gridspec as gridspec\nimport scipy.special\nfrom scipy.optimize import curve_fit\nimport matplotlib.patches as patches\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\nDefine some functions\n\nx = np.arange(0, 12, 0.4)\n\ndef func(x, par0, par1, par2):\n    return par0 + np.cos(par1 * x + par2)\n\n\ndef add_rec(ax, c, v, col):\n    ax.add_patch(\n        patches.Rectangle(\n            c,          # (x,y)\n            np.abs(v),  # width\n            v,          # height\n            alpha=0.4,\n            color=col\n        )\n    )\n\nNow let’s plot some stuff\n\n%matplotlib notebook\n\nfig, [ax1, ax2] = plt.subplots(2, 1, figsize=(8,6), sharex=True, sharey=True,\n                               subplot_kw={'aspect':'equal'}\n                              )\nfig.subplots_adjust(left=0.04, right=0.98, top=0.93, bottom=0.15,\n                    hspace=0.05, wspace=0.02)\nparams = {#'backend': 'ps',\n          'font.family': 'serif',\n          'font.serif': ['Computer Modern Roman'],\n          'ps.usedistiller': 'xpdf',\n          'text.usetex': True,\n          # include here any neede package for latex\n          'text.latex.preamble': [r'\\usepackage{amsmath}'],\n          }\n# the parameter values\npar = (1.3, 2, 1)\n# generating data with noise\ny = func(x, *par) + (np.random.random(len(x)) - 0.5)\nax1.plot(x, y, marker='o', ls='None', markerfacecolor=\"blue\", markeredgecolor=\"black\")\nax2.plot(x, y, marker='o', ls='None', markerfacecolor=\"red\", markeredgecolor=\"black\")\n\n# best fit\npopt, pcov = curve_fit(func, x, y, p0=(1.5, 1.5, 2.5))  # p0 = initial guess\np0, p1, p2 = popt\n# The total sum of squares (proportional to the variance of the data)\nSStot = ((y - y.mean()) ** 2).sum()\n# The sum of squares of residuals\nSSres = ((y - func(x, p0, p1, p2)) ** 2).sum()\nRsquared = 1 - SSres / SStot\n# plot best fit\nh = np.linspace(x.min(), x.max(), 1001)\nfit, = ax1.plot(h, func(h, p0, p1, p2), color='black', linewidth=2)\nax1.legend([fit], [\"Best fit\"], loc=\"upper right\",\n           frameon=False, handlelength=4)\n# plot mean\nmean, = ax2.plot(h, h * 0 + np.mean(y), ls='--', color='black', linewidth=2)\nax2.legend([mean], [\"Mean\"], loc=\"upper right\", frameon=False, handlelength=4)\n\n# plot blue and red squares\nfor ind in np.arange(len(x)):\n    x0 = x[ind]\n    y0 = y[ind]\n    # print(x0,y0)\n    v1 = y0 - func(x0, p0, p1, p2)\n    v2 = y0 - y.mean()\n    add_rec(ax1, (x0, y0), -v1, \"blue\")\n    add_rec(ax2, (x0, y0), -v2, \"red\")\n\nax2.text(0.5, 2.9, r\"Total sum of squares: {:.1f}\".format(SStot))\nax1.text(0.5, -0.8, r\"Sum of squares of residuals: {:.1f}\".format(SSres))\n# ax2.set_xlabel(\n#          r\"R-squared = $1 - \\frac{\\text{blue area}}{\\text{red area}}$ = \" +\n#          \"{:.2f}\".format(Rsquared))\nax2.set_xlabel(\n              r\"R-squared = $1 - \\frac{\\mathrm{blue\\ area}}{\\mathrm{red\\ area}}$\"\n              )\nax1.set_xlabel(\n               r\"Data: $f(x) = p_0 + \\cos(p_1 x + p_2)+ $ noise \",\n               labelpad=12\n               )\nax1.xaxis.set_label_position(\"top\")\n\nax1.set(xlim=[x.min(), x.max()],\n        ylim=[-1, 3.5],\n        xticklabels=[],\n        yticks=np.arange(-1, 4)\n       )\nax2.set(\n        xticklabels=np.arange(0,13,2)\n       )\n\nfig.savefig(\"least-squares.png\", dpi=300)\n\n\n\n\n\n\n\n/Users/yairmau/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:70: UserWarning: FixedFormatter should only be used together with FixedLocator",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Least Squares</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/histograms.html",
+    "href": "jupyter/histograms.html",
+    "title": "4  Fun with histograms",
+    "section": "",
+    "text": "4.1 Introduction\nThis code produces the figure above. I tried to showcase a few things one can do with 1d and 2d histograms.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fun with histograms</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/histograms.html#the-code",
+    "href": "jupyter/histograms.html#the-code",
+    "title": "4  Fun with histograms",
+    "section": "4.2 The code",
+    "text": "4.2 The code\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport matplotlib.gridspec as gridspec\nimport scipy.special\nfrom scipy.optimize import curve_fit\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\n\nfig = plt.figure(1, figsize=(8,6))  # figsize accepts only inches.\n\n##################################\n# Panels on the left of the figure\n##################################\n\ngs = gridspec.GridSpec(2, 2, width_ratios=[1, 0.2], height_ratios=[0.2, 1])\ngs.update(left=0.10, right=0.50, top=0.95, bottom=0.13,\n          hspace=0.02, wspace=0.02)\n\nsigma = 1.0  # standard deviation (spread)\nmu = 0.0  # mean (center) of the distribution\nx = np.random.normal(loc=mu, scale=sigma, size=5000)\nk = 2.0  # shape\ntheta = 1.0  # scale\ny = np.random.gamma(shape=k, scale=theta, size=5000)\n\n# bottom left panel\nax10 = plt.subplot(gs[1, 0])\ncounts, xedges, yedges, image = ax10.hist2d(x, y, bins=40, cmap=\"YlOrRd\",\n                                            density=True)\ndx = xedges[1] - xedges[0]\ndy = yedges[1] - yedges[0]\nxvec = xedges[:-1] + dx / 2\nyvec = yedges[:-1] + dy / 2\nax10.set_xlabel(r\"$x$\")\nax10.set_ylabel(r\"$y$\", rotation=\"horizontal\")\nax10.text(-2, 8, r\"$p(x,y)$\")\nax10.set_xlim([xedges.min(), xedges.max()])\nax10.set_ylim([yedges.min(), yedges.max()])\n\n# top left panel\nax00 = plt.subplot(gs[0, 0])\ngaussian = (1.0 / np.sqrt(2.0 * np.pi * sigma ** 2)) * \\\n    np.exp(-((xvec - mu) ** 2) / (2.0 * sigma ** 2))\nxdist = counts.sum(axis=1) * dy\nax00.bar(xvec, xdist, width=dx, fill=False,\n         edgecolor='black', alpha=0.8)\nax00.plot(xvec, gaussian, color='black')\nax00.set_xlim([xedges.min(), xedges.max()])\nax00.set_xticklabels([])\nax00.set_yticks([])\nax00.set_xlabel(\"Normal distribution\", fontsize=16)\nax00.xaxis.set_label_position(\"top\")\nax00.set_ylabel(r\"$p(x)$\", rotation=\"horizontal\", labelpad=20)\n\n# bottom right panel\nax11 = plt.subplot(gs[1, 1])\ngamma_dist = yvec ** (k - 1.0) * np.exp(-yvec / theta) / \\\n    (theta ** k * scipy.special.gamma(k))\nydist = counts.sum(axis=0) * dx\nax11.barh(yvec, ydist, height=dy, fill=False,\n          edgecolor='black', alpha=0.8)\nax11.plot(gamma_dist, yvec, color='black')\nax11.set_ylim([yedges.min(), yedges.max()])\nax11.set_xticks([])\nax11.set_yticklabels([])\nax11.set_ylabel(\"Gamma distribution\", fontsize=16)\nax11.yaxis.set_label_position(\"right\")\nax11.set_xlabel(r\"$p(y)$\")\nax11.xaxis.set_label_position(\"top\")\n\n###################################\n# Panels on the right of the figure\n###################################\n\ngs2 = gridspec.GridSpec(2, 1, width_ratios=[1], height_ratios=[1, 1])\ngs2.update(left=0.60, right=0.98, top=0.95, bottom=0.13,\n           hspace=0.02, wspace=0.05)\n\nx = np.random.normal(loc=0, scale=1, size=1000)\ny = np.random.gamma(shape=2, size=1000)\n\nbx10 = plt.subplot(gs2[1, 0])\nbx00 = plt.subplot(gs2[0, 0])\n\nN = 100\na = np.random.gamma(shape=5, size=N)\nmy_bins = np.arange(0,15,1.5)\nn1, bins1, patches1 = bx00.hist(a, bins=my_bins, density=True,\n                                histtype='stepfilled', alpha=0.2, hatch='/')\nbx00.set_xlim([0, 15])\nbx00.set_ylim([0, 0.28])\nbx00.set_xticklabels([])\nbx00.set_xlabel(\"plt.hist\", fontfamily=\"monospace\")\nbx00.xaxis.set_label_position(\"top\")\n\n# the following way is equivalent to plt.hist, but it gives\n# the user more flexibility when plotting and analysing the results\nn2, bins2 = np.histogram(a, bins=my_bins, density=True)\nwid = bins2[1] - bins2[0]\nred, = bx10.plot(bins2[:-1]+wid/2, n2, marker='o', color='red')\nbx10.bar(bins2[:-1], n2, width=wid, fill=False,\n         edgecolor='black', linewidth=3, alpha=0.8, align=\"edge\")\nbx10.set_xlim([0, 15])\nbx10.set_ylim([0, 0.28])\nbx10.set_xlabel(r\"np.histogram;  plt.bar\", fontfamily=\"monospace\")\n\n# best fit\n\nxdata = my_bins[:-1] + wid/2\nydata = n2\ndef func(x, p1, p2):\n    return x ** (p1 - 1.0) * np.exp(-x / p2) / (p2 ** p1 * scipy.special.gamma(p1))\npopt, pcov = curve_fit(func, xdata, ydata, p0=(1.5, 1.5))  # p0 = initial guess\np1, p2 = popt\nSStot = ((ydata - ydata.mean()) ** 2).sum()\nSSres = ((ydata - func(xdata, p1, p2)) ** 1).sum()\nRsquared = 1 - SSres / SStot\nh = np.linspace(0,15,101)\nbx00.plot(h, func(h, p1, p2), color='blue', linewidth=2)\n# dummy plot, just so we can have a legend on the bottom panel\nblue, = ax10.plot([100],[100], color='blue', linewidth=2, label=\"Best fit\")\nbx10.legend([red,blue],[r'Data',r'Best fit, $r^2=${:.2f}'.format(Rsquared)],\n            loc='upper right', frameon=False, handlelength=4,\n            markerfirst=False, numpoints=3, fontsize=14)\n\nfig.savefig(\"histograms.png\",dpi=300)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fun with histograms</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/subplot-grid.html",
+    "href": "jupyter/subplot-grid.html",
+    "title": "5  Fancy subplot grid",
+    "section": "",
+    "text": "5.1 Introduction\nWith GridSpec you can create any combination of panels",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fancy subplot grid</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/subplot-grid.html#the-code",
+    "href": "jupyter/subplot-grid.html#the-code",
+    "title": "5  Fancy subplot grid",
+    "section": "5.2 The code",
+    "text": "5.2 The code\n\nimport numpy as np\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport matplotlib.gridspec as gridspec\nfrom matplotlib.ticker import FuncFormatter\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\n\n# figsize accepts only inches.\nfig = plt.figure(1, figsize=(8, 6))\ngs = gridspec.GridSpec(3, 2, width_ratios=[1,0.5], height_ratios=[1,0.7,0.3])\ngs.update(left=0.16, right=0.86,top=0.88, bottom=0.13, hspace=0.05, wspace=0.05)\n\n###########\n# subplot a\n###########\nax0 = plt.subplot(gs[0, :])\n\nheaviside = lambda x: 0.5 * (np.sign(x) + 1)\nx = np.arange(0, 10.01, 0.01)\nax0.plot(x, heaviside(x - 2), color='purple', lw=3)\nax0.text(2.5, 1.1, r\"$\\longleftarrow$ heaviside\")\n\n# y ticks as a percentage\nax0.set_yticks(np.arange(-0.5, 2.0, 0.5))\ndef to_percent(y, position):\n    # Ignore the passed in position. This has the effect of scaling the default\n    # tick locations.\n    s = \"{:+.0f}\".format(y * 100)  # str(100 * y)\n    # The percent symbol needs escaping in latex\n    if matplotlib.rcParams['text.usetex'] is True:\n        return s + r'$\\%$'\n    else:\n        return s + '%'\n# Create the formatter using the function to_percent. This multiplies all the\n# default labels by 100, making them all percentages\nformatter = FuncFormatter(to_percent)\n# Set the formatter\nax0.yaxis.set_major_formatter(formatter)\nax0.set_ylabel(\"heaviside, percentage\")\n\n# x ticks on top\nax0.axis([x.min(), x.max(), -0.5, 1.5])\nax0.xaxis.tick_top()\nax0.set_xlabel(r\"x labels on top\")\nax0.xaxis.set_label_position(\"top\")\n\n# transAxes makes position relative to axes\nax0.text(0.97, 0.97, r\"a\", transform=ax0.transAxes,\n         horizontalalignment='right', verticalalignment='top',\n         fontweight=\"bold\")\n\n# copy window with same x axis (y will be different)\nax0b = ax0.twinx()\nax0b.plot(x, np.tanh(x - 5), color=\"green\", linewidth=3)\nax0b.axis([x.min(), x.max(), -1.1, 2.5])\nax0b.text(5.5, 0, r\"tanh $\\longrightarrow$\")\nax0b.set_ylabel(r'tanh, offset label')\nax0b.yaxis.set_label_coords(1.1, 0.70)\n\n###########\n# subplot b\n###########\nax10 = plt.subplot(gs[1, 0])\n\nx = np.arange(-5, 5, 0.01)\ny = np.exp(-x)\nax10.plot(x, y, color=\"orange\", lw=3)\nax10.set_yscale('log', base=2)\nax10.set_yticks(2.0 ** np.arange(-7, 7, 3))\nax10.text(1.0, 1, r\"$y=e^{-x}$\")\nax10.set_xticks(np.arange(-5, 6, 2))\nax10.set_xticklabels(np.arange(-5, 6, 2), y=0.15)\nax10.get_yaxis().set_tick_params(direction='out')\nax10.set_ylabel(\"log scale base 2\", labelpad=15)\nax10.text(0.97, 0.97, r\"b\", transform=ax10.transAxes,\n          horizontalalignment='right', verticalalignment='top',\n          fontweight=\"bold\")\n\n###########\n# subplot c\n###########\nax11 = plt.subplot(gs[1, 1])\n\nx = np.arange(1.0, np.e ** 4, 0.01)\ny = x ** (-0.8)\nax11.plot(x, y, color=\"cyan\", lw=3)\nax11.text(2, 1, r\"$y=x^{-0.8}$\")\nax11.loglog(x, y)\nax11.set_xscale(\"log\", base=np.e)\nax11.set_yscale(\"log\", base=np.e)\nxt = np.exp(np.arange(1, 4, 1))\nyt = np.pi ** (np.arange(-3, 2, 1))\nax11.set_xticks(xt)\nax11.set_xticklabels(xt, y=0.15)\nax11.set_yticks(yt)\n\n\ndef ticks_e(y, pos):   # base e\n    return r'$e^{:.0f}$'.format(np.log(y))\n\n\ndef ticks_pi(y, pos):  # base pi, why not?\n    return r'$\\pi^{%+.0f}$'%(np.log(y)/np.log(np.pi))\n\n\nax11.xaxis.set_major_formatter(FuncFormatter(ticks_e))\nax11.yaxis.set_major_formatter(FuncFormatter(ticks_pi))\nax11.yaxis.tick_right()\nax11.yaxis.set_label_position(\"right\")\nax11.set_ylabel(\"right side\", labelpad=10)\nax11.text(0.97, 0.97, r\"c\", transform=ax11.transAxes,\n          horizontalalignment='right', verticalalignment='top',\n          fontweight=\"bold\")\n\n###########\n# subplot d\n###########\nax20 = plt.subplot(gs[2, 0])\n\nax20.axis([0, 1, 0, 1])\nax20.set_xticks(np.arange(0, 1.1, 0.2))\nax20.set_xticklabels([\"January\", \"February\",\n                      \"March\", \"April\",\n                      \"May\", \"June\"],\n                      rotation=30, horizontalalignment=\"right\")\nax20.set_yticks([])\nax20.text(0.97, 0.97, r\"d\", transform=ax20.transAxes,\n          horizontalalignment='right', verticalalignment='top',\n          fontweight=\"bold\")\n\n###########\n# subplot e\n###########\nax21 = plt.subplot(gs[2, 1])\n\nax21.set_xticks([])\nax21.set_yticks([])\nax21.axis([0, 1, 0, 1])\nax21.text(0.97, 0.97, r\"e\", transform=ax21.transAxes,\n          horizontalalignment='right', verticalalignment='top',\n          fontweight=\"bold\")\n\nfig.savefig(\"subplot-grid.png\", dpi=300)\nfig",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fancy subplot grid</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/streamplot.html",
+    "href": "jupyter/streamplot.html",
+    "title": "6  Streamplot",
+    "section": "",
+    "text": "6.1 Introduction\nStreamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.\nMain features: meshgrid, streamplot, contour, legend, LaTeX",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Streamplot</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/streamplot.html#the-code",
+    "href": "jupyter/streamplot.html#the-code",
+    "title": "6  Streamplot",
+    "section": "6.2 The code",
+    "text": "6.2 The code\n\nimport matplotlib\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\nmake graph look pretty\n\n\n# learn how to configure:\n# http://matplotlib.sourceforge.net/users/customizing.html\nparams = {\n          'font.family': 'serif',\n          'ps.usedistiller': 'xpdf',\n          'text.usetex': True,\n          # include here any neede package for latex\n          'text.latex.preamble': r'\\usepackage{amsmath}',\n          }\nplt.rcParams.update(params)\n\ndefine parameters, system of equations, and equation for eigenvectors\n\n%matplotlib widget\nfig, ax = plt.subplots(figsize=(8,6))\nfig.subplots_adjust(left=0.08, right=0.68, top=0.87, bottom=0.10,\n                    hspace=0.02, wspace=0.02)\n# parameters as a dictionary\np = {'a': -1.0, 'b': +0.2,\n     'c': +1.2, 'd': -1.5}\n\n# the equations\ndef system_equations(x,y):\n    return [p['a'] * x + p['b'] * y,\n            p['c'] * x + p['d'] * y,\n           ]\n# eigenvectors\neigen_vec = 100 * np.array([            \n                           [(p['a'] - p['d'] -\n                            np.sqrt((p['a'] - p['d']) ** 2 +\n                                    4.0 * p['b'] * p['c'])) /\n                            (2.0 * p['c']), 1.0],\n                           [(p['a'] - p['d'] +\n                            np.sqrt((p['a'] - p['d']) ** 2 +\n                                    4.0 * p['b'] * p['c'])) /\n                            (2.0 * p['c']), 1.0],\n                           ])\n\nmin_x, max_x = [-1, 1]\nmin_y, max_y = [-4, 4]\ndivJ = 50j\ndiv = 50\n# 1st way\n# Y, X = np.mgrid[min_y:max_y:div,min_x:max_x:div]\n# 2nd way\nX, Y = np.meshgrid(np.linspace(min_x, max_x, div),\n                   np.linspace(min_y, max_y, div))\n\n# streamplot\ndensity = 2 * [0.80]\nminlength = 0.2\narrow_color = 3 * [0.5]\nax.streamplot(X, Y, system_equations(X, Y)[0], system_equations(X, Y)[1],\n              density=density, color=arrow_color, arrowsize=2,\n              linewidth=2, minlength=minlength)\n\n# eigenvectors\neigen_0, = ax.plot([eigen_vec[0, 0],-eigen_vec[0, 0]],\n                   [eigen_vec[0, 1],-eigen_vec[0, 1]],\n                   color='red', lw=3, ls=\"--\")\neigen_1, = ax.plot([eigen_vec[1, 0],-eigen_vec[1, 0]],\n                   [eigen_vec[1, 1],-eigen_vec[1, 1]],\n                   color='orange', lw=3, ls=\"--\")\ndash = (7, 2, 1, 2)\neigen_0.set_dashes(dash)\neigen_1.set_dashes(dash)\n\n# nullclines\nnull_0 = ax.contour(X, Y, system_equations(X, Y)[0],\n                    levels=[0], colors='black', linewidths=3)\nnull_1 = ax.contour(X, Y,system_equations(X, Y)[1],\n                    levels=[0], colors='blue', linewidths=3)\nn0, = ax.plot([100,101], [100,101], color='black', linewidth=3)\nn1, = ax.plot([100,101], [100,101], color='blue', linewidth=3)\n\n# some text\nax.text(0.0, 1.02, (r\"$\\displaystyle\\frac{d}{dt}\\begin{pmatrix}x\\\\y\\end{pmatrix}=$\"\n                    r\"$\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\cdot$\"\n                    r\"$\\begin{pmatrix}x\\\\y\\end{pmatrix}$\"),\n                    transform=ax.transAxes, va=\"bottom\")\nax.text(1.0, 1.1, r\"$a={:.1f}\\qquad b={:.1f}$\".format(p['a'], p['b']),\n        transform=ax.transAxes, ha=\"right\")\nax.text(1.0, 1.03, r\"$c={:.1f}\\qquad d={:.1f}$\".format(p['c'], p['d']),\n        transform=ax.transAxes, ha=\"right\")\n\nax.legend([n0, n1, eigen_0, eigen_1],\n          [r'$dx/dt=0$', r'$dy/dt=0$',\n           r\"eigenvector 1\", r\"eigenvector 2\"],\n          loc=\"center left\",\n          bbox_to_anchor=(1.0,0.5),\n          frameon=False, fancybox=False, shadow=False, ncol=1,\n          borderpad=0.5, labelspacing=0.5, handlelength=3, handletextpad=1.1,\n          borderaxespad=0.3, columnspacing=2)\n\nax.set_ylabel(r\"$y$\", rotation='horizontal')\nax.set_xlabel(r\"$x$\", labelpad=5)\n\nax.axis([min_x, max_x, min_y, max_y])\n\nfig.savefig(\"streamplot.png\", dpi=300)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Streamplot</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/palette.html",
+    "href": "jupyter/palette.html",
+    "title": "7  Palette",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\nimport colorsys\nimport matplotlib.colors as mcolors\n\n\ndef get_hls(color):\n    \"\"\"\n    Returns the HLS values of a given color.\n    \n    Args:\n        color (str or tuple): A color name (e.g., 'xkcd:hot pink', 'tab:orange'), a hex code (e.g., '#FF69B4'), or an RGB triplet (e.g., (255, 105, 180)).\n    \n    Returns:\n        tuple: A tuple containing the HLS values (hue, lightness, saturation) of the given color.\n    \"\"\"\n    try:\n        # Convert the input color to RGB\n        if isinstance(color, str):\n            # If the input is a color name, convert it to RGB\n            rgb = mcolors.to_rgb(color)\n        elif isinstance(color, tuple) and len(color) == 3:\n            # If the input is an RGB triplet, use it directly\n            rgb = color\n        else:\n            # If the input is a hex code, convert it to RGB\n            rgb = mcolors.to_rgb(color)\n        \n        # Convert RGB to HSL\n        r, g, b = rgb\n        hls = colorsys.rgb_to_hls(r, g, b)\n        \n        return hls\n    \n    except ValueError as e:\n        print(f\"Error: {e}\")\n        return None\n\ndef get_hls2(color):\n    \"\"\"\n    Returns the HLS values of a given color.\n    \n    Args:\n        color (str or tuple): A color name (e.g., 'xkcd:hot pink', 'tab:orange'), a hex code (e.g., '#FF69B4'), or an RGB triplet (e.g., (255, 105, 180)).\n    \n    Returns:\n        tuple: A tuple containing the HLS values (hue, lightness, saturation) of the given color.\n    \"\"\"\n    try:\n        # Convert the input color to RGB\n        if isinstance(color, str):\n            # If the input is a color name, convert it to RGB\n            rgb = mcolors.to_rgb(color)\n            rgb = [int(val * 255) for val in rgb]\n        elif isinstance(color, tuple) and len(color) == 3:\n            # If the input is an RGB triplet, use it directly\n            rgb = color\n        else:\n            # If the input is a hex code, convert it to RGB\n            rgb = mcolors.to_rgb(color)\n            rgb = [int(val * 255) for val in rgb]\n        \n        # Convert RGB to HSL\n        r, g, b = rgb\n        hls = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)\n        \n        return hls\n    \n    except ValueError as e:\n        print(f\"Error: {e}\")\n        return None\n\ndef new_range(l):\n    r = np.arange(-1.0, 1.1, 0.1) + l\n    return r[(r&lt;=1.0) & (r&gt;=0.0)]\n\ndef rgb_to_hex(rgb):\n    return '#{:02x}{:02x}{:02x}'.format(int(rgb[0]*255), int(rgb[1]*255), int(rgb[2]*255))\n\ndef plot_panel(c, type, ax):\n    \"\"\"\n    type=0 : hue\n    type=1 : lightness\n    type=2 : saturation\n    \"\"\"\n    r = new_range(c[type])\n    if type == 0:\n        a_rgb = [colorsys.hls_to_rgb( *((ri, c[1], c[2]) ) ) for ri in r]\n        type_name = \"hue\"\n    if type == 1:\n        a_rgb = [colorsys.hls_to_rgb( *((c[0], ri, c[2]) ) ) for ri in r]\n        type_name = \"lightness\"\n    if type == 2:\n        a_rgb = [colorsys.hls_to_rgb( *((c[0], c[1], ri) ) ) for ri in r]\n        type_name = \"saturation\"\n    a_hex = [rgb_to_hex(i) for i in a_rgb]\n    ax[type].imshow([a_rgb], interpolation='none')\n    # Minor ticks\n    ax[type].set_xticks(np.arange(-.5, len(a_rgb), 1), minor=True)\n    # Gridlines based on minor ticks\n    ax[type].grid(which='minor', color='w', linestyle='-', linewidth=2)\n    # Remove minor ticks\n    ax[type].tick_params(which='minor', bottom=False, left=False)\n\n    ax[type].set_xticks(np.arange(len(a_rgb)))\n    ax[type].set_xticklabels(a_hex, rotation=30);\n    ax[type].set_yticks([])\n    ax[type].text(1.02, 0.5, type_name, transform=ax[type].transAxes,\n         horizontalalignment='left', verticalalignment='center',\n         fontweight=\"bold\")\n    mask = np.abs(r-c[type])&lt; 1.0e-8\n    idx = np.argwhere(mask)\n    ax[type].plot(idx[0], [0], marker='o', markersize=20, markerfacecolor='None', markeredgecolor=\"white\")\n    return a_hex\n\ndef pallete(color_name):\n    fig, ax = plt.subplots(3, 1, figsize=(10,6))\n    c = get_hls(color_name)\n    hex_codes = plot_panel(c, 0, ax)\n    print(\"hue array:\\n\", hex_codes)\n    hex_codes = plot_panel(c, 1, ax)\n    print(\"lightness array:\\n\", hex_codes)\n    hex_codes = plot_panel(c, 2, ax)\n    print(\"saturation array:\\n\", hex_codes)\n    ax[0].set_title(\"color = \" + color_name)\n    return fig\n\n\npallete('xkcd:emerald');\n\nhue array:\n ['#a00900', '#a06800', '#77a000', '#18a000', '#00a048', '#0097a0', '#0038a0', '#2900a0', '#8800a0', '#a00058']\nlightness array:\n ['#000703', '#003a1a', '#006d31', '#009f48', '#01d260', '#09fd77', '#3cfd93', '#6efeaf', '#a1fecb', '#d4fee7']\nsaturation array:\n ['#49574f', '#415f4f', '#39674e', '#316f4d', '#29774c', '#217f4c', '#19874b', '#118f4a', '#099749', '#019f48']\n\n\n\n\n\n\n\n\n\n\nfig = pallete('gold')\nfig.savefig('palette-gold.png')\n\nhue array:\n ['#ff3d00', '#ffd600', '#8eff00', '#00ff0a', '#00ffa3', '#00c1ff', '#0028ff', '#7000ff', '#ff00f4', '#ff005b']\nlightness array:\n ['#322a00', '#655500', '#988000', '#cbab00', '#fed600', '#ffde32', '#ffe665', '#ffef98', '#fff6cb', '#fffefe']\nsaturation array:\n ['#7f7f7f', '#8c8872', '#999166', '#a59959', '#b2a24c', '#bfab3f', '#cbb333', '#d8bc26', '#e5c519', '#f2ce0c', '#fed700']\n\n\n\n\n\n\n\n\n\n\npallete('tab:pink');\n\nhue array:\n ['#e3ad77', '#d7e377', '#96e377', '#77e397', '#77e3d8', '#77ace3', '#8277e3', '#c377e3', '#e377c2', '#e37781']\nlightness array:\n ['#210619', '#4b0f39', '#751859', '#a02079', '#ca2999', '#da4caf', '#e276c1', '#eba1d4', '#f4cbe7', '#fdf5fa']\nsaturation array:\n ['#b1a8ae', '#baa0b2', '#c297b5', '#ca8fb8', '#d287bb', '#da7fbe', '#e277c1', '#eb6ec5', '#f366c8', '#fb5ecb']",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Palette</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/tdgle.html",
+    "href": "jupyter/tdgle.html",
+    "title": "8  The time-dependent Ginzburg-Landau equation",
+    "section": "",
+    "text": "8.1 Introduction\nSimulation of the Time-Dependent Ginzburg-Landau Equation \\frac{\\text{d}u}{\\text{d}t}= u - u^3 +D\\nabla^2 u, in 1 and 2 spatial dimensions. This is the simplest example of numerical integration through Finite Differences: - Euler method to advance time - Five-point stencil to compute the laplacian, periodic boundary conditions are assumed. See an example of the output here: https://www.youtube.com/watch?v=JgE9Px7zsQE",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>The time-dependent Ginzburg-Landau equation</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/tdgle.html#code",
+    "href": "jupyter/tdgle.html#code",
+    "title": "8  The time-dependent Ginzburg-Landau equation",
+    "section": "8.2 Code",
+    "text": "8.2 Code\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.axes_grid1 import make_axes_locatable\nimport time as tm\n\n\n# grid size\nn = 128\n# for 1d simulation write N=(n,)\nN=(n,n)\n# diffusion coefficient\nD = 1.0\n# spatial dimensions\nL = 100.0\ndx = L / n\nx = np.arange(0,L,dx)\n# time\nt = 0.0\ntotal_time = 3.0\n# beware of the Von Neumann stability analysis\n# https://en.wikipedia.org/wiki/Von_Neumann_stability_analysis\ndt = 0.2 * 0.5 * dx**2 / D\n\ndefine functions\n\ndef periodic_lap_1d(u,dx=1.0):\n    return (+1*np.roll(u,+1)\n            +1*np.roll(u,-1)\n            -2*u) / dx**2\ndef periodic_lap_2d(u,dx=1.0):\n    return (+1*np.roll(u,+1,axis=0)\n            +1*np.roll(u,-1,axis=0)\n            +1*np.roll(u,+1,axis=1)\n            +1*np.roll(u,-1,axis=1)\n            -4*u) / dx**2\nf = lambda u: u - u**3\n\ninitialize and start plotting\n\nplt.ion()\nfig = plt.figure(1,figsize=(7,6))\nplt.clf()\nax = fig.add_subplot(111)\n# random initial condition\nu = 2*np.random.random(N)-1.0\nif len(N) == 1:\n    lap = periodic_lap_1d\n    p, = ax.plot(x,u)\n    ax.axis([x[0],x[-1],-1.1,1.1])\nif len(N) == 2:\n    lap = periodic_lap_2d\n    p = ax.imshow(u,cmap=\"RdGy\", vmin=-1.0, vmax=1.0,extent=[0,L,0,L])\n    # create an axes on the right side of ax. The width of cax will be 5%\n    # of ax and the padding between cax and ax will be fixed at 0.15 inch.\n    divider = make_axes_locatable(ax)\n    colorbar_ax = divider.append_axes(\"right\", size=\"5%\", pad=0.15)\n    cbar = fig.colorbar(p, cax=colorbar_ax, ticks=[-1,-0.5,0,0.5,1])\nax.set_title(\"time={:5.1f}\".format(0.0))\n\nText(0.5, 1.0, 'time=  0.0')\n\n\nstart simulation\n\nwhile t&lt;total_time:\n    t += dt\n    u = u + dt * (f(u) + D * lap(u,dx) )\n    # we don't need to plot again, just to update the data of the plot\n    if len(N) == 1:\n        p.set_data(x,u)\n    if len(N) == 2:\n        p.set_data(u)\n    ax.set_title(\"time={:5.1f}\".format(t))\n    fig.canvas.draw()",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>The time-dependent Ginzburg-Landau equation</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/doublependulum.html",
+    "href": "jupyter/doublependulum.html",
+    "title": "9  Double Pendulum",
+    "section": "",
+    "text": "9.1 Introduction\nThe double pendulum is one of the most famous examples of chaos. Enjoy making your own animations!",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Double Pendulum</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/doublependulum.html#the-code",
+    "href": "jupyter/doublependulum.html#the-code",
+    "title": "9  Double Pendulum",
+    "section": "9.2 The code",
+    "text": "9.2 The code\ncomment the lines below if you want interactive mode, i.e., if you want to see the animation in real time.\n\nimport matplotlib\nmatplotlib.use('Agg')\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport os\nfrom scipy.integrate import ode\n\ndefine equations of motion and other functions\n\ndef equations(t, y, args):\n    \"\"\" the equations for the double pendulum \"\"\"\n    x1 = y[0] # x1 = theta1, angle\n    x2 = y[1] # x2 = theta2, angle\n    p1 = y[2] # p1 = omega1, angular velocity\n    p2 = y[3] # p2 = omega2, angular velocity\n    l1,l2,m1,m2,g = args\n    x1_eq = p1\n    x2_eq = p2\n    p1_eq = -((g*(2*m1+m2)*np.sin(x1)+m2*(g*np.sin(x1-2*x2)+2*(l2*p2**2+l1*p1**2*np.cos(x1-x2))*np.sin(x1-x2)))/(2*l1*(m1+m2-m2*(np.cos(x1-x2))**2)))\n    p2_eq = ((l1*(m1+m2)*p1**2+g*(m1+m2)*np.cos(x1)+l2*m2*p2**2*np.cos(x1-x2))*np.sin(x1-x2))/(l2*(m1+m2-m2*(np.cos(x1-x2))**2))\n    return [x1_eq, x2_eq, p1_eq, p2_eq]\n\ndef calculate_trajectory(args,time,y0):\n    \"\"\" uses scipy's ode itegrator to simulate the equations \"\"\"\n    t0,t1,dt = time\n    r = ode(equations).set_integrator('dopri5')\n    r.set_initial_value(y0, t0).set_f_params(args)\n    data=[[t0, y0[0], y0[1], y0[2], y0[3] ]]\n    while r.successful() and r.t &lt; t1:\n        r.integrate(r.t+dt)\n        data.append([r.t, r.y[0], r.y[1], r.y[2], r.y[3] ])\n    return np.array(data)\n\ndef from_angle_to_xy(args,angles):\n    \"\"\" converts angles into xy positions \"\"\"\n    l1,l2,m1,m2,g = args\n    time,theta1,theta2 = angles.T\n    x1 =  l1*np.sin(theta1)\n    y1 = -l1*np.cos(theta1)\n    x2 =  l2*np.sin(theta2) + x1\n    y2 = -l2*np.cos(theta2) + y1\n    return np.array([time,x1,y1,x2,y2]).T\n\nparameters\n\nl1 = 0.5 # length of arms\nl2 = 0.5\nm1 = 1.0 # mass of the pendulum\nm2 = 1.0\ng  = 10.0 # acceleration of gravity\nargs = [l1,l2,m1,m2,g]\nfps = 80\ntotal_time = 5 # seconds\ntime = [0.0,total_time,1.0/fps] # start, finish, dt\nic   = [np.pi*0.65, np.pi*1.1, 0.0, 0.0]\n\nhere the magic happens\n\nd = calculate_trajectory(args,time,ic)\ndata_TXY = from_angle_to_xy(args,d[:,:3])\n\nLet’s plot stuff, and make a nice movie.\nRequrement: ffmpeg\n\nmake_movie=True\nparams = {'backend': 'ps',\n          'font.size': 20,\n          'font.family':'serif',\n          'font.serif':['Computer Modern Roman'], # Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman\n          'ps.usedistiller': 'xpdf',\n          'text.usetex': True,\n          }\nplt.rcParams.update(params)\nplt.ion()\nfig = plt.figure(figsize=(9.6,5.4),dpi=100) # 1920x1080\nfig.subplots_adjust(left=0, right=1, top=1, bottom=0,hspace=0.02,wspace=0.02)\nax = fig.add_subplot(111)\nax.axis('off') # no frame\n\ndef plot_last_seconds(data,index):\n    \"\"\" Plots a line with the trajectory of the tip of pendulum 2 (x2,y2)\n    \"\"\"\n    how_long = 1.0 # seconds\n    n = int(how_long/time[2])\n    to_plot = data[:index,:]\n    if index &lt; n:\n        prepend =  np.tile(data[0],(n-index,1))\n        to_plot = np.vstack([prepend,to_plot])\n        index = n\n    colormap = plt.cm.Greys_r\n    colors = [colormap(i) for i in np.linspace(0.0, 1.0, n-1)]\n    plots = []\n    for j in np.arange(n-1):\n        p, = ax.plot(to_plot[index-j-1:index-j+1,3],to_plot[index-j-1:index-j+1,4],\n                color=colors[j], zorder=-1)\n        plots.append(p)\n    return plots\n\n# \"plot\" returns a tuple of line objects, thus the comma\nt,x1,y1,x2,y2 = data_TXY[0]\nline1, = ax.plot([0.0,x1], [0.0,y1], 'r-')\nline2, = ax.plot([x1,x2], [y1,y2], 'r-')\ncirc1, = ax.plot([x1], [y1], 'ro',markersize=10)\ncirc2, = ax.plot([x2], [y2], 'ro',markersize=10)\nsizeY = 1.2\nax.axis([-sizeY*16/9,sizeY*16/9,-sizeY,sizeY])\n\nframe_names = []\ntex=ax.text(0.0,0.85,'',ha=\"center\")\n\nfor i,v in enumerate(data_TXY):\n    t,x1,y1,x2,y2 = v\n    # print(\"t={:.2f}\".format(t)) # you might want to know how things are going...\n    line1.set_data([0.0,x1],[0.0,y1])\n    line2.set_data([x1,x2],[y1,y2])\n    circ1.set_data([x1],[y1])\n    circ2.set_data([x2],[y2])\n    \n    # plot_last_seconds considerably slows down the simulation,\n    # but makes it much prettier...\n    pls = plot_last_seconds(data_TXY,i+1)\n    tex.set_text(r\"$t={:.3f}$ s\".format(t))\n    fig.canvas.draw()\n    if make_movie:\n        fname = \"_tmp{:05d}.png\".format(i)\n        frame_names.append(fname)\n        fig.savefig(fname,bbox_inches='tight')\n    for k in pls:\n        k.remove()\n\nif make_movie:\n    frames = \"_tmp%5d.png\"\n    frames = \"_tmp%5d.png\"\n    movie_command = \"ffmpeg -y -r {:} -i {:} double.mp4\".format(fps,frames)\n    os.system(movie_command)\n    \n    for fname in frame_names:\n        os.remove(fname)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Double Pendulum</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/hilbertcurve.html",
+    "href": "jupyter/hilbertcurve.html",
+    "title": "10  Hilbert Curve",
+    "section": "",
+    "text": "10.1 Introduction\nThe Hilbert curve is calculated iteratively. Check out this: Hilbert_curve: Representation_as_Lindenmayer_system",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hilbert Curve</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/hilbertcurve.html#the-code",
+    "href": "jupyter/hilbertcurve.html#the-code",
+    "title": "10  Hilbert Curve",
+    "section": "10.2 The code",
+    "text": "10.2 The code\n\n# comment this to enable interactive mode\nimport matplotlib\nmatplotlib.use('AGG')\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport os\n\n\ndef apply_rules(s):\n    \"\"\" Hilbert Curve as a Lindenmayer system (L-system)\n    https://en.wikipedia.org/wiki/Hilbert_curve#Representation_as_Lindenmayer_system\"\"\"\n    s=s.replace(\"a\",\"-Bf+AfA+fB-\")  # capital letters \"A\" and \"B\" so that the second operation\n    s=s.replace(\"b\",\"+Af-BfB-fA+\")  # doesn't apply to the changes already made\n    return s.lower() # make everyone lowercase\n\naxiom = \"a\"\nn=3 # number of iterations\n# displacements, ordered in a counter-clockwise direction\ndxdy = np.array([[ 1, 0],    # right\n                 [ 0, 1],    # up\n                 [-1, 0],    # left\n                 [ 0,-1] ])  # down\n# displacement is of size 1, so the higher n is, the greater the domain\nlength = 2**n-1; margin = 0.05*length\ndomain = [0-margin,length+margin,0-margin,length+margin] # a 5% margin around the curve\ns = axiom # string to iterate upon\n\nfor i in np.arange(n):\n    s = apply_rules(s)\n\n\nmake_movie=True\nplt.ion() # interactive mode disabled if \"matplotlib.use('AGG')\"\nfig = plt.figure(figsize=(6,6))\nax = fig.add_subplot(111)\nax.axis('off')                        # no frame\nax.axis(domain)                       # domain size\nax.set_aspect('equal')                # square look\nax.set_xticks([]); ax.set_yticks([])  # no ticks\nax.set_title(r\"$n = {:d}$\".format(n))\nplt.show()\n\n# \"a\" and \"b\" can be erased now\ns=s.replace(\"a\",\"\")\ns=s.replace(\"b\",\"\")\n\nframe_names = []  # these two are only relevant if make_movie==True\nframe_counter=0\n\np = np.array([[0.0,0.0]]) # this is the starting point (0,0)\np_plot, = plt.plot(p[:,0],p[:,1],color=\"black\")\n\n# iterate on the string s\nfor i,c in enumerate(s):\n    # uncomment to see how fast things are going\n    # print(\"{:d}/{:d}\".format(i,len(s)))\n    \n    # rotations \"+\" and \"-\" change the displacement array dxdy\n    # \"+\" means clockwise rotation\n    if c == '+': dxdy = np.roll(dxdy,+1,axis=0)\n    # \"-\" means counter-clockwise rotation\n    if c == '-': dxdy = np.roll(dxdy,-1,axis=0)\n    # forward \"f\"\n    if c == 'f':\n        # add one more point to array p\n        p = np.vstack([p, [p[-1,0]+dxdy[0,0],p[-1,1]+dxdy[0,1]] ])\n        # update p_plot data, this is MUCH faster that plotting\n        # several line segments separately\n        p_plot.set_data(p[:,0],p[:,1])\n        fig.canvas.draw()\n        if make_movie:\n            fname = \"_tmp{:05d}.png\".format(frame_counter)\n            frame_names.append(fname)\n            fig.savefig(fname,bbox_inches='tight',resolution=300)\n        frame_counter += 1\n\n\nif make_movie:\n    frames = \"_tmp%5d.png\"\n    # movie_command = \"mencoder mf://*.png -mf fps=24:type=png --ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o hil{:d}.avi\".format(n)\n    \n    # we might have other .png figures in the directory\n    # in this case, use the code below\n    f = open(\"png_list.txt\", \"w\")\n    for i in frame_names:\n        f.write(i+\"\\n\")\n    f.close()\n    movie_command = \"mencoder mf://@png_list.txt -mf fps=24:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o hil{:d}.avi\".format(n)\n    \n    err=os.system(movie_command)\n    if err!=0:\n        raise RuntimeError(\"Couldn't run mencoder.  Data in tmp*.png files\")\n    for fname in frame_names:\n        os.remove(fname)\n    \n    # we now have one video ready.\n    # if you want to join several videos, use this:\n    # sudo apt-get install gpac\n    # MP4Box -cat part1.avi -cat part2.avi -new joinedfile.avi",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hilbert Curve</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/hysteresis.html",
+    "href": "jupyter/hysteresis.html",
+    "title": "11  A hysteresis mechanism",
+    "section": "",
+    "text": "11.1 Introduction\nHysteresis mechanism created by bistability of states.\nEnergy function: f = u^4 - 2u^2 + hu",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>A hysteresis mechanism</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/hysteresis.html#the-code",
+    "href": "jupyter/hysteresis.html#the-code",
+    "title": "11  A hysteresis mechanism",
+    "section": "11.2 The code",
+    "text": "11.2 The code\n\n# comment these lines if you want interactive mode,\n# i.e., if you want to see the animation in real time.\nimport matplotlib\nmatplotlib.use('Agg')\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport os\nimport sympy\nfrom scipy.integrate import ode\n\n# learn how to configure: http://matplotlib.sourceforge.net/users/customizing.html\nparams = {#'backend': 'GTKAgg',\n          'legend.handlelength': 2.5,\n          'legend.borderaxespad': 0,\n          'font.family':'serif',\n          'font.size': 18,\n          'font.serif':['Times'], # Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman\n          'ps.usedistiller': 'xpdf',\n          'text.usetex': True,\n          }\n\nplt.rcParams.update(params)\nfig=plt.figure(1,figsize=(9.6,5.4),dpi=100) # 1920x1080 # figsize accepts only inches. if you rather think in cm, change the code yourself.\nfig.clf()\nfig.subplots_adjust(left=0.07, right=0.93,top=0.90, bottom=0.12,hspace=0.02,wspace=0.10)\n\nHlim=2.5 # parameter range from -Hlim to Hlim\n\nax1=fig.add_subplot(121)\nax1.set_xticks([])\nax1.set_yticks([])\nax1.set_xlabel(r'System response',labelpad=12)\nax1.set_ylabel('Energy',labelpad=12)\nax1.axis([-Hlim,Hlim,-5,5])\n\nax2=fig.add_subplot(122)\nax2.set_xticks([])\nax2.set_yticks([])\nax2.set_xlabel(r'Parameter',labelpad=12)\nax2.set_ylabel(r'System response',labelpad=12)\nax2.yaxis.set_label_position(\"right\")\nax2.axis([-Hlim*1.2,Hlim*1.2,-2,2])\n\nframe_names = []\nframe_index = 0\nmake_movie=True\nplt.ion()\n\n\n# energy function and its derivative\nf = lambda u,h: u**4-2*u**2+h*u\nfprime = lambda u,h: sympy.diff(f(u,h),u)\n\nHinit=Hlim\nulim=2.5 # system response axis, from -ulim to ulim\nu = np.linspace(-ulim,ulim,101)\n\nx = sympy.Symbol('x')\n\ndef res(h):\n    \"\"\"System response is one of the real roots\n       of the energy function derivative\n    \"\"\"\n    # derivative roots, complex\n    resp = sympy.solvers.solve(fprime(x,h),x)\n    # numerical evaluation\n    resp = map(sympy.N,resp)\n    # let's check which roots are real\n    isreal = len(resp)*[False]\n    for i in range(len(resp)):\n        # negligible imaginary component\n        if np.abs(sympy.functions.im(resp[i]))&lt;1e-15:\n            resp[i]=sympy.functions.re(resp[i])\n            isreal[i]=True\n    resp = np.array(resp)\n    # return only real roots\n    return resp[np.array(isreal)]\n\n# let's plot stuff, and make a nice movie\n#### left plot, ax1 ####\nline_func, = ax1.plot(u,f(u,Hinit),lw=2,color='black')\n# ball color\nball_color = \"blue\"\n# minimum = the smallest root, the leftmost root\nmini = np.min(res(Hinit)) # calculated for initial parameter value\nboost = 0.22 # so that ball sits on top of the curve\n# plot ball\nball_u, = ax1.plot([mini],[f(mini,Hinit)+boost],'o',\n                 markersize=12, markerfacecolor=ball_color)\n\n#### right plot, ax2 ####\n# build empty hysteresis array, we will add values\n# as simulation progresses\ndeetype = np.dtype([('h', 'float64'), ('u', 'float64')])\nhysteresis = np.array([(Hinit,mini)],dtype=deetype)\nline_hyst, = ax2.plot(hysteresis['h'],hysteresis['u'], lw=2,color='black')\nballH, = ax2.plot([hysteresis['h'][-1]],[hysteresis['u'][-1]],'o',\n                  markersize=12, markerfacecolor=ball_color)\nplt.show()\n\n\n# time to simulate\nTotal_time = 15 # seconds\nfps = 24 # frames per second\n\n# divided by 2 because we ramp down then up\nparam_vec = np.linspace(Hlim,-Hlim,Total_time*fps/2)\n\n# ramp down\nfor H in param_vec:\n    line_func.set_data(u,f(u,H)) # update line on the left\n    mini = np.min(res(H)) # calculate new minimum\n    ball_u.set_data([mini],[f(mini,H)+boost]) # update ball on the left\n    new_line = np.array([(H,mini)],dtype=deetype) # create new line\n    # append new line to hysteresis array\n    hysteresis = np.concatenate((hysteresis,new_line))\n    line_hyst.set_data(hysteresis['h'],hysteresis['u']) # update line\n    ballH.set_data([hysteresis['h'][-1]],[hysteresis['u'][-1]]) # update ball on the right\n    fig.canvas.draw()\n    if make_movie:\n        fname = \"_tmp{:05d}.png\".format(frame_index)\n        frame_names.append(fname)\n        fig.savefig(fname,dpi=200)\n        frame_index+=1\n\n# ramp up\nfor H in param_vec[::-1]: # just reverse parameter array\n    line_func.set_data(u,f(u,H))\n    maxi = np.max(res(H)) # everything is the same, but now with maximum\n    ball_u.set_data([maxi],[f(maxi,H)+boost])\n    new_line = np.array([(H,maxi)],dtype=deetype)\n    hysteresis = np.concatenate((hysteresis,new_line))\n    line_hyst.set_data(hysteresis['h'],hysteresis['u'])\n    ballH.set_data([hysteresis['h'][-1]],[hysteresis['u'][-1]])\n    fig.canvas.draw()\n    if make_movie:\n        fname = \"_tmp{:05d}.png\".format(frame_index)\n        frame_names.append(fname)\n        fig.savefig(fname,dpi=200)\n        frame_index+=1\n\nif make_movie:\n    frames = \"_tmp%5d.png\"\n    movie_command = \"ffmpeg -y -r {:} -i {:} ball.mp4\".format(fps,frames)\n    os.system(movie_command)\n\n    for fname in frame_names:\n        # pass\n        os.remove(fname)",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>A hysteresis mechanism</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/contour_plot.html",
+    "href": "jupyter/contour_plot.html",
+    "title": "12  Contour plot",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\nimport matplotlib\n# %matplotlib widget\n\n\nfig_size = (8, 6)\ntick_size = 16\nif True:\n    # this is a latex constant, don't change it.\n    pts_per_inch = 72.27\n    # write \"\\the\\textwidth\" (or \"\\showthe\\columnwidth\" for a 2 collumn text)\n    text_width_in_pts = 246.0\n    # inside a figure environment in latex, the result will be on the\n    # dvi/pdf next to the figure. See url above.\n    text_width_in_inches = text_width_in_pts / pts_per_inch\n    # make rectangles with a nice proportion\n    golden_ratio = 0.618\n    # figure.png or figure.eps will be intentionally larger, because it is prettier\n    inverse_latex_scale = 2\n    # when compiling latex code, use\n    # \\includegraphics[scale=(1/inverse_latex_scale)]{figure}\n    # we want the figure to occupy 2/3 (for example) of the text width\n    fig_proportion = (3.0 / 3.0)\n    csize = inverse_latex_scale * fig_proportion * text_width_in_inches\n    # always 1.0 on the first argument\n    fig_size = (1.0 * csize,golden_ratio * csize)\n    # find out the fontsize of your latex text, and put it here\n    text_size = inverse_latex_scale * 12\n    tick_size = inverse_latex_scale * 8\n    # learn how to configure:\n    # http://matplotlib.sourceforge.net/users/customizing.html\n    params = {'backend': 'ps',\n            'axes.labelsize': text_size,\n            'legend.fontsize': tick_size,\n            'legend.handlelength': 2.5,\n            'legend.borderaxespad': 0,\n            'xtick.labelsize': tick_size,\n            'ytick.labelsize': tick_size,\n            'font.family': 'serif',\n            'font.size': text_size,\n            # Times, Palatino, New Century Schoolbook,\n            # Bookman, Computer Modern Roman\n            'font.serif': ['Times'],\n            'ps.usedistiller': 'xpdf',\n            'text.usetex': True,\n            'figure.figsize': fig_size,\n            # include here any neede package for latex\n            'text.latex.preamble': r'\\usepackage{amsmath}',\n            }\n    plt.rcParams.update(params)\n\n\nfig, ax = plt.subplots(figsize=fig_size)\nfig.subplots_adjust(left=0.12, right=0.96, top=0.96, bottom=0.18,\n                    hspace=0.02, wspace=0.02)\n\ndef truncate_colormap(cmap, minval=0.0, maxval=1.0, n=256):\n    new_cmap = matplotlib.colors.LinearSegmentedColormap.from_list(\n        'trunc({n},{a:.2f},{b:.2f})'.format(n=cmap.name, a=minval, b=maxval),\n        cmap(np.linspace(minval, maxval, n)))\n    return new_cmap\ncmap = plt.get_cmap('YlOrBr')\nmy_cmap = truncate_colormap(cmap, 0.2, 0.9)\n\nminX = 0\nmaxX = 10\nminY = 0\nmaxY = 3\nN = 50j\ny, x = np.mgrid[minY:maxY:N, minX:maxX:N]\nz = 2 * np.exp(-(0.02 * (x + 1) ** 2 + 0.05 * (y - 3.1) **2 ))\n\ndivisions = np.arange(0.3, 2.1, 0.3)\ndivisions2 = np.append(divisions, 2.5)\ndivisions2 = np.append(-0.5, divisions2)\n# contour filled with colors\nax.contourf(x, y, z, divisions2, cmap=my_cmap, vmin=0.0,vmax=2.0)\n\n\nline_styles = ['solid', 'dashed', 'dashdot', 'dotted', (0, (10,5,2,5)), 'solid', ]\nline_widths = [10, 2.5, 2.5, 2.5, 2.5, 2.5]\ncolors = ['red', 'black', 'xkcd:dodger blue', 'black', 'black', 'black']\n\n# contour lines\ncont = ax.contour(x, y, z, divisions,\n                  colors=colors,\n                  linewidths=line_widths,\n                  linestyles=line_styles)\n# labels\nmanual_locations = [(1.0, 2.5), (2.5, 2.5),\n                    (3.8, 2.5), (5.0, 2.5),\n                    (6.2, 2.5), (8.3, 2.5)]\nax.clabel(cont, inline=1, fontsize=tick_size,\n          fmt=r'$z=%.2f$', manual=manual_locations,\n          colors=5 * ['black'] + ['white'])\n\nax.set_xlabel(r\"$x$ axis\")\nax.set_ylabel(r\"$y$ axis\")\n\nfig.savefig('contour_plot.png', dpi=300)",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Contour plot</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/best_path.html",
+    "href": "jupyter/best_path.html",
+    "title": "13  Best path",
+    "section": "",
+    "text": "import matplotlib\nimport matplotlib.pyplot as plt\nimport numpy as np\n# %matplotlib widget\n\n\n# this is a latex constant, don't change it.\npts_per_inch = 72.27\n# write \"\\the\\textwidth\" (or \"\\showthe\\columnwidth\" for a 2 collumn text)\ntext_width_in_pts = 252.0\n# inside a figure environment in latex, the result will be on the\n# dvi/pdf next to the figure. See url above.\ntext_width_in_inches = text_width_in_pts / pts_per_inch\n# make rectangles with a nice proportion\ngolden_ratio = 0.618\n# figure.png or figure.eps will be intentionally larger, because it is prettier\ninverse_latex_scale = 2\n# when compiling latex code, use\n# \\includegraphics[scale=(1/inverse_latex_scale)]{figure}\n# we want the figure to occupy 2/3 (for example) of the text width\nfig_proportion = (3.0 / 3.0)\ncsize = inverse_latex_scale * fig_proportion * text_width_in_inches\n# always 1.0 on the first argument\nfig_size = (1.0 * csize,golden_ratio * csize)\n# find out the fontsize of your latex text, and put it here\ntext_size = inverse_latex_scale * 12\ntick_size = inverse_latex_scale * 8\n# learn how to configure:\n# http://matplotlib.sourceforge.net/users/customizing.html\nparams = {'axes.labelsize': text_size,\n          'legend.fontsize': tick_size,\n          'legend.handlelength': 2.5,\n          'legend.borderaxespad': 0,\n          'xtick.labelsize': tick_size,\n          'ytick.labelsize': tick_size,\n          'font.family': 'serif',\n          'font.size': text_size,\n          'font.serif': ['Computer Modern Roman'],\n          'text.usetex': True,\n          'figure.figsize': fig_size,\n          'text.latex.preamble': r'\\usepackage{amsmath}',\n          }\nplt.rcParams.update(params)\nfig, ax = plt.subplots(figsize=fig_size)\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0.02, wspace=0.02)\n\norigin = [0, 0]\nlifeguard = [-3, -2]\ndrowning = [2, 3]\nxlim = [-4, 4]\nylim = [-4, 4]\n\n##### drowning #####\n# line\nax.plot([origin[0], drowning[0]], [origin[1], drowning[1]],\n        color=\"black\", lw=2)\n# diamond\nax.plot(drowning[0], drowning[1], \"D\", markerfacecolor=\"None\", markersize=10, markeredgecolor=\"black\",\n        markeredgewidth=3, color=\"black\")\n# explanation\nax.text(drowning[0], drowning[1] - 0.3, r\"drowning\", verticalalignment=\"top\")\nax.text(drowning[0], drowning[1] - 0.8, r\"person\", verticalalignment=\"top\")\n\n##### lifeguard #####\n# line\nax.plot([origin[0], lifeguard[0]], [origin[1], lifeguard[1]],\n        color=\"black\", lw=2)\n# circle\nax.plot(lifeguard[0], lifeguard[1], \"o\", markerfacecolor=\"None\", markeredgecolor=\"black\",\n        markersize=10, markeredgewidth=3, color=\"black\")\n# explanation\nax.text(lifeguard[0], lifeguard[1] - 0.3, r\"lifeguard\",\n        verticalalignment=\"top\")\n\n##### sand and sea background #####\nsand = matplotlib.patches.Rectangle([xlim[0], ylim[0]],\n                                    (xlim[1] - xlim[0]),\n                                    (ylim[1] - ylim[0]) / 2.0,\n                                    color=\"yellow\", alpha=0.6)\nax.add_patch(sand)\nsea = matplotlib.patches.Rectangle([xlim[0], 0],\n                                   (xlim[1] - xlim[0]),\n                                   (ylim[1] - ylim[0]) / 2.0,\n                                   color=\"blue\", alpha=0.4)\nax.add_patch(sea)\n###### sand #####\nax.text(0.95, 0.05, r\"(1) sand\",\n        transform=ax.transAxes, horizontalalignment='right')\n###### sea #####\nax.text(0.95, 0.50, r\"(2) sea\",\n    transform=ax.transAxes, horizontalalignment='right',\n    verticalalignment=\"bottom\")\n\nax.spines['left'].set_position('zero')\nax.spines['right'].set_color('none')\nax.spines['bottom'].set_position('zero')\nax.spines['top'].set_color('none')\n\nax.set(xlim=xlim,\n       ylim=ylim,\n       xticks=[],\n       yticks=[])\n\nax.annotate(\"\",\n            xy=(lifeguard[0] - 0.3, lifeguard[1]), xycoords='data',\n            xytext=(lifeguard[0] - 0.3, 0), textcoords='data',\n            size=tick_size,\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\",\n                            connectionstyle=\"arc3\"),\n            )\nax.text(lifeguard[0] - 0.2, lifeguard[1] / 2.0, r\"$h_1$\",\n        verticalalignment=\"center\", horizontalalignment=\"left\")\n# h_2\nax.annotate(\"\",\n            xy=(lifeguard[0] - 0.3, drowning[1]), xycoords='data',\n            xytext=(lifeguard[0] - 0.3, 0), textcoords='data',\n            size=tick_size,\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\",\n                            connectionstyle=\"arc3\"),\n            )\nax.text(lifeguard[0] - 0.2, drowning[1] / 2.0, r\"$h_2$\",\n        verticalalignment=\"center\", horizontalalignment=\"left\")\n# L\nax.annotate(\"\",\n            xy=(lifeguard[0], drowning[1] + 0.3), xycoords='data',\n            xytext=(drowning[0], drowning[1] + 0.3), textcoords='data',\n            size=tick_size,\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\",\n                            shrinkA=0, shrinkB=0,\n                            connectionstyle=\"arc3\"),\n            )\nax.text((lifeguard[1] - lifeguard[0]) / 2.0, drowning[1] + 0.3, r\"$L$\",\n        verticalalignment=\"bottom\", horizontalalignment=\"left\")\n\n# l1\nax.text(lifeguard[0] / 2.0, 1.10 * lifeguard[1] / 2.0, r\"$\\ell_1$\",\n        verticalalignment=\"top\", horizontalalignment=\"left\")\n# l2\nax.text(drowning[0] / 2.0, 0.95 * drowning[1] / 2.0, r\"$\\ell_2$\",\n        verticalalignment=\"top\", horizontalalignment=\"left\")\n\n# theta_1\nax.annotate(\"\",\n            xy=(0, 0.5 * lifeguard[1]), xycoords='data',\n            xytext=(0.2 * lifeguard[0], 0.2 * lifeguard[1]), textcoords='data',\n            size=tick_size,\n            arrowprops=dict(arrowstyle=\"-\", lw=2,\n                            connectionstyle=\"angle3,angleA=-60,angleB=0\"),\n            )\nax.text(0.1 * lifeguard[0], 0.5 * lifeguard[1], r\"$\\theta_1$\",\n        verticalalignment=\"top\", horizontalalignment=\"right\")\n\n# theta_2\nax.annotate(\"\",\n            xy=(0, 0.3 * drowning[1]), xycoords='data',\n            xytext=(0.2 * drowning[0], 0.2 * drowning[1]), textcoords='data',\n            size=tick_size,\n            arrowprops=dict(arrowstyle=\"-\", lw=2,\n                            connectionstyle=\"angle3,angleA=120,angleB=0\"),\n            )\nax.text(0.1 * drowning[0], 0.5 * drowning[1], r\"$\\theta_2$\",\n        verticalalignment=\"top\", horizontalalignment=\"left\")\n\nfig.savefig('best_path.png', dpi=300)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Best path</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html",
+    "href": "jupyter/website-logo.html",
+    "title": "14  Logo",
+    "section": "",
+    "text": "14.1 Equation for an offset parabola\nx0 = 0.25\nx = np.linspace(x0, 1, 1001)\ndef parabola(x):\n    return (x - x0)**2 / (1 - x0)**2\ny = parabola(x)",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#the-standard-logo",
+    "href": "jupyter/website-logo.html#the-standard-logo",
+    "title": "14  Logo",
+    "section": "14.2 The standard logo",
+    "text": "14.2 The standard logo\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 10\nsolid_capstyle = 'round' # 'butt', 'round', 'projecting'\nsolid_joinstyle = 'round' # 'miter', 'round', 'bevel'\n\nframe_path_x = np.array([0, 1, 1, 0, 0])\nframe_path_y = np.array([0, 0, 1, 1, 0])\nax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(y, x, color=\"black\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)\n\n# fig.savefig(\"logo_white_bg_withborder.png\", dpi=600, transparent=False, bbox_inches=None)\n# fig.savefig(\"logo_transparent_bg_withborder.png\", dpi=600, transparent=True, bbox_inches=None)\n# fig.savefig(\"logo_white_bg.png\", dpi=600, transparent=False, bbox_inches=\"tight\")\nfig.savefig(\"logo_transparent_bg.png\", dpi=600, transparent=True, bbox_inches=\"tight\")\n# fig.savefig(\"figure.svg\", transparent=True, bbox_inches=\"tight\")",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#logo-in-white",
+    "href": "jupyter/website-logo.html#logo-in-white",
+    "title": "14  Logo",
+    "section": "14.3 Logo in white",
+    "text": "14.3 Logo in white\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 10\nsolid_capstyle = 'round' # 'butt', 'round', 'projecting'\nsolid_joinstyle = 'round' # 'miter', 'round', 'bevel'\n\nframe_path_x = np.array([0, 1, 1, 0, 0])\nframe_path_y = np.array([0, 0, 1, 1, 0])\nax.plot(frame_path_x, frame_path_y, color=\"white\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(y, x, color=\"white\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)\n\nfig.savefig(\"logo_inverted.png\", dpi=600, transparent=True, bbox_inches=\"tight\")",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#annotated-logo",
+    "href": "jupyter/website-logo.html#annotated-logo",
+    "title": "14  Logo",
+    "section": "14.4 Annotated logo",
+    "text": "14.4 Annotated logo\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(y, x, color=\"black\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)\nax.set_xlabel(r\"saddle-node bifurcation\",\n              fontsize=20, color=\"red\", labelpad=10)\n\nx2 = np.linspace(0, 0.25, 1001)\ny2 = parabola(x2)\nax.plot(y, x, color=\"black\", lw=10)\nax.plot(y, x, color=\"red\", lw=2, clip_on=False)\nax.plot(y2, x2, color=\"red\", lw=2, clip_on=False, ls=\"--\")\n\nax.plot(0, 0.25, 'o', markersize=10, clip_on=False, markerfacecolor=\"orange\", markeredgecolor=\"red\")\nax.text(0.05, 0.25, r\"$\\left(0, \\tfrac{1}{4}\\right)$\", fontsize=20, color=\"red\", va=\"center\", ha=\"left\")\n\nax.plot(1, 1, 'o', markersize=10, clip_on=False, markerfacecolor=\"orange\", markeredgecolor=\"red\")\nax.text(1.05, 1.05, r\"$\\left(1,1\\right)$\", fontsize=20, color=\"red\", va=\"center\", ha=\"left\")\n\n# fig.savefig(\"logo_explanation.png\", dpi=600, transparent=False, bbox_inches=None) # bbox_inches=\"tight\"\n\nText(1.05, 1.05, '$\\\\left(1,1\\\\right)$')",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#chunky-logo-to-be-converted-into-favicon",
+    "href": "jupyter/website-logo.html#chunky-logo-to-be-converted-into-favicon",
+    "title": "14  Logo",
+    "section": "14.5 Chunky logo to be converted into favicon",
+    "text": "14.5 Chunky logo to be converted into favicon\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 20\n\nax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(y, x, color=\"black\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)\n\nfig.savefig(\"logo_favicon_hires.png\", dpi=600, transparent=True, bbox_inches=\"tight\")",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#duotone",
+    "href": "jupyter/website-logo.html#duotone",
+    "title": "14  Logo",
+    "section": "14.6 Duotone",
+    "text": "14.6 Duotone\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 10\nsolid_capstyle = 'round' # 'butt', 'round', 'projecting'\nsolid_joinstyle = 'round' # 'miter', 'round', 'bevel'\n\nframe_path_x = np.array([0, 1, 1, 0, 0])\nframe_path_y = np.array([0, 0, 1, 1, 0])\n# ax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n#         solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\ncolor_dark = np.array([24,43,72]) / 255\ncolor_light = np.array([153,163,177]) / 255\n# ax.plot(y, x, color=\"black\", lw=width)\nax.fill_between(y, x, 0, color=color_dark, edgecolor=\"white\", linewidth=width)\nax.fill_between(y, x, 1, color=color_light, edgecolor=\"white\", linewidth=width)\n\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#variation-on-the-theme",
+    "href": "jupyter/website-logo.html#variation-on-the-theme",
+    "title": "14  Logo",
+    "section": "14.7 Variation on the theme",
+    "text": "14.7 Variation on the theme\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 10\nsolid_capstyle = 'round' # 'butt', 'round', 'projecting'\nsolid_joinstyle = 'round' # 'miter', 'round', 'bevel'\n\nax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(1-y, x-x0, color=\"black\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/website-logo.html#logo-with-url",
+    "href": "jupyter/website-logo.html#logo-with-url",
+    "title": "14  Logo",
+    "section": "14.8 logo with URL",
+    "text": "14.8 logo with URL\n\nfig=plt.figure(figsize=(5, 5))\nfig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0,\n                    hspace=0, wspace=0)\nax = plt.Axes(fig, [0.2, 0.2, 0.6, 0.6])\nfig.add_axes(ax)\n\nfor spine in ax.spines.values():\n    spine.set_visible(False)\n\nwidth = 10\nsolid_capstyle = 'round' # 'butt', 'round', 'projecting'\nsolid_joinstyle = 'round' # 'miter', 'round', 'bevel'\n\nframe_path_x = np.array([0, 1, 1, 0, 0])\nframe_path_y = np.array([0, 0, 1, 1, 0])\nax.plot(frame_path_x, frame_path_y, color=\"black\", lw=width, clip_on=False,\n        solid_capstyle=solid_capstyle, solid_joinstyle=solid_joinstyle)\n\nax.plot(y, x, color=\"black\", lw=width)\nax.set(xlim=[0,1],\n       ylim=[0,1],\n       xticks=[],\n       yticks=[],)\n\n# Reset font-related rcParams to defaults\nmpl.rcParams.update(mpl.rcParamsDefault)\n\nfont_path = os.path.expanduser(\"~/Library/Fonts/Ubuntu-Bold.ttf\")\nubuntu_font = font_manager.FontProperties(fname=font_path)\n\nax.text(0.5, 0.1, 'yairmau.com', transform=ax.transAxes, ha='center', fontsize=32, fontproperties=ubuntu_font)\n\nfig.savefig(\"logo_transparent_bg_URL.png\", dpi=600, transparent=True, bbox_inches=\"tight\")",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logo</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/bars.html",
+    "href": "jupyter/bars.html",
+    "title": "15  Bar plot",
+    "section": "",
+    "text": "15.1 Introduction\nThis code produces the figure above. Here we showcase the use of unicode text.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Bar plot</span>"
+    ]
+  },
+  {
+    "objectID": "jupyter/bars.html#the-code",
+    "href": "jupyter/bars.html#the-code",
+    "title": "15  Bar plot",
+    "section": "15.2 The code",
+    "text": "15.2 The code\n\nfrom __future__ import unicode_literals\nimport numpy as np\nimport matplotlib\nimport matplotlib.pyplot as plt\nfrom bidi import algorithm as bidialg      # needed for arabic, hebrew\nimport arabic_reshaper                     # needed for arabic\n\n\n---------------------------------------------------------------------------\nModuleNotFoundError                       Traceback (most recent call last)\n&lt;ipython-input-2-aaa74850711b&gt; in &lt;module&gt;\n      4 import matplotlib.pyplot as plt\n      5 from bidi import algorithm as bidialg      # needed for arabic, hebrew\n----&gt; 6 import arabic_reshaper                     # needed for arabic\n\nModuleNotFoundError: No module named 'arabic_reshaper'\n\n\n\n\n# http://wiki.scipy.org/Cookbook/Matplotlib/LaTeX_Examples\npts_per_inch = 72.27       # this is a latex constant, don't change it.\ntext_width_in_pts = 300.0  # write \"\\the\\textwidth\" (or \"\\showthe\\columnwidth\" for a 2 collumn text)\n                           # inside a figure environment in latex, the result will be on the dvi/pdf next to the figure. See url above.\ntext_width_in_inches=text_width_in_pts/pts_per_inch\ngolden_ratio = 0.618     # make rectangles with a nice proportion\ninverse_latex_scale = 2  # figure.png or figure.eps will be intentionally larger, because it is prettier\n                         # when compiling latex code, use \\includegraphics[scale=(1/inverse_latex_scale)]{figure}\nfig_proportion = (3.0 / 3.0) # we want the figure to occupy 2/3 (for example) of the text width\ncsize = inverse_latex_scale * fig_proportion * text_width_in_inches\nfig_size = (1 * csize, 1.3 * csize)  # always 1.0 on the first argument\ntext_size = inverse_latex_scale * 10  # find out the fontsize of your latex text, and put it here\nlabel_size = inverse_latex_scale * 10\ntick_size = inverse_latex_scale * 8\n# learn how to configure:\n# http://matplotlib.sourceforge.net/users/customizing.html\nparams = {'backend': 'ps',\n          'axes.labelsize': 16,\n          'legend.fontsize': 14,\n          'legend.handlelength': 2.5,\n          'legend.borderaxespad': 0,\n          'axes.labelsize': label_size,\n          'xtick.labelsize': tick_size,\n          'ytick.labelsize': tick_size,\n          # 'font.family': 'serif',\n          'font.size': text_size,\n          # 'font.serif': ['Computer Modern Roman'],\n          'ps.usedistiller': 'xpdf',\n          # 'text.usetex': True,\n          'figure.figsize': fig_size,\n          #'text.latex.unicode': True,\n          }\nplt.rcParams.update(params)\n\nplt.ioff()\nfig = plt.figure(1, figsize=fig_size)  # figsize accepts only inches.\nfig.clf()\n\ndpi = 100\npixel_size = (700,700)\nfig_size = (pixel_size[0]/dpi,pixel_size[1]/dpi)\nax1=fig.add_subplot(211)\nax2=fig.add_subplot(212)\nfig.subplots_adjust(left=0.30, right=0.97, top=0.95, bottom=0.06,\n                    hspace=0.2, wspace=0.1)\n\n\nwords = [u'Fußball Ångström\\nsøster Россия',\n         u'français maître\\nvoilà égoïste',\n         u'España',\n         u'İstanbul ağzı',\n         u'Anything Unicode'\n         ]\nvalues1 = [2575, 5851, 3191, 2303, 3029]\nvalues2 = [4813, 5219, 5505, 6229, 6961]\nvalues1 = np.array(values1)\nvalues2 = np.array(values2)\nwidth = 0.35       # the width of the bars\nr = np.arange(len(values1))\n\nax1 , horizontal bars\n\nv1 = ax1.barh(r, values1, width, color='pink')\nv2 = ax1.barh(r + width, values2, width, color='brown')\nax1.axis([0, 8600, r.min() - 0.3, r.max() + 1])\nax1.set_yticks(r)\nax1.set_yticks(r + 1 * width)\nax1.set_yticklabels(words)\nxt = np.arange(0, 8100, 1000)\nax1.set_xticks(xt)\nax1.set_xticklabels(xt)\nax1.set_xlabel(u'the values', fontsize=16)\nax1.set_title(u'Title here', fontsize=18)\nax1.xaxis.grid(True)\n\nax1.tick_params(\n    axis='y',          # changes apply to the y-axis\n    which='both',      # both major and minor ticks are affected\n    left='off',        # ticks along the left edge are off\n    right='off',       # ticks along the right edge are off\n    labelleft='on')    # labels along the bottom edge are on\n\nax1.legend((v1, v2),\n          (u'2016', u'2015'),\n          loc=(0.74,0.05))\n\ndef autolabel_hor(rects,ax, offset_x, offset_y):\n    # attach some text labels at the tip of the bars\n    for i,rect in enumerate(rects):\n        width = rect.get_width()\n        height = rect.get_height()\n        ax.text(width + offset_x, rect.get_y() + offset_y * height,\n                '%d' % int(width),\n                ha='left', va='bottom', fontsize=14)\nautolabel_hor(v1, ax1, 100.0, -0.20)\nautolabel_hor(v2, ax1, 100.0, -0.10)\n\nax2, vertical bars\n\nfrom bidi import algorithm as bidialg\n\nw1 = ax2.bar(r, values1, width, color='pink')\nw2 = ax2.bar(r + width, values2, width, color='brown')\nax2.axis([r.min() - 0.3, r.max() + 1, 0, 8600])\nax2.set_xticks(r)\nax2.set_xticks(r + 1 * width)\nshalom = bidialg.get_display(u'שלום')\nsalam = bidialg.get_display(arabic_reshaper.reshape(u'سلام'))\nax2.set_xticklabels([shalom, salam, 'ccc', 'ddd', 'eee'])\nxt = np.arange(0, 8200, 1000)\nax2.set_yticks(xt)\nax2.set_yticklabels(xt)\nax2.yaxis.grid(True)\n\nax2.tick_params(\n    axis='x',          # changes apply to the x-axis\n    which='both',      # both major and minor ticks are affected\n    top='off',         # ticks along the top edge are off\n    bottom='off',      # ticks along the bottom edge are off\n    labelbottom='on')  # labels along the bottom edge are on\n\nax2.legend((w1, w2),\n          (u'2016', u'2015'),\n          loc=\"upper center\")\n\ndef autolabel_ver(rects,ax, offset_x, offset_y):\n    # attach some text labels at the tip of the bars\n    for i,rect in enumerate(rects):\n        width = rect.get_width()\n        height = rect.get_height()\n        ax.text(rect.get_x() + offset_x * width, height + offset_y,\n                '%d' % int(height),\n                ha='left', va='bottom', fontsize=14)\nautolabel_ver(w1, ax2, -0.3, 100.0)\nautolabel_ver(w2, ax2, 0., 100.0)\n\n\n%matplotlib inline\nfig.savefig(\"./python_figures/bars.png\")\nplt.show()\nfig",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Bar plot</span>"
+    ]
+  }
+]

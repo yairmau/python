@@ -1,0 +1,63 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "python"
+  author: "Yair Mau"
+  repo-url: https://github.com/yairmau/python/
+  favicon: archive/logo.png
+
+  chapters:
+    - index.qmd
+    - jupyter/fhn.ipynb
+    - jupyter/game-of-life.ipynb
+    - jupyter/least-squares.ipynb
+    - jupyter/histograms.ipynb
+    - jupyter/subplot-grid.ipynb
+    - jupyter/streamplot.ipynb
+    - jupyter/palette.ipynb
+    - jupyter/tdgle.ipynb
+    - jupyter/doublependulum.ipynb
+    - jupyter/hilbertcurve.ipynb
+    - jupyter/hysteresis.ipynb
+    - jupyter/contour_plot.ipynb
+    - jupyter/best_path.ipynb
+    - jupyter/website-logo.ipynb
+    - jupyter/bars.ipynb
+
+
+  sidebar:
+    collapse-level: 2
+    tools:
+      - icon: house-fill
+        href: https://yairmau.com/
+    logo: archive/logo.png
+  search: true
+
+# bibliography: references.bib
+
+format:
+  html:
+    theme:
+    - flatly
+    - custom.scss
+    # - font_defs.css
+    # css: styles.css
+    fontsize: 1.2em
+    highlight-style: kate-custom.theme #kate #solarized # kate # tango # breeze # ayu # monokai # breezedark # espresso
+    include-in-header:
+      - includes.html
+    code-line-numbers: true
+    code-tools:
+      source: repo  # https://quarto.org/docs/output-formats/html-code.html#code-tools
+    callout-icon: false
+    fig-align: center
+    # the default MathJax rendering option yields ugly results, use katex
+    html-math-method: katex
+
+  pdf:
+    documentclass: scrreprt
+    include-in-header:
+      - latex_preamble.tex
+
