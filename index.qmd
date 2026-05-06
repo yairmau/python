@@ -33,6 +33,16 @@ I recommend <a href="https://www.sublimetext.com/" target="_blank">Sublime Text<
 
 --------------------------------
 
+## Graph parameters
+
+[Jupyter notebook](/jupyter/graph_params.ipynb){.btn .btn-success .btn role="button"}
+
+Main features:
+The `plot_style.py` file defines parameters for nice-looking graphs.
+![](/jupyter/stam_graph.png)
+
+--------------------------------
+
 ## Fitzhugh-Nagumo --- Labyrinthine Patterns
 
 [Jupyter notebook](jupyter/fhn.ipynb){.btn .btn-success .btn role="button"}

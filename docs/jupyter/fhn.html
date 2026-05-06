@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Fitzhugh-Nagumo Equation – python</title>
+<title>2&nbsp; Fitzhugh-Nagumo Equation – python</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -66,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../jupyter/game-of-life.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../jupyter/graph_params.html" rel="prev">
 <link href="../archive/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -74,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a588049bcf6ba0aff1d03aeee07a0105.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3574cce5e3fde4ed97df547c7360872.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fcf83911b402597c2c5fefaa754962c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5cf42a88583f490b230c66bbb099c6a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,7 +138,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -162,7 +165,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../jupyter/fhn.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../jupyter/fhn.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +180,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../archive/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">python</a> 
@@ -202,92 +206,98 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../jupyter/graph_params.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">graph parameters</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../jupyter/fhn.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/game-of-life.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conway’s Game of Life</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conway’s Game of Life</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/least-squares.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Least Squares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Least Squares</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/histograms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fun with histograms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fun with histograms</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/subplot-grid.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fancy subplot grid</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Fancy subplot grid</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/streamplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Streamplot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Streamplot</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/palette.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Palette</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Palette</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/tdgle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The time-dependent Ginzburg-Landau equation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The time-dependent Ginzburg-Landau equation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/doublependulum.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Double Pendulum</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Double Pendulum</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/hilbertcurve.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Hilbert Curve</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hilbert Curve</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/hysteresis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">A hysteresis mechanism</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">A hysteresis mechanism</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/contour_plot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Contour plot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Contour plot</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/best_path.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Best path</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Best path</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/website-logo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Logo</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../jupyter/bars.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Bar plot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bar plot</span></span></a>
   </div>
 </li>
     </ul>
@@ -300,19 +310,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1.1</span> Introduction</a></li>
-  <li><a href="#the-code" id="toc-the-code" class="nav-link" data-scroll-target="#the-code"><span class="header-section-number">1.2</span> The code</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
+  <li><a href="#the-code" id="toc-the-code" class="nav-link" data-scroll-target="#the-code"><span class="header-section-number">2.2</span> The code</a>
   <ul class="collapse">
-  <li><a href="#import-packages" id="toc-import-packages" class="nav-link" data-scroll-target="#import-packages"><span class="header-section-number">1.2.1</span> import packages</a></li>
-  <li><a href="#define-class-with-all-the-methods" id="toc-define-class-with-all-the-methods" class="nav-link" data-scroll-target="#define-class-with-all-the-methods"><span class="header-section-number">1.2.2</span> define class with all the methods</a></li>
-  <li><a href="#run-simulation-save-snapshots" id="toc-run-simulation-save-snapshots" class="nav-link" data-scroll-target="#run-simulation-save-snapshots"><span class="header-section-number">1.2.3</span> run simulation, save snapshots</a></li>
-  <li><a href="#make-movie-delete-snapshots" id="toc-make-movie-delete-snapshots" class="nav-link" data-scroll-target="#make-movie-delete-snapshots"><span class="header-section-number">1.2.4</span> make movie, delete snapshots</a></li>
+  <li><a href="#import-packages" id="toc-import-packages" class="nav-link" data-scroll-target="#import-packages"><span class="header-section-number">2.2.1</span> import packages</a></li>
+  <li><a href="#define-class-with-all-the-methods" id="toc-define-class-with-all-the-methods" class="nav-link" data-scroll-target="#define-class-with-all-the-methods"><span class="header-section-number">2.2.2</span> define class with all the methods</a></li>
+  <li><a href="#run-simulation-save-snapshots" id="toc-run-simulation-save-snapshots" class="nav-link" data-scroll-target="#run-simulation-save-snapshots"><span class="header-section-number">2.2.3</span> run simulation, save snapshots</a></li>
+  <li><a href="#make-movie-delete-snapshots" id="toc-make-movie-delete-snapshots" class="nav-link" data-scroll-target="#make-movie-delete-snapshots"><span class="header-section-number">2.2.4</span> make movie, delete snapshots</a></li>
   </ul></li>
-  <li><a href="#the-semi-spectral-method" id="toc-the-semi-spectral-method" class="nav-link" data-scroll-target="#the-semi-spectral-method"><span class="header-section-number">1.3</span> The semi-spectral method</a>
+  <li><a href="#the-semi-spectral-method" id="toc-the-semi-spectral-method" class="nav-link" data-scroll-target="#the-semi-spectral-method"><span class="header-section-number">2.3</span> The semi-spectral method</a>
   <ul class="collapse">
-  <li><a href="#the-method" id="toc-the-method" class="nav-link" data-scroll-target="#the-method"><span class="header-section-number">1.3.1</span> the method</a></li>
-  <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step"><span class="header-section-number">1.3.2</span> step by step</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">1.3.3</span> example</a></li>
+  <li><a href="#the-method" id="toc-the-method" class="nav-link" data-scroll-target="#the-method"><span class="header-section-number">2.3.1</span> the method</a></li>
+  <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step"><span class="header-section-number">2.3.2</span> step by step</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">2.3.3</span> example</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -322,7 +332,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/python/blob/main/jupyter/fhn.ipynb"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/python/blob/main/jupyter/fhn.ipynb"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -341,8 +351,8 @@ window.Quarto = {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5au-G5FuI_A?si=-PissmPXaY0pduuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
-<section id="introduction" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
 <p>We simulate the Fitzhugh-Nagumo equations <span class="math display">
 u_t = u - u^3 - v + \nabla^2 u\\
 v_t = \epsilon(u - a_1 v - a_0) + \delta \nabla^2 v,
@@ -352,22 +362,22 @@ v_t = \epsilon(u - a_1 v - a_0) + \delta \nabla^2 v,
 <p>Parameters: <span class="math inline">\epsilon=0.3</span>, <span class="math inline">\delta=2.0</span>, <span class="math inline">a_1=1.4</span>, and <span class="math inline">a_0=0</span>.</p>
 <p>Other simulations and Python examples can be found on my website: <a href="yairmau.com">yairmau.com</a>.</p>
 </section>
-<section id="the-code" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-code"><span class="header-section-number">1.2</span> The code</h2>
-<section id="import-packages" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="import-packages"><span class="header-section-number">1.2.1</span> import packages</h3>
+<section id="the-code" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-code"><span class="header-section-number">2.2</span> The code</h2>
+<section id="import-packages" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="import-packages"><span class="header-section-number">2.2.1</span> import packages</h3>
 <div id="cell-4" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> os</span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> matplotlib <span class="im">import</span> rcParams</span>
-<span id="cb1-5"><a href="#cb1-5"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">'monospace'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5"></a>rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">'monospace'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="define-class-with-all-the-methods" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="define-class-with-all-the-methods"><span class="header-section-number">1.2.2</span> define class with all the methods</h3>
+<section id="define-class-with-all-the-methods" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="define-class-with-all-the-methods"><span class="header-section-number">2.2.2</span> define class with all the methods</h3>
 <div id="cell-6" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> FitzHughNagumo(<span class="bu">object</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> FitzHughNagumo(<span class="bu">object</span>):</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, epsilon<span class="op">=</span><span class="fl">0.3</span>, delta<span class="op">=</span><span class="fl">2.0</span>, a1<span class="op">=</span><span class="fl">1.4</span>, a0<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb2-3"><a href="#cb2-3"></a>                 n<span class="op">=</span>(<span class="dv">256</span>, <span class="dv">256</span>), l<span class="op">=</span>(<span class="dv">400</span>, <span class="dv">400</span>),</span>
 <span id="cb2-4"><a href="#cb2-4"></a>                 start<span class="op">=</span><span class="fl">0.0</span>, step<span class="op">=</span><span class="fl">1.0</span>, finish<span class="op">=</span><span class="fl">2000.0</span>, dt<span class="op">=</span><span class="fl">0.1</span>,</span>
@@ -477,13 +487,13 @@ v_t = \epsilon(u - a_1 v - a_0) + \delta \nabla^2 v,
 <span id="cb2-108"><a href="#cb2-108"></a>        a[<span class="dv">0</span>] <span class="op">=</span> uplus</span>
 <span id="cb2-109"><a href="#cb2-109"></a>        a[<span class="dv">1</span>] <span class="op">=</span> vplus</span>
 <span id="cb2-110"><a href="#cb2-110"></a>        a[<span class="dv">0</span>][Z <span class="op">&gt;</span> <span class="fl">0.8</span>] <span class="op">=</span> uminus</span>
-<span id="cb2-111"><a href="#cb2-111"></a>        <span class="cf">return</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-111"><a href="#cb2-111"></a>        <span class="cf">return</span> a</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="run-simulation-save-snapshots" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="run-simulation-save-snapshots"><span class="header-section-number">1.2.3</span> run simulation, save snapshots</h3>
+<section id="run-simulation-save-snapshots" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="run-simulation-save-snapshots"><span class="header-section-number">2.2.3</span> run simulation, save snapshots</h3>
 <div id="cell-8" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>plt.ion()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>plt.ion()</span>
 <span id="cb3-2"><a href="#cb3-2"></a>plt.clf()</span>
 <span id="cb3-3"><a href="#cb3-3"></a>foo <span class="op">=</span> FitzHughNagumo()</span>
 <span id="cb3-4"><a href="#cb3-4"></a>foo.fig <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
@@ -507,27 +517,27 @@ v_t = \epsilon(u - a_1 v - a_0) + \delta \nabla^2 v,
 <span id="cb3-22"><a href="#cb3-22"></a>            a <span class="op">=</span> a <span class="op">+</span> foo.dt <span class="op">*</span> foo.rhs_euler(a)</span>
 <span id="cb3-23"><a href="#cb3-23"></a>        t <span class="op">+=</span> foo.dt</span>
 <span id="cb3-24"><a href="#cb3-24"></a>    foo.draw_update(a, t)</span>
-<span id="cb3-25"><a href="#cb3-25"></a>    foo.save_frame(i <span class="op">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-25"><a href="#cb3-25"></a>    foo.save_frame(i <span class="op">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="make-movie-delete-snapshots" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="make-movie-delete-snapshots"><span class="header-section-number">1.2.4</span> make movie, delete snapshots</h3>
+<section id="make-movie-delete-snapshots" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="make-movie-delete-snapshots"><span class="header-section-number">2.2.4</span> make movie, delete snapshots</h3>
 <div id="cell-10" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>fps <span class="op">=</span> <span class="dv">24</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>fps <span class="op">=</span> <span class="dv">24</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>frames <span class="op">=</span> <span class="st">"_tmp</span><span class="sc">%5d</span><span class="st">.png"</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>movie_command <span class="op">=</span> <span class="st">"ffmpeg -y -r </span><span class="sc">{:}</span><span class="st"> -i </span><span class="sc">{:}</span><span class="st"> fhn.mp4"</span>.<span class="bu">format</span>(fps, frames)</span>
 <span id="cb4-4"><a href="#cb4-4"></a>os.system(movie_command)</span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="cf">for</span> fname <span class="kw">in</span> foo.frame_names:</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    os.remove(fname)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-6"><a href="#cb4-6"></a>    os.remove(fname)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="the-semi-spectral-method" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="the-semi-spectral-method"><span class="header-section-number">1.3</span> The semi-spectral method</h2>
+<section id="the-semi-spectral-method" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="the-semi-spectral-method"><span class="header-section-number">2.3</span> The semi-spectral method</h2>
 <p>The explanation below was taken from my thesis: <a href="http://aranne5.bgu.ac.il/others/MauYair3.pdf">“Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration”</a>.</p>
 <p>The semi-spectral method is extremely useful when working with reaction-diffusion systems, and with parabolic PDEs in general. This was the method used to run all the simulations of the Swift-Hohenberg model in this thesis, and it proved to be reliable and fast. The explanation below is a summary of <a href="https://pdfs.semanticscholar.org/6bb0/b794a07b0c9b19e7c7ab03a9a523eac2141d.pdf">“Spectral algorithms for reaction-diffusion equations”</a>, by Richard V. Craster and Roberto Sassi, with a step by step recipe, so the reader can easily apply the method to any suitable problem.</p>
-<section id="the-method" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="the-method"><span class="header-section-number">1.3.1</span> the method</h3>
+<section id="the-method" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="the-method"><span class="header-section-number">2.3.1</span> the method</h3>
 <p>The semi-spectral transform method is very useful when we have to integrate a system that evolves really slowly. Let us say we have a (parabolic) system of the form: <span class="math display">
    u_t=\epsilon u + f(u)+D\nabla^2u,
    \tag{1}
@@ -569,15 +579,15 @@ v_t = \epsilon(u - a_1 v - a_0) + \delta \nabla^2 v,
    \tag{9}
 </span></p>
 </section>
-<section id="step-by-step" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="step-by-step"><span class="header-section-number">1.3.2</span> step by step</h3>
+<section id="step-by-step" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="step-by-step"><span class="header-section-number">2.3.2</span> step by step</h3>
 <p>To implement this technique, one just has to follow the steps below:</p>
 <ul>
 <li>Calculate the Fourier transform of <span class="math inline">u</span>: <span class="math inline">\hat{u}=\mathcal{F}[u]</span>.</li>
 <li>Have <span class="math inline">f(u)</span> calculated and then take its Fourier transform: <span class="math inline">\hat{f}(u)=\mathcal{F}[f(u)]</span>.</li>
 <li>For a given lattice with <span class="math inline">N</span> points, and <span class="math inline">\delta x</span> being the distance between them, make the frequency bin vector (matrix) <span class="math inline">k</span> for your one (two) dimensional system. In python the command would be</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python3 number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>numpy.fft.fftfreq(N, dx).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python3 number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>numpy.fft.fftfreq(N, dx).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The frequency bin vector <span class="math inline">k</span> looks like:</p>
 <p><span class="math display">\begin{align}
    k&amp;=2\pi\cdot\left[ 0,1,\cdots,\tfrac{N}{2}-1,-\tfrac{N}{2},\cdots,-1 \right]/(N\, \delta x), \quad \text{if N is even;} \tag{10a}\\
@@ -635,8 +645,8 @@ k_{y,2d} = \begin{pmatrix}
 <li>We finally go back to the real space by applying the inverse Fourier transform: <span class="math inline">u^{t_{n+1}}=\mathcal{F}^{-1}[\hat{u}^{t_{n+1}}]</span>.</li>
 </ul>
 </section>
-<section id="example" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="example"><span class="header-section-number">1.3.3</span> example</h3>
+<section id="example" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="example"><span class="header-section-number">2.3.3</span> example</h3>
 <p>For the parametrically forced Swift-Hohenberg equation <span class="math display">
 \frac{\partial u}{\partial t} = [\epsilon + \gamma \cos(k_f x)]u - u^3 -(\nabla^2+k_0^2)^2 u,
 \tag{15}
@@ -701,13 +711,14 @@ f(u)= -u^3 + \gamma u \cos(k_f x),\qquad a = \epsilon - \left(k_0- k_x^2 - k_y^2
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1102,13 +1113,13 @@ f(u)= -u^3 + \gamma u \cos(k_f x),\qquad a = \epsilon - \left(k_0- k_x^2 - k_y^2
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Home">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      <a href="../jupyter/graph_params.html" class="pagination-link" aria-label="graph parameters">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">graph parameters</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../jupyter/game-of-life.html" class="pagination-link" aria-label="Conway's Game of Life">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conway’s Game of Life</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conway’s Game of Life</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

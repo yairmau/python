@@ -10,6 +10,7 @@ book:
 
   chapters:
     - index.qmd
+    - jupyter/graph_params.ipynb
     - jupyter/fhn.ipynb
     - jupyter/game-of-life.ipynb
     - jupyter/least-squares.ipynb
