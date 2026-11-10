@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>15&nbsp; Logo – python</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -77,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3574cce5e3fde4ed97df547c7360872.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a588049bcf6ba0aff1d03aeee07a0105.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5cf42a88583f490b230c66bbb099c6a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-413a42dab4f405069d638ccd5bacac3d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -134,16 +131,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
+<p><a href="https://yairmau.com/" class="back-home">← Back to yairmau.com</a></p>
+</div></div>
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../archive/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../archive/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">python</a> 
         <div class="sidebar-tools-main">
-    <a href="https://yairmau.com/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <a href="https://github.com/yairmau/python/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
     </div>
@@ -301,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div id="cell-1" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> os</span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager</span>
@@ -311,22 +308,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8"></a>mpl.rcParams[<span class="st">'text.latex.preamble'</span>] <span class="op">=</span> <span class="vs">r'</span><span class="er">\</span><span class="vs">usepackage{amsmath}'</span></span>
 <span id="cb1-9"><a href="#cb1-9"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># %matplotlib widget</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># %matplotlib widget</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="equation-for-an-offset-parabola" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="equation-for-an-offset-parabola"><span class="header-section-number">15.1</span> Equation for an offset parabola</h2>
 <div id="cell-3" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>x0 <span class="op">=</span> <span class="fl">0.25</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>x0 <span class="op">=</span> <span class="fl">0.25</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>x <span class="op">=</span> np.linspace(x0, <span class="dv">1</span>, <span class="dv">1001</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="kw">def</span> parabola(x):</span>
 <span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">return</span> (x <span class="op">-</span> x0)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> x0)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>y <span class="op">=</span> parabola(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5"></a>y <span class="op">=</span> parabola(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-standard-logo" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="the-standard-logo"><span class="header-section-number">15.2</span> The standard logo</h2>
 <div id="cell-5" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb3-2"><a href="#cb3-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb3-3"><a href="#cb3-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb3-4"><a href="#cb3-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -354,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-26"><a href="#cb3-26"></a><span class="co"># fig.savefig("logo_transparent_bg_withborder.png", dpi=600, transparent=True, bbox_inches=None)</span></span>
 <span id="cb3-27"><a href="#cb3-27"></a><span class="co"># fig.savefig("logo_white_bg.png", dpi=600, transparent=False, bbox_inches="tight")</span></span>
 <span id="cb3-28"><a href="#cb3-28"></a>fig.savefig(<span class="st">"logo_transparent_bg.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb3-29"><a href="#cb3-29"></a><span class="co"># fig.savefig("figure.svg", transparent=True, bbox_inches="tight")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="co"># fig.savefig("figure.svg", transparent=True, bbox_inches="tight")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -367,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="logo-in-white" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="logo-in-white"><span class="header-section-number">15.3</span> Logo in white</h2>
 <div id="cell-7" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb4-2"><a href="#cb4-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb4-3"><a href="#cb4-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb4-4"><a href="#cb4-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -391,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-22"><a href="#cb4-22"></a>       xticks<span class="op">=</span>[],</span>
 <span id="cb4-23"><a href="#cb4-23"></a>       yticks<span class="op">=</span>[],)</span>
 <span id="cb4-24"><a href="#cb4-24"></a></span>
-<span id="cb4-25"><a href="#cb4-25"></a>fig.savefig(<span class="st">"logo_inverted.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-25"><a href="#cb4-25"></a>fig.savefig(<span class="st">"logo_inverted.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -404,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="annotated-logo" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="annotated-logo"><span class="header-section-number">15.4</span> Annotated logo</h2>
 <div id="cell-9" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb5-2"><a href="#cb5-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb5-3"><a href="#cb5-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb5-4"><a href="#cb5-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -436,7 +433,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-30"><a href="#cb5-30"></a>ax.plot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="st">'o'</span>, markersize<span class="op">=</span><span class="dv">10</span>, clip_on<span class="op">=</span><span class="va">False</span>, markerfacecolor<span class="op">=</span><span class="st">"orange"</span>, markeredgecolor<span class="op">=</span><span class="st">"red"</span>)</span>
 <span id="cb5-31"><a href="#cb5-31"></a>ax.text(<span class="fl">1.05</span>, <span class="fl">1.05</span>, <span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">left</span><span class="kw">(</span><span class="vs">1,1</span><span class="ch">\r</span><span class="vs">ight</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, fontsize<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">"red"</span>, va<span class="op">=</span><span class="st">"center"</span>, ha<span class="op">=</span><span class="st">"left"</span>)</span>
 <span id="cb5-32"><a href="#cb5-32"></a></span>
-<span id="cb5-33"><a href="#cb5-33"></a><span class="co"># fig.savefig("logo_explanation.png", dpi=600, transparent=False, bbox_inches=None) # bbox_inches="tight"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="co"># fig.savefig("logo_explanation.png", dpi=600, transparent=False, bbox_inches=None) # bbox_inches="tight"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>Text(1.05, 1.05, '$\\left(1,1\\right)$')</code></pre>
 </div>
@@ -452,7 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="chunky-logo-to-be-converted-into-favicon" class="level2" data-number="15.5">
 <h2 data-number="15.5" class="anchored" data-anchor-id="chunky-logo-to-be-converted-into-favicon"><span class="header-section-number">15.5</span> Chunky logo to be converted into favicon</h2>
 <div id="cell-11" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb7-2"><a href="#cb7-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb7-3"><a href="#cb7-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb7-4"><a href="#cb7-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -472,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-18"><a href="#cb7-18"></a>       xticks<span class="op">=</span>[],</span>
 <span id="cb7-19"><a href="#cb7-19"></a>       yticks<span class="op">=</span>[],)</span>
 <span id="cb7-20"><a href="#cb7-20"></a></span>
-<span id="cb7-21"><a href="#cb7-21"></a>fig.savefig(<span class="st">"logo_favicon_hires.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-21"><a href="#cb7-21"></a>fig.savefig(<span class="st">"logo_favicon_hires.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -485,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="duotone" class="level2" data-number="15.6">
 <h2 data-number="15.6" class="anchored" data-anchor-id="duotone"><span class="header-section-number">15.6</span> Duotone</h2>
 <div id="cell-13" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb8-2"><a href="#cb8-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb8-3"><a href="#cb8-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb8-4"><a href="#cb8-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -512,7 +509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-25"><a href="#cb8-25"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">1</span>],</span>
 <span id="cb8-26"><a href="#cb8-26"></a>       ylim<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">1</span>],</span>
 <span id="cb8-27"><a href="#cb8-27"></a>       xticks<span class="op">=</span>[],</span>
-<span id="cb8-28"><a href="#cb8-28"></a>       yticks<span class="op">=</span>[],)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-28"><a href="#cb8-28"></a>       yticks<span class="op">=</span>[],)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -525,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="variation-on-the-theme" class="level2" data-number="15.7">
 <h2 data-number="15.7" class="anchored" data-anchor-id="variation-on-the-theme"><span class="header-section-number">15.7</span> Variation on the theme</h2>
 <div id="cell-15" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb9-2"><a href="#cb9-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb9-3"><a href="#cb9-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb9-4"><a href="#cb9-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -545,7 +542,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-18"><a href="#cb9-18"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">1</span>],</span>
 <span id="cb9-19"><a href="#cb9-19"></a>       ylim<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">1</span>],</span>
 <span id="cb9-20"><a href="#cb9-20"></a>       xticks<span class="op">=</span>[],</span>
-<span id="cb9-21"><a href="#cb9-21"></a>       yticks<span class="op">=</span>[],)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-21"><a href="#cb9-21"></a>       yticks<span class="op">=</span>[],)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -558,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="logo-with-url" class="level2" data-number="15.8">
 <h2 data-number="15.8" class="anchored" data-anchor-id="logo-with-url"><span class="header-section-number">15.8</span> logo with URL</h2>
 <div id="cell-17" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb10-2"><a href="#cb10-2"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, top<span class="op">=</span><span class="fl">1.0</span>, bottom<span class="op">=</span><span class="fl">0.0</span>,</span>
 <span id="cb10-3"><a href="#cb10-3"></a>                    hspace<span class="op">=</span><span class="dv">0</span>, wspace<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb10-4"><a href="#cb10-4"></a>ax <span class="op">=</span> plt.Axes(fig, [<span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.6</span>])</span>
@@ -590,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-30"><a href="#cb10-30"></a></span>
 <span id="cb10-31"><a href="#cb10-31"></a>ax.text(<span class="fl">0.5</span>, <span class="fl">0.1</span>, <span class="st">'yairmau.com'</span>, transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">32</span>, fontproperties<span class="op">=</span>ubuntu_font)</span>
 <span id="cb10-32"><a href="#cb10-32"></a></span>
-<span id="cb10-33"><a href="#cb10-33"></a>fig.savefig(<span class="st">"logo_transparent_bg_URL.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-33"><a href="#cb10-33"></a>fig.savefig(<span class="st">"logo_transparent_bg_URL.png"</span>, dpi<span class="op">=</span><span class="dv">600</span>, transparent<span class="op">=</span><span class="va">True</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -655,14 +652,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

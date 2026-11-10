@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>12&nbsp; A hysteresis mechanism – python</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -77,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3574cce5e3fde4ed97df547c7360872.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a588049bcf6ba0aff1d03aeee07a0105.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5cf42a88583f490b230c66bbb099c6a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-413a42dab4f405069d638ccd5bacac3d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -138,7 +135,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -177,16 +174,16 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
+<p><a href="https://yairmau.com/" class="back-home">← Back to yairmau.com</a></p>
+</div></div>
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../archive/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../archive/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">python</a> 
         <div class="sidebar-tools-main">
-    <a href="https://yairmau.com/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <a href="https://github.com/yairmau/python/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
     </div>
@@ -350,13 +347,13 @@ window.Quarto = {
 <section id="the-code" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="the-code"><span class="header-section-number">12.2</span> The code</h2>
 <div id="cell-3" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># comment these lines if you want interactive mode,</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># comment these lines if you want interactive mode,</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># i.e., if you want to see the animation in real time.</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib</span>
-<span id="cb1-4"><a href="#cb1-4"></a>matplotlib.use(<span class="st">'Agg'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4"></a>matplotlib.use(<span class="st">'Agg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-4" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> os</span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="im">import</span> sympy</span>
@@ -398,10 +395,10 @@ window.Quarto = {
 <span id="cb2-40"><a href="#cb2-40"></a>frame_names <span class="op">=</span> []</span>
 <span id="cb2-41"><a href="#cb2-41"></a>frame_index <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-42"><a href="#cb2-42"></a>make_movie<span class="op">=</span><span class="va">True</span></span>
-<span id="cb2-43"><a href="#cb2-43"></a>plt.ion()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-43"><a href="#cb2-43"></a>plt.ion()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-5" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># energy function and its derivative</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># energy function and its derivative</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>f <span class="op">=</span> <span class="kw">lambda</span> u,h: u<span class="op">**</span><span class="dv">4</span><span class="op">-</span><span class="dv">2</span><span class="op">*</span>u<span class="op">**</span><span class="dv">2</span><span class="op">+</span>h<span class="op">*</span>u</span>
 <span id="cb3-3"><a href="#cb3-3"></a>fprime <span class="op">=</span> <span class="kw">lambda</span> u,h: sympy.diff(f(u,h),u)</span>
 <span id="cb3-4"><a href="#cb3-4"></a></span>
@@ -450,10 +447,10 @@ window.Quarto = {
 <span id="cb3-47"><a href="#cb3-47"></a>line_hyst, <span class="op">=</span> ax2.plot(hysteresis[<span class="st">'h'</span>],hysteresis[<span class="st">'u'</span>], lw<span class="op">=</span><span class="dv">2</span>,color<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb3-48"><a href="#cb3-48"></a>ballH, <span class="op">=</span> ax2.plot([hysteresis[<span class="st">'h'</span>][<span class="op">-</span><span class="dv">1</span>]],[hysteresis[<span class="st">'u'</span>][<span class="op">-</span><span class="dv">1</span>]],<span class="st">'o'</span>,</span>
 <span id="cb3-49"><a href="#cb3-49"></a>                  markersize<span class="op">=</span><span class="dv">12</span>, markerfacecolor<span class="op">=</span>ball_color)</span>
-<span id="cb3-50"><a href="#cb3-50"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-50"><a href="#cb3-50"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-6" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># time to simulate</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># time to simulate</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>Total_time <span class="op">=</span> <span class="dv">15</span> <span class="co"># seconds</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>fps <span class="op">=</span> <span class="dv">24</span> <span class="co"># frames per second</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a></span>
@@ -500,7 +497,7 @@ window.Quarto = {
 <span id="cb4-45"><a href="#cb4-45"></a></span>
 <span id="cb4-46"><a href="#cb4-46"></a>    <span class="cf">for</span> fname <span class="kw">in</span> frame_names:</span>
 <span id="cb4-47"><a href="#cb4-47"></a>        <span class="co"># pass</span></span>
-<span id="cb4-48"><a href="#cb4-48"></a>        os.remove(fname)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-48"><a href="#cb4-48"></a>        os.remove(fname)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -558,14 +555,13 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
