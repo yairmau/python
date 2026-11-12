@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>16&nbsp; Logo system – python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../jupyter/bars.html" rel="next">
+<link href="../jupyter/website-logo.html" rel="prev">
+<link href="../archive/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a588049bcf6ba0aff1d03aeee07a0105.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-413a42dab4f405069d638ccd5bacac3d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../jupyter/new_logo.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Logo system</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
+<p><a href="https://yairmau.com/" class="back-home">← Back to yairmau.com</a></p>
+</div></div>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">python</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/yairmau/python/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/graph_params.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">graph parameters</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/fhn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fitzhugh-Nagumo Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/game-of-life.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conway’s Game of Life</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/least-squares.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Least Squares</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/histograms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fun with histograms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/subplot-grid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Fancy subplot grid</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/streamplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Streamplot</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/palette.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Palette</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/tdgle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The time-dependent Ginzburg-Landau equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/doublependulum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Double Pendulum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/hilbertcurve.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hilbert Curve</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/hysteresis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">A hysteresis mechanism</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/contour_plot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Contour plot</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/best_path.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Best path</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/website-logo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Logo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/new_logo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Logo system</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../jupyter/bars.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bar plot</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ingredients" id="toc-ingredients" class="nav-link active" data-scroll-target="#ingredients"><span class="header-section-number">16.1</span> Ingredients</a></li>
+  <li><a href="#the-geometry" id="toc-the-geometry" class="nav-link" data-scroll-target="#the-geometry"><span class="header-section-number">16.2</span> The geometry</a></li>
+  <li><a href="#the-mark" id="toc-the-mark" class="nav-link" data-scroll-target="#the-mark"><span class="header-section-number">16.3</span> The mark</a></li>
+  <li><a href="#two-readings-earth-and-galileo" id="toc-two-readings-earth-and-galileo" class="nav-link" data-scroll-target="#two-readings-earth-and-galileo"><span class="header-section-number">16.4</span> Two readings: Earth and Galileo</a>
+  <ul class="collapse">
+  <li><a href="#vertical-earth" id="toc-vertical-earth" class="nav-link" data-scroll-target="#vertical-earth"><span class="header-section-number">16.4.1</span> Vertical: Earth</a></li>
+  <li><a href="#horizontal-galileo" id="toc-horizontal-galileo" class="nav-link" data-scroll-target="#horizontal-galileo"><span class="header-section-number">16.4.2</span> Horizontal: Galileo</a></li>
+  <li><a href="#one-rule" id="toc-one-rule" class="nav-link" data-scroll-target="#one-rule"><span class="header-section-number">16.4.3</span> One rule</a></li>
+  </ul></li>
+  <li><a href="#the-φ-mark" id="toc-the-φ-mark" class="nav-link" data-scroll-target="#the-φ-mark"><span class="header-section-number">16.5</span> The φ mark</a></li>
+  <li><a href="#colour" id="toc-colour" class="nav-link" data-scroll-target="#colour"><span class="header-section-number">16.6</span> Colour</a></li>
+  <li><a href="#stress-test" id="toc-stress-test" class="nav-link" data-scroll-target="#stress-test"><span class="header-section-number">16.7</span> Stress test</a></li>
+  <li><a href="#rules-of-use" id="toc-rules-of-use" class="nav-link" data-scroll-target="#rules-of-use"><span class="header-section-number">16.8</span> Rules of use</a></li>
+  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export"><span class="header-section-number">16.9</span> Export</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Logo system</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/python/blob/main/jupyter/new_logo.ipynb"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>A triangle, a circle, and the golden ratio hiding where they meet.</em></p>
+<p>This notebook is the source of the visual identity of yairmau.com and its sister sites. It is a design document and a drawing machine at once: every mark is generated from the same few lines of geometry, so the whole system stays coherent by construction. Change a number here and every logo, favicon and export follows.</p>
+<p>The idea comes from a classic piece of geometry, the <a href="https://www.cut-the-knot.org/do_you_know/GoldenRatioPoster.shtml">golden ratio construction on cut-the-knot</a>: a right triangle with legs 1 and 2, and a circle of diameter 1 resting on its long side. The proportions of the mark come from that construction. The only real choices are how heavy to draw it.</p>
+<ul>
+<li>Ingredients</li>
+<li>The geometry</li>
+<li>The mark</li>
+<li>Two readings: Earth and Galileo</li>
+<li>The φ mark</li>
+<li>Colour</li>
+<li>Stress test</li>
+<li>Rules of use</li>
+<li>Export</li>
+</ul>
+<section id="ingredients" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="ingredients"><span class="header-section-number">16.1</span> Ingredients</h2>
+<p>Two numbers in this cell are design decisions: the weight of the ring in the primary mark, and the weight of the φ mark. Everything else is dictated by the geometry. Lengths are in the units of the construction, where the triangle’s short leg is 1.</p>
+<div id="107506f6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:02.210497Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:02.209853Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.207885Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.206608Z&quot;}}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path <span class="im">as</span> FilePath</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> matplotlib.path <span class="im">import</span> Path</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> PathPatch, Polygon, Circle</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="im">from</span> matplotlib.transforms <span class="im">import</span> Affine2D</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a>PHI <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> np.sqrt(<span class="dv">5</span>)) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># The construction: right triangle (0,0), (1,0), (0,2) and a circle of diameter 1</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># centered on the midpoint of the hypotenuse.</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>TRIANGLE <span class="op">=</span> np.array([(<span class="dv">0</span>, <span class="dv">0</span>), (<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">0</span>, <span class="dv">2</span>)], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>CENTER <span class="op">=</span> np.array([<span class="fl">0.5</span>, <span class="fl">1.0</span>])</span>
+<span id="cb1-16"><a href="#cb1-16"></a>R <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>U <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">1.0</span>, <span class="fl">2.0</span>]) <span class="op">/</span> np.sqrt(<span class="dv">5</span>)  <span class="co"># unit vector along the hypotenuse, toward the top tip</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>N <span class="op">=</span> np.array([U[<span class="dv">1</span>], <span class="op">-</span>U[<span class="dv">0</span>]])              <span class="co"># unit vector perpendicular to it, pointing away from the triangle</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># Stroke weights</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>WIDTH <span class="op">=</span> <span class="fl">0.05</span>     <span class="co"># primary mark: ring thickness, and the thinnest wall anywhere in the shape</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>PHI_RING <span class="op">=</span> <span class="fl">0.18</span>  <span class="co"># φ mark: ring and pole thickness, heavier because it is used at small sizes</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="co"># Colours: the Midnight palette of yairmau.com</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a>NAVY <span class="op">=</span> <span class="st">"#0d1f2d"</span>       <span class="co"># navbar and buttons, and the logo's default colour</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a>INK <span class="op">=</span> <span class="st">"#1e2a33"</span>        <span class="co"># body text</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>LINK_BLUE <span class="op">=</span> <span class="st">"#0071eb"</span>  <span class="co"># links only, never the logo</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>WHITE <span class="op">=</span> <span class="st">"#ffffff"</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>DARK_TAB <span class="op">=</span> <span class="st">"#292a2d"</span>   <span class="co"># a typical dark browser tab, used for previews</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a>EXPORT <span class="op">=</span> <span class="va">True</span>              <span class="co"># set to False to explore without writing files</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a>OUT <span class="op">=</span> FilePath(<span class="st">"logo"</span>)     <span class="co"># exported files go here, next to this notebook</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="the-geometry" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="the-geometry"><span class="header-section-number">16.2</span> The geometry</h2>
+<p>Draw a right triangle with legs 1 and 2. Its long side, the hypotenuse, is <span class="math inline">\sqrt{1^2+2^2}=\sqrt{5}</span>.</p>
+<p>Now set a circle of diameter 1 on the midpoint of that hypotenuse. It covers exactly the middle unit and leaves two equal ends:</p>
+<p><span class="math display">\frac{\sqrt{5}-1}{2} = \frac{1}{\varphi} \approx 0.618</span></p>
+<p>Walk down the hypotenuse from the top tip. After <span class="math inline">1/\varphi</span> you enter the circle. After <span class="math inline">1/\varphi + 1 = \varphi \approx 1.618</span> you leave it. The golden ratio, built from nothing but 1 and 2.</p>
+<p>Two consequences shape everything that follows:</p>
+<ul>
+<li><strong>The circle touches the long leg at a single point.</strong> Its center sits 0.5 from that leg, exactly its radius. This is the most delicate spot in the design, and <em>The mark</em> below deals with it.</li>
+<li><strong>The hypotenuse leans 26.6° away from vertical</strong> (<span class="math inline">\arctan\tfrac12</span>). <em>Two readings</em> below explains why that number matters.</li>
+</ul>
+<div id="00adcdf8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.212309Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.211782Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.542646Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.541384Z&quot;}}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>upper, lower <span class="op">=</span> CENTER <span class="op">+</span> R <span class="op">*</span> U, CENTER <span class="op">-</span> R <span class="op">*</span> U   <span class="co"># where the hypotenuse crosses the circle</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="dv">6</span>))</span>
+<span id="cb2-4"><a href="#cb2-4"></a>ax.add_patch(Polygon(TRIANGLE, closed<span class="op">=</span><span class="va">True</span>, fill<span class="op">=</span><span class="va">False</span>, ec<span class="op">=</span>INK, lw<span class="op">=</span><span class="fl">1.2</span>))</span>
+<span id="cb2-5"><a href="#cb2-5"></a>ax.add_patch(Circle(CENTER, R, fill<span class="op">=</span><span class="va">False</span>, ec<span class="op">=</span>LINK_BLUE, lw<span class="op">=</span><span class="fl">1.2</span>))</span>
+<span id="cb2-6"><a href="#cb2-6"></a>ax.plot(<span class="op">*</span>np.array([upper, lower]).T, <span class="st">"o"</span>, color<span class="op">=</span>INK, ms<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>ax.plot(<span class="op">*</span>CENTER, <span class="st">"o"</span>, color<span class="op">=</span>LINK_BLUE, ms<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="kw">def</span> label(point, text, offset):</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    ax.annotate(text, point, xytext<span class="op">=</span>offset, textcoords<span class="op">=</span><span class="st">"offset points"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11"></a>                ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span>INK)</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>label((<span class="fl">0.5</span>, <span class="dv">0</span>), <span class="st">"$1$"</span>, (<span class="dv">0</span>, <span class="op">-</span><span class="dv">14</span>))</span>
+<span id="cb2-14"><a href="#cb2-14"></a>label((<span class="dv">0</span>, <span class="fl">1.5</span>), <span class="st">"$2$"</span>, (<span class="op">-</span><span class="dv">14</span>, <span class="dv">0</span>))</span>
+<span id="cb2-15"><a href="#cb2-15"></a>label((TRIANGLE[<span class="dv">2</span>] <span class="op">+</span> upper) <span class="op">/</span> <span class="dv">2</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">1/</span><span class="ch">\v</span><span class="vs">arphi</span><span class="dv">$</span><span class="vs">"</span>, <span class="bu">tuple</span>(<span class="dv">18</span> <span class="op">*</span> N))</span>
+<span id="cb2-16"><a href="#cb2-16"></a>label(CENTER, <span class="vs">r"</span><span class="dv">$</span><span class="vs">1</span><span class="dv">$</span><span class="vs">"</span>, <span class="bu">tuple</span>(<span class="dv">14</span> <span class="op">*</span> N))</span>
+<span id="cb2-17"><a href="#cb2-17"></a>label((lower <span class="op">+</span> TRIANGLE[<span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">1/</span><span class="ch">\v</span><span class="vs">arphi</span><span class="dv">$</span><span class="vs">"</span>, <span class="bu">tuple</span>(<span class="dv">18</span> <span class="op">*</span> N))</span>
+<span id="cb2-18"><a href="#cb2-18"></a>ax.text(<span class="fl">0.02</span>, <span class="op">-</span><span class="fl">0.32</span>, <span class="vs">r"hypotenuse </span><span class="dv">$</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{5}</span><span class="vs">=1/</span><span class="ch">\v</span><span class="vs">arphi </span><span class="op">+</span><span class="vs"> 1 </span><span class="op">+</span><span class="vs"> 1/</span><span class="ch">\v</span><span class="vs">arphi</span><span class="dv">$</span><span class="vs">"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, color<span class="op">=</span>INK)</span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.25</span>, <span class="fl">1.35</span>)</span>
+<span id="cb2-22"><a href="#cb2-22"></a>ax.set_ylim(<span class="op">-</span><span class="fl">0.45</span>, <span class="fl">2.15</span>)</span>
+<span id="cb2-23"><a href="#cb2-23"></a>ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24"></a>plt.show()</span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="bu">print</span>(<span class="ss">f"tip to circle: </span><span class="sc">{</span>np<span class="sc">.</span>linalg<span class="sc">.</span>norm(TRIANGLE[<span class="dv">2</span>] <span class="op">-</span> upper)<span class="sc">:.4f}</span><span class="ss">   1/phi = </span><span class="sc">{</span><span class="dv">1</span> <span class="op">/</span> PHI<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="bu">print</span>(<span class="ss">f"tip to far side of circle: </span><span class="sc">{</span>np<span class="sc">.</span>linalg<span class="sc">.</span>norm(TRIANGLE[<span class="dv">2</span>] <span class="op">-</span> lower)<span class="sc">:.4f}</span><span class="ss">   phi = </span><span class="sc">{</span>PHI<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tip to circle: 0.6180   1/phi = 0.6180
+tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
+</div>
+</div>
+</section>
+<section id="the-mark" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="the-mark"><span class="header-section-number">16.3</span> The mark</h2>
+<p>Cut the circle out of the triangle. What remains is a solid wedge holding a void. The half of the circle that falls outside the triangle is kept as a fine ring, so the eye still completes the whole circle. It is the tension between the heavy wedge and the hairline ring that gives the mark its character.</p>
+<p>Two refinements make it hold together:</p>
+<ul>
+<li><strong>The golden ratio lives on the silhouette.</strong> The circle of diameter 1 is the ring’s outer edge, and the ring grows inward from it. Where the hypotenuse meets that edge, it is exactly <span class="math inline">1/\varphi</span> from the tip.</li>
+<li><strong>There are no hairlines and no spikes.</strong> Left alone, the circle would touch the long leg at a point, and the wedge would taper into two needle-thin horns. Making the void slightly smaller than the circle (radius <span class="math inline">0.5 -</span> <code>WIDTH</code>) leaves a wall at that spot as thick as the ring itself. One weight governs the whole mark: nothing is thinner than the ring.</li>
+</ul>
+<p>The mark is drawn as a single shape, so exported files are clean.</p>
+<div id="966294ee" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.547508Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.547070Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.621436Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.620473Z&quot;}}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> arc(center, radius, theta1, theta2):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">"""Vertices of a counterclockwise circular arc (cubic Bezier segments), from theta1 to theta2 in degrees."""</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> center <span class="op">+</span> radius <span class="op">*</span> Path.arc(theta1, theta2).vertices</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="kw">def</span> primary_mark(width<span class="op">=</span>WIDTH):</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="co">"""The primary mark, upright, inside the box 0 &lt;= x &lt;= 1, 0 &lt;= y &lt;= 2."""</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>    hole <span class="op">=</span> R <span class="op">-</span> width</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    a_up <span class="op">=</span> np.degrees(np.arctan2(U[<span class="dv">1</span>], U[<span class="dv">0</span>]))  <span class="co"># direction from the center to the upper crossing</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="co"># Solid: the triangle with a half-disc notch of radius `hole` on its inner side.</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>    notch <span class="op">=</span> arc(CENTER, hole, a_up, a_up <span class="op">+</span> <span class="dv">180</span>)[::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># walked from the lower crossing up to the upper one</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>    solid <span class="op">=</span> Path([TRIANGLE[<span class="dv">0</span>], TRIANGLE[<span class="dv">1</span>], <span class="op">*</span>notch, TRIANGLE[<span class="dv">2</span>], TRIANGLE[<span class="dv">0</span>]],</span>
+<span id="cb4-14"><a href="#cb4-14"></a>                 [Path.MOVETO, Path.LINETO, Path.LINETO] <span class="op">+</span> [Path.CURVE4] <span class="op">*</span> (<span class="bu">len</span>(notch) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-15"><a href="#cb4-15"></a>                 <span class="op">+</span> [Path.LINETO, Path.CLOSEPOLY])</span>
+<span id="cb4-16"><a href="#cb4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="co"># Ring: the outer half of the circle, between radius `hole` and R. Its ends lie on the hypotenuse.</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>    outer <span class="op">=</span> arc(CENTER, R, a_up <span class="op">+</span> <span class="dv">180</span>, a_up <span class="op">+</span> <span class="dv">360</span>)</span>
+<span id="cb4-19"><a href="#cb4-19"></a>    inner <span class="op">=</span> arc(CENTER, hole, a_up <span class="op">+</span> <span class="dv">180</span>, a_up <span class="op">+</span> <span class="dv">360</span>)[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb4-20"><a href="#cb4-20"></a>    ring <span class="op">=</span> Path([<span class="op">*</span>outer, <span class="op">*</span>inner, outer[<span class="dv">0</span>]],</span>
+<span id="cb4-21"><a href="#cb4-21"></a>                [Path.MOVETO] <span class="op">+</span> [Path.CURVE4] <span class="op">*</span> (<span class="bu">len</span>(outer) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-22"><a href="#cb4-22"></a>                <span class="op">+</span> [Path.LINETO] <span class="op">+</span> [Path.CURVE4] <span class="op">*</span> (<span class="bu">len</span>(inner) <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> [Path.CLOSEPOLY])</span>
+<span id="cb4-23"><a href="#cb4-23"></a></span>
+<span id="cb4-24"><a href="#cb4-24"></a>    <span class="cf">return</span> Path.make_compound_path(solid, ring)</span>
+<span id="cb4-25"><a href="#cb4-25"></a></span>
+<span id="cb4-26"><a href="#cb4-26"></a></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="kw">def</span> draw(ax, path, color<span class="op">=</span>NAVY, background<span class="op">=</span><span class="va">None</span>, pad<span class="op">=</span><span class="fl">0.08</span>):</span>
+<span id="cb4-28"><a href="#cb4-28"></a>    <span class="co">"""Draw a mark on an axis, framed tightly with a small margin."""</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a>    ax.add_patch(PathPatch(path, facecolor<span class="op">=</span>color, edgecolor<span class="op">=</span><span class="st">"none"</span>))</span>
+<span id="cb4-30"><a href="#cb4-30"></a>    box <span class="op">=</span> path.get_extents()</span>
+<span id="cb4-31"><a href="#cb4-31"></a>    m <span class="op">=</span> pad <span class="op">*</span> <span class="bu">max</span>(box.width, box.height)</span>
+<span id="cb4-32"><a href="#cb4-32"></a>    ax.set_xlim(box.x0 <span class="op">-</span> m, box.x1 <span class="op">+</span> m)</span>
+<span id="cb4-33"><a href="#cb4-33"></a>    ax.set_ylim(box.y0 <span class="op">-</span> m, box.y1 <span class="op">+</span> m)</span>
+<span id="cb4-34"><a href="#cb4-34"></a>    ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb4-35"><a href="#cb4-35"></a>    ax.set_xticks([])</span>
+<span id="cb4-36"><a href="#cb4-36"></a>    ax.set_yticks([])</span>
+<span id="cb4-37"><a href="#cb4-37"></a>    <span class="cf">for</span> spine <span class="kw">in</span> ax.spines.values():</span>
+<span id="cb4-38"><a href="#cb4-38"></a>        spine.set_visible(<span class="va">False</span>)</span>
+<span id="cb4-39"><a href="#cb4-39"></a>    <span class="cf">if</span> background:</span>
+<span id="cb4-40"><a href="#cb4-40"></a>        ax.set_facecolor(background)</span>
+<span id="cb4-41"><a href="#cb4-41"></a></span>
+<span id="cb4-42"><a href="#cb4-42"></a></span>
+<span id="cb4-43"><a href="#cb4-43"></a>mark <span class="op">=</span> primary_mark()</span>
+<span id="cb4-44"><a href="#cb4-44"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">6</span>))</span>
+<span id="cb4-45"><a href="#cb4-45"></a>draw(ax, mark)</span>
+<span id="cb4-46"><a href="#cb4-46"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="two-readings-earth-and-galileo" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="two-readings-earth-and-galileo"><span class="header-section-number">16.4</span> Two readings: Earth and Galileo</h2>
+<p>Stand the mark up and it is a planet. Lay it down and it is an experiment. It is the same shape and the same geometry, telling two stories that together describe a path from physics to the environment.</p>
+<section id="vertical-earth" class="level3" data-number="16.4.1">
+<h3 data-number="16.4.1" class="anchored" data-anchor-id="vertical-earth"><span class="header-section-number">16.4.1</span> Vertical: Earth</h3>
+<p>Upright, the hypotenuse becomes an axis through a sphere. Because the triangle’s legs are 1 and 2, that axis leans 26.6° from vertical, about three degrees off the 23.4° tilt of Earth’s own axis, the tilt that gives us seasons. The mark gets there by pure geometry, without bending the golden ratio.</p>
+<p>Read this way, the solid wedge is ground and the fine ring around the sphere is a thin living shell, like the critical zone, where soil, plants and atmosphere exchange water and carbon. This is the primary orientation: the environmental scientist’s mark.</p>
+</section>
+<section id="horizontal-galileo" class="level3" data-number="16.4.2">
+<h3 data-number="16.4.2" class="anchored" data-anchor-id="horizontal-galileo"><span class="header-section-number">16.4.2</span> Horizontal: Galileo</h3>
+<p>Lay the mark on its long leg and the hypotenuse becomes a ramp rising 1 in 2, with a ball sitting in it. This is the most famous apparatus in the history of physics. Around 1604, Galileo rolled balls down gentle inclined planes to slow falling motion enough to time it, and found that the distance covered grows with the square of the time. He published the result in <em>Two New Sciences</em> (1638), and mechanics has rested on it ever since.</p>
+<p>This is the physicist’s mark, and the natural choice when the space is wide and short, such as banners and headers.</p>
+</section>
+<section id="one-rule" class="level3" data-number="16.4.3">
+<h3 data-number="16.4.3" class="anchored" data-anchor-id="one-rule"><span class="header-section-number">16.4.3</span> One rule</h3>
+<p><strong>The slope always falls in the reading direction.</strong> Next to a name, the round void bulges toward the text, and in the horizontal version the ball would roll toward it. Both versions are transformations of the same shape, so they can never drift apart. In the rare case of right-to-left text, mirror the vertical mark so it still falls toward the words.</p>
+<div id="abae8442" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.625522Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.625166Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.775057Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.774202Z&quot;}}" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>ORIENTATIONS <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="st">"vertical"</span>: Affine2D(),</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">"horizontal"</span>: Affine2D(np.array([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>]])),        <span class="co"># swap x and y</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="kw">def</span> oriented(name, path<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="cf">return</span> ORIENTATIONS[name].transform_path(primary_mark() <span class="cf">if</span> path <span class="kw">is</span> <span class="va">None</span> <span class="cf">else</span> path)</span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>), gridspec_kw<span class="op">=</span>{<span class="st">"width_ratios"</span>: [<span class="dv">1</span>, <span class="dv">2</span>]})</span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="cf">for</span> ax, name <span class="kw">in</span> <span class="bu">zip</span>(axes, ORIENTATIONS):</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    draw(ax, oriented(name))</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    ax.set_title(name, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span>INK)</span>
+<span id="cb5-13"><a href="#cb5-13"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-φ-mark" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="the-φ-mark"><span class="header-section-number">16.5</span> The φ mark</h2>
+<p>A favicon is the small icon a browser shows next to the page title in a tab, and in bookmarks and history. Browsers draw it at 16 × 16 pixels. On high-resolution screens those 16 pixels are made of 32 physical ones, which is why <code>favicon.ico</code> carries both sizes. Sixteen pixels is therefore the smallest size the identity regularly appears at, and the size it has to survive.</p>
+<p>At 16 pixels there is no room for a wedge, a void and a hairline ring. The φ mark keeps only the essentials: the circle and the line that runs through it. Take the triangle away from the construction and this is what remains. It happens to be the letter φ.</p>
+<ul>
+<li><strong>It uses the same circle.</strong> The ring’s outer diameter is 1.</li>
+<li><strong>The poles are the hypotenuse.</strong> Each is exactly <span class="math inline">1/\varphi</span> long, the tips are <span class="math inline">\sqrt{5}</span> apart, and a pole plus the circle is <span class="math inline">\varphi</span>.</li>
+<li><strong>The slash falls the same way as in the mark.</strong> A “\” slash reads as φ, the golden-ratio symbol. A “/” slash would read as ∅, the empty set.</li>
+<li><strong>It is drawn heavier</strong> (<code>PHI_RING</code>), because it lives in browser tabs and sidebars and has to survive at 16 pixels.</li>
+</ul>
+<div id="55f5fd40" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.779322Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.778932Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.870796Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.869950Z&quot;}}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> phi_mark(ring<span class="op">=</span>PHI_RING):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="co">"""Ring of outer diameter 1 centered at the origin, with two poles along the hypotenuse direction."""</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>    reach <span class="op">=</span> np.sqrt(<span class="dv">5</span>) <span class="op">/</span> <span class="dv">2</span>  <span class="co"># center to pole tip: each pole is 1/phi beyond the circle</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a>    outer <span class="op">=</span> arc(np.zeros(<span class="dv">2</span>), R, <span class="dv">0</span>, <span class="dv">360</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>    inner <span class="op">=</span> arc(np.zeros(<span class="dv">2</span>), R <span class="op">-</span> ring, <span class="dv">0</span>, <span class="dv">360</span>)[::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># opposite direction, so it becomes a hole</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>    ring_path <span class="op">=</span> Path([<span class="op">*</span>outer, <span class="op">*</span>inner],</span>
+<span id="cb6-8"><a href="#cb6-8"></a>                     [Path.MOVETO] <span class="op">+</span> [Path.CURVE4] <span class="op">*</span> (<span class="bu">len</span>(outer) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a>                     <span class="op">+</span> [Path.MOVETO] <span class="op">+</span> [Path.CURVE4] <span class="op">*</span> (<span class="bu">len</span>(inner) <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a>    poles <span class="op">=</span> []</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="cf">for</span> d <span class="kw">in</span> (U, <span class="op">-</span>U):</span>
+<span id="cb6-13"><a href="#cb6-13"></a>        start, end <span class="op">=</span> (R <span class="op">-</span> ring <span class="op">/</span> <span class="dv">2</span>) <span class="op">*</span> d, reach <span class="op">*</span> d  <span class="co"># start inside the ring so the joint is seamless</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a>        h <span class="op">=</span> ring <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> N</span>
+<span id="cb6-15"><a href="#cb6-15"></a>        corners <span class="op">=</span> np.array([start <span class="op">+</span> h, start <span class="op">-</span> h, end <span class="op">-</span> h, end <span class="op">+</span> h])</span>
+<span id="cb6-16"><a href="#cb6-16"></a>        x, y <span class="op">=</span> corners.T</span>
+<span id="cb6-17"><a href="#cb6-17"></a>        <span class="cf">if</span> np.dot(x, np.roll(y, <span class="op">-</span><span class="dv">1</span>)) <span class="op">-</span> np.dot(y, np.roll(x, <span class="op">-</span><span class="dv">1</span>)) <span class="op">&lt;</span> <span class="dv">0</span>:  <span class="co"># make it counterclockwise, like the ring's</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a>            corners <span class="op">=</span> corners[::<span class="op">-</span><span class="dv">1</span>]                                       <span class="co"># outer edge, so overlaps add up instead of cancelling</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a>        poles.append(Path([<span class="op">*</span>corners, corners[<span class="dv">0</span>]], [Path.MOVETO] <span class="op">+</span> [Path.LINETO] <span class="op">*</span> <span class="dv">3</span> <span class="op">+</span> [Path.CLOSEPOLY]))</span>
+<span id="cb6-20"><a href="#cb6-20"></a></span>
+<span id="cb6-21"><a href="#cb6-21"></a>    <span class="cf">return</span> Path.make_compound_path(ring_path, <span class="op">*</span>poles)</span>
+<span id="cb6-22"><a href="#cb6-22"></a></span>
+<span id="cb6-23"><a href="#cb6-23"></a></span>
+<span id="cb6-24"><a href="#cb6-24"></a>icon <span class="op">=</span> phi_mark()</span>
+<span id="cb6-25"><a href="#cb6-25"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb6-26"><a href="#cb6-26"></a>draw(ax, icon)</span>
+<span id="cb6-27"><a href="#cb6-27"></a>plt.show()</span>
+<span id="cb6-28"><a href="#cb6-28"></a></span>
+<span id="cb6-29"><a href="#cb6-29"></a>tip <span class="op">=</span> np.sqrt(<span class="dv">5</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb6-30"><a href="#cb6-30"></a><span class="bu">print</span>(<span class="ss">f"tips apart: </span><span class="sc">{</span><span class="dv">2</span> <span class="op">*</span> tip<span class="sc">:.4f}</span><span class="ss"> (sqrt 5)   each pole beyond the circle: </span><span class="sc">{</span>tip <span class="op">-</span> R<span class="sc">:.4f}</span><span class="ss"> (1/phi)   pole + circle: </span><span class="sc">{</span>tip <span class="op">+</span> R<span class="sc">:.4f}</span><span class="ss"> (phi)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tips apart: 2.2361 (sqrt 5)   each pole beyond the circle: 0.6180 (1/phi)   pole + circle: 1.6180 (phi)</code></pre>
+</div>
+</div>
+</section>
+<section id="colour" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="colour"><span class="header-section-number">16.6</span> Colour</h2>
+<p>One colour does the work: Midnight navy, the colour of the sites’ navigation bars.</p>
+<ul>
+<li><strong>Navy on light backgrounds.</strong> This is the default.</li>
+<li><strong>White when reversed</strong> out of navy or any dark background.</li>
+<li><strong>Never link blue.</strong> In this system blue means “you can click this”, and the logo is not a link to anywhere.</li>
+</ul>
+<div id="78b804d2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.874550Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.874192Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:07.244504Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:07.242923Z&quot;}}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>swatches <span class="op">=</span> [(<span class="st">"navy"</span>, NAVY), (<span class="st">"ink"</span>, INK), (<span class="st">"link blue"</span>, LINK_BLUE), (<span class="st">"white"</span>, WHITE)]</span>
+<span id="cb8-2"><a href="#cb8-2"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="bu">len</span>(swatches), figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">1.4</span>))</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="cf">for</span> ax, (name, hex_) <span class="kw">in</span> <span class="bu">zip</span>(axes, swatches):</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    ax.add_patch(plt.Rectangle((<span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">1</span>, <span class="dv">1</span>, color<span class="op">=</span>hex_, ec<span class="op">=</span><span class="st">"#cccccc"</span>))</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    ax.text(<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.25</span>, <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>hex_<span class="sc">}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"top"</span>, fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span>INK)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    ax.set_xlim(<span class="dv">0</span>, <span class="dv">1</span>)<span class="op">;</span> ax.set_ylim(<span class="dv">0</span>, <span class="dv">1</span>)<span class="op">;</span> ax.set_aspect(<span class="st">"equal"</span>)<span class="op">;</span> ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>plt.show()</span>
+<span id="cb8-8"><a href="#cb8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9"></a>colorways <span class="op">=</span> [(<span class="st">"navy on white"</span>, NAVY, WHITE), (<span class="st">"white on navy"</span>, WHITE, NAVY)]</span>
+<span id="cb8-10"><a href="#cb8-10"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">3.6</span>), gridspec_kw<span class="op">=</span>{<span class="st">"width_ratios"</span>: [<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">1.4</span>, <span class="fl">1.4</span>]})</span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="cf">for</span> i, (name, fg, bg) <span class="kw">in</span> <span class="bu">enumerate</span>(colorways):</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    draw(axes[i], mark, color<span class="op">=</span>fg, background<span class="op">=</span>bg, pad<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    draw(axes[i <span class="op">+</span> <span class="dv">2</span>], icon, color<span class="op">=</span>fg, background<span class="op">=</span>bg, pad<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    axes[i].set_title(name, fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span>INK)</span>
+<span id="cb8-15"><a href="#cb8-15"></a>    axes[i <span class="op">+</span> <span class="dv">2</span>].set_title(name, fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span>INK)</span>
+<span id="cb8-16"><a href="#cb8-16"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="stress-test" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="stress-test"><span class="header-section-number">16.7</span> Stress test</h2>
+<p>A mark is only as good as its smallest appearance. Each tile below is rendered at the size shown and then enlarged, so every pixel is visible.</p>
+<p>The primary mark needs room: its ring is <code>WIDTH</code>/2 of its height, so below about 64 pixels the ring falls under one and a half pixels and starts to dissolve. That is the φ mark’s territory, and it stays crisp down to 16.</p>
+<div id="6f783f42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:07.249354Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:07.248430Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:08.779302Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:08.778233Z&quot;}}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> raster(path, height_px, color<span class="op">=</span>NAVY, background<span class="op">=</span><span class="va">None</span>, square<span class="op">=</span><span class="va">False</span>, pad<span class="op">=</span><span class="fl">0.06</span>, supersample<span class="op">=</span><span class="dv">8</span>):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">"""Render a mark to a PIL image of the given pixel height, antialiased by supersampling."""</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>    box <span class="op">=</span> path.get_extents()</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    m <span class="op">=</span> pad <span class="op">*</span> <span class="bu">max</span>(box.width, box.height)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    x0, x1, y0, y1 <span class="op">=</span> box.x0 <span class="op">-</span> m, box.x1 <span class="op">+</span> m, box.y0 <span class="op">-</span> m, box.y1 <span class="op">+</span> m</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="cf">if</span> square:  <span class="co"># center the mark in a square canvas</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>        side <span class="op">=</span> <span class="bu">max</span>(x1 <span class="op">-</span> x0, y1 <span class="op">-</span> y0)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>        cx, cy <span class="op">=</span> (x0 <span class="op">+</span> x1) <span class="op">/</span> <span class="dv">2</span>, (y0 <span class="op">+</span> y1) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>        x0, x1, y0, y1 <span class="op">=</span> cx <span class="op">-</span> side <span class="op">/</span> <span class="dv">2</span>, cx <span class="op">+</span> side <span class="op">/</span> <span class="dv">2</span>, cy <span class="op">-</span> side <span class="op">/</span> <span class="dv">2</span>, cy <span class="op">+</span> side <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>    width_px <span class="op">=</span> height_px <span class="cf">if</span> square <span class="cf">else</span> <span class="bu">max</span>(<span class="dv">1</span>, <span class="bu">round</span>(height_px <span class="op">*</span> (x1 <span class="op">-</span> x0) <span class="op">/</span> (y1 <span class="op">-</span> y0)))</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    big_w, big_h <span class="op">=</span> width_px <span class="op">*</span> supersample, height_px <span class="op">*</span> supersample</span>
+<span id="cb9-12"><a href="#cb9-12"></a></span>
+<span id="cb9-13"><a href="#cb9-13"></a>    fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(big_w <span class="op">/</span> <span class="dv">100</span>, big_h <span class="op">/</span> <span class="dv">100</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb9-14"><a href="#cb9-14"></a>    ax <span class="op">=</span> fig.add_axes([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb9-15"><a href="#cb9-15"></a>    ax.add_patch(PathPatch(path, facecolor<span class="op">=</span>color, edgecolor<span class="op">=</span><span class="st">"none"</span>))</span>
+<span id="cb9-16"><a href="#cb9-16"></a>    ax.set_xlim(x0, x1)<span class="op">;</span> ax.set_ylim(y0, y1)<span class="op">;</span> ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb9-17"><a href="#cb9-17"></a>    fig.patch.set_alpha(<span class="dv">0</span> <span class="cf">if</span> background <span class="kw">is</span> <span class="va">None</span> <span class="cf">else</span> <span class="dv">1</span>)</span>
+<span id="cb9-18"><a href="#cb9-18"></a>    fig.patch.set_facecolor(background <span class="kw">or</span> <span class="st">"none"</span>)</span>
+<span id="cb9-19"><a href="#cb9-19"></a>    fig.canvas.draw()</span>
+<span id="cb9-20"><a href="#cb9-20"></a>    image <span class="op">=</span> Image.frombuffer(<span class="st">"RGBA"</span>, fig.canvas.get_width_height(), fig.canvas.buffer_rgba()).copy()</span>
+<span id="cb9-21"><a href="#cb9-21"></a>    plt.close(fig)</span>
+<span id="cb9-22"><a href="#cb9-22"></a>    <span class="cf">return</span> image.resize((width_px, height_px), Image.LANCZOS)</span>
+<span id="cb9-23"><a href="#cb9-23"></a></span>
+<span id="cb9-24"><a href="#cb9-24"></a></span>
+<span id="cb9-25"><a href="#cb9-25"></a>rows <span class="op">=</span> [(<span class="st">"primary, navy on white"</span>, mark, NAVY, WHITE),</span>
+<span id="cb9-26"><a href="#cb9-26"></a>        (<span class="st">"primary, white on dark tab"</span>, mark, WHITE, DARK_TAB),</span>
+<span id="cb9-27"><a href="#cb9-27"></a>        (<span class="st">"φ mark, navy on white"</span>, icon, NAVY, WHITE),</span>
+<span id="cb9-28"><a href="#cb9-28"></a>        (<span class="st">"φ mark, white on dark tab"</span>, icon, WHITE, DARK_TAB)]</span>
+<span id="cb9-29"><a href="#cb9-29"></a>sizes <span class="op">=</span> [<span class="dv">16</span>, <span class="dv">32</span>, <span class="dv">48</span>, <span class="dv">64</span>]</span>
+<span id="cb9-30"><a href="#cb9-30"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="bu">len</span>(rows), <span class="bu">len</span>(sizes), figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb9-31"><a href="#cb9-31"></a><span class="cf">for</span> (name, path, fg, bg), row <span class="kw">in</span> <span class="bu">zip</span>(rows, axes):</span>
+<span id="cb9-32"><a href="#cb9-32"></a>    <span class="cf">for</span> size, ax <span class="kw">in</span> <span class="bu">zip</span>(sizes, row):</span>
+<span id="cb9-33"><a href="#cb9-33"></a>        ax.imshow(raster(path, size, fg, bg, square<span class="op">=</span><span class="va">True</span>), interpolation<span class="op">=</span><span class="st">"nearest"</span>)</span>
+<span id="cb9-34"><a href="#cb9-34"></a>        ax.set_xticks([])<span class="op">;</span> ax.set_yticks([])</span>
+<span id="cb9-35"><a href="#cb9-35"></a>        ax.set_title(<span class="ss">f"</span><span class="sc">{</span>size<span class="sc">}</span><span class="ss"> px"</span>, fontsize<span class="op">=</span><span class="dv">8</span>, color<span class="op">=</span>INK)</span>
+<span id="cb9-36"><a href="#cb9-36"></a>    row[<span class="dv">0</span>].set_ylabel(name, fontsize<span class="op">=</span><span class="dv">8</span>, color<span class="op">=</span>INK)</span>
+<span id="cb9-37"><a href="#cb9-37"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="new_logo_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="rules-of-use" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="rules-of-use"><span class="header-section-number">16.8</span> Rules of use</h2>
+<p>These are starting points, meant to be revised as the system gets used.</p>
+<ul>
+<li><strong>Pick the mark by size.</strong> Use the primary mark from 64 pixels up: the home page, title slides, posters, social cards. Use the φ mark below that: favicons, the navbar, the sister sites’ sidebars.</li>
+<li><strong>Pick the orientation by space.</strong> Vertical by default. Horizontal only where the space is much wider than tall. Mirror the vertical mark only next to right-to-left text. Never rotate it to any other angle.</li>
+<li><strong>Leave it alone.</strong> No stretching, outlines, shadows, gradients or effects. To change the weight, change <code>WIDTH</code> or <code>PHI_RING</code> here and export again. Never thin a mark by hand.</li>
+<li><strong>Give it air.</strong> Keep empty space around the mark of at least half the circle’s diameter (0.25 units).</li>
+<li><strong>Favicons look after themselves.</strong> The SVG favicon turns white on its own when the browser is in dark mode.</li>
+</ul>
+</section>
+<section id="export" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="export"><span class="header-section-number">16.9</span> Export</h2>
+<p>This cell writes every version to the <code>logo/</code> folder next to this notebook. The SVGs are written straight from the geometry, so each holds one clean shape and nothing else.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>primary-&lt;orientation&gt;-navy.svg</code>, <code>-white.svg</code></td>
+<td>Vector mark, for each orientation and colourway</td>
+</tr>
+<tr class="even">
+<td><code>primary-&lt;orientation&gt;-navy.png</code>, <code>-white.png</code></td>
+<td>The same, 512 pixels tall, transparent background</td>
+</tr>
+<tr class="odd">
+<td><code>phi-mark-navy.svg</code>, <code>-white.svg</code></td>
+<td>Vector φ mark</td>
+</tr>
+<tr class="even">
+<td><code>favicon.svg</code></td>
+<td>Browser favicon, navy in light mode and white in dark mode</td>
+</tr>
+<tr class="odd">
+<td><code>favicon.ico</code></td>
+<td>Fallback favicon for older browsers, at 16, 32 and 48 pixels</td>
+</tr>
+<tr class="even">
+<td><code>apple-touch-icon.png</code></td>
+<td>Phone home-screen icon, 180 pixels, white φ on navy</td>
+</tr>
+</tbody>
+</table>
+<div id="f0ab3cbd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:08.783786Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:08.783193Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:13.124769Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:13.124030Z&quot;}}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> svg_d(path):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co">"""SVG path data for a matplotlib Path, with y flipped to point down."""</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    parts <span class="op">=</span> []</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="cf">for</span> vertices, code <span class="kw">in</span> path.iter_segments(simplify<span class="op">=</span><span class="va">False</span>, curves<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb10-5"><a href="#cb10-5"></a>        pts <span class="op">=</span> <span class="st">" "</span>.join(<span class="ss">f"</span><span class="sc">{</span>x<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span><span class="op">-</span>y<span class="sc">:.4f}</span><span class="ss">"</span> <span class="cf">for</span> x, y <span class="kw">in</span> vertices.reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb10-6"><a href="#cb10-6"></a>        parts.append({Path.MOVETO: <span class="st">"M"</span>, Path.LINETO: <span class="st">"L"</span>, Path.CURVE3: <span class="st">"Q"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7"></a>                      Path.CURVE4: <span class="st">"C"</span>, Path.CLOSEPOLY: <span class="st">"Z"</span>}[code] <span class="op">+</span> (<span class="st">""</span> <span class="cf">if</span> code <span class="op">==</span> Path.CLOSEPOLY <span class="cf">else</span> <span class="st">" "</span> <span class="op">+</span> pts))</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="cf">return</span> <span class="st">" "</span>.join(parts)</span>
+<span id="cb10-9"><a href="#cb10-9"></a></span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="kw">def</span> write_svg(path, filename, color<span class="op">=</span>NAVY, dark_color<span class="op">=</span><span class="va">None</span>, pad<span class="op">=</span><span class="fl">0.0</span>, square<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb10-12"><a href="#cb10-12"></a>    box <span class="op">=</span> path.get_extents()</span>
+<span id="cb10-13"><a href="#cb10-13"></a>    m <span class="op">=</span> pad <span class="op">*</span> <span class="bu">max</span>(box.width, box.height)</span>
+<span id="cb10-14"><a href="#cb10-14"></a>    x0, x1, y0, y1 <span class="op">=</span> box.x0 <span class="op">-</span> m, box.x1 <span class="op">+</span> m, box.y0 <span class="op">-</span> m, box.y1 <span class="op">+</span> m</span>
+<span id="cb10-15"><a href="#cb10-15"></a>    <span class="cf">if</span> square:</span>
+<span id="cb10-16"><a href="#cb10-16"></a>        side <span class="op">=</span> <span class="bu">max</span>(x1 <span class="op">-</span> x0, y1 <span class="op">-</span> y0)</span>
+<span id="cb10-17"><a href="#cb10-17"></a>        cx, cy <span class="op">=</span> (x0 <span class="op">+</span> x1) <span class="op">/</span> <span class="dv">2</span>, (y0 <span class="op">+</span> y1) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a>        x0, x1, y0, y1 <span class="op">=</span> cx <span class="op">-</span> side <span class="op">/</span> <span class="dv">2</span>, cx <span class="op">+</span> side <span class="op">/</span> <span class="dv">2</span>, cy <span class="op">-</span> side <span class="op">/</span> <span class="dv">2</span>, cy <span class="op">+</span> side <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>    style <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>    <span class="cf">if</span> dark_color:</span>
+<span id="cb10-21"><a href="#cb10-21"></a>        style <span class="op">=</span> (<span class="ss">f"&lt;style&gt;path</span><span class="ch">{{</span><span class="ss">fill:</span><span class="sc">{</span>color<span class="sc">}</span><span class="ch">}}</span><span class="ss">@media (prefers-color-scheme: dark)"</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a>                 <span class="ss">f"</span><span class="ch">{{</span><span class="ss">path</span><span class="ch">{{</span><span class="ss">fill:</span><span class="sc">{</span>dark_color<span class="sc">}</span><span class="ch">}}}}</span><span class="ss">&lt;/style&gt;"</span>)</span>
+<span id="cb10-23"><a href="#cb10-23"></a>    svg <span class="op">=</span> (<span class="ss">f'&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="</span><span class="sc">{</span>x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span><span class="op">-</span>y1<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>x1 <span class="op">-</span> x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>y1 <span class="op">-</span> y0<span class="sc">:.4f}</span><span class="ss">"&gt;'</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a>           <span class="ss">f'</span><span class="sc">{</span>style<span class="sc">}</span><span class="ss">&lt;path fill="</span><span class="sc">{</span>color<span class="sc">}</span><span class="ss">" d="</span><span class="sc">{</span>svg_d(path)<span class="sc">}</span><span class="ss">"/&gt;&lt;/svg&gt;</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb10-25"><a href="#cb10-25"></a>    (OUT <span class="op">/</span> filename).write_text(svg)</span>
+<span id="cb10-26"><a href="#cb10-26"></a></span>
+<span id="cb10-27"><a href="#cb10-27"></a></span>
+<span id="cb10-28"><a href="#cb10-28"></a><span class="cf">if</span> EXPORT:</span>
+<span id="cb10-29"><a href="#cb10-29"></a>    OUT.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-30"><a href="#cb10-30"></a>    <span class="cf">for</span> name <span class="kw">in</span> ORIENTATIONS:</span>
+<span id="cb10-31"><a href="#cb10-31"></a>        <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
+<span id="cb10-32"><a href="#cb10-32"></a>            write_svg(oriented(name), <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
+<span id="cb10-33"><a href="#cb10-33"></a>            raster(oriented(name), <span class="dv">512</span>, colour, pad<span class="op">=</span><span class="dv">0</span>).save(OUT <span class="op">/</span> <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.png"</span>)</span>
+<span id="cb10-34"><a href="#cb10-34"></a>    <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
+<span id="cb10-35"><a href="#cb10-35"></a>        write_svg(icon, <span class="ss">f"phi-mark-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
+<span id="cb10-36"><a href="#cb10-36"></a></span>
+<span id="cb10-37"><a href="#cb10-37"></a>    write_svg(icon, <span class="st">"favicon.svg"</span>, NAVY, dark_color<span class="op">=</span>WHITE, pad<span class="op">=</span><span class="fl">0.04</span>, square<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-38"><a href="#cb10-38"></a>    <span class="co"># each size is rendered on its own, rather than shrunk from the largest</span></span>
+<span id="cb10-39"><a href="#cb10-39"></a>    raster(icon, <span class="dv">48</span>, NAVY, square<span class="op">=</span><span class="va">True</span>).save(OUT <span class="op">/</span> <span class="st">"favicon.ico"</span>, sizes<span class="op">=</span>[(<span class="dv">16</span>, <span class="dv">16</span>), (<span class="dv">32</span>, <span class="dv">32</span>), (<span class="dv">48</span>, <span class="dv">48</span>)],</span>
+<span id="cb10-40"><a href="#cb10-40"></a>                                             append_images<span class="op">=</span>[raster(icon, s, NAVY, square<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> s <span class="kw">in</span> (<span class="dv">16</span>, <span class="dv">32</span>)])</span>
+<span id="cb10-41"><a href="#cb10-41"></a></span>
+<span id="cb10-42"><a href="#cb10-42"></a>    touch <span class="op">=</span> Image.new(<span class="st">"RGBA"</span>, (<span class="dv">180</span>, <span class="dv">180</span>), NAVY)</span>
+<span id="cb10-43"><a href="#cb10-43"></a>    glyph <span class="op">=</span> raster(icon, <span class="dv">132</span>, WHITE, square<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-44"><a href="#cb10-44"></a>    touch.alpha_composite(glyph, ((<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>, (<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>))</span>
+<span id="cb10-45"><a href="#cb10-45"></a>    touch.convert(<span class="st">"RGB"</span>).save(OUT <span class="op">/</span> <span class="st">"apple-touch-icon.png"</span>)</span>
+<span id="cb10-46"><a href="#cb10-46"></a></span>
+<span id="cb10-47"><a href="#cb10-47"></a>    <span class="cf">for</span> f <span class="kw">in</span> <span class="bu">sorted</span>(OUT.iterdir()):</span>
+<span id="cb10-48"><a href="#cb10-48"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>name<span class="sc">:40s}</span><span class="ss"> </span><span class="sc">{</span>f<span class="sc">.</span>stat()<span class="sc">.</span>st_size<span class="sc">:&gt;7,d}</span><span class="ss"> bytes"</span>)</span>
+<span id="cb10-49"><a href="#cb10-49"></a><span class="cf">else</span>:</span>
+<span id="cb10-50"><a href="#cb10-50"></a>    <span class="bu">print</span>(<span class="st">"EXPORT is False: nothing written"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>apple-touch-icon.png                       4,117 bytes
+favicon.ico                                2,941 bytes
+favicon.svg                                1,879 bytes
+phi-mark-navy.svg                          1,791 bytes
+phi-mark-white.svg                         1,791 bytes
+primary-horizontal-navy.png               30,530 bytes
+primary-horizontal-navy.svg                  782 bytes
+primary-horizontal-white.png              23,507 bytes
+primary-horizontal-white.svg                 782 bytes
+primary-vertical-navy.png                 15,230 bytes
+primary-vertical-navy.svg                    782 bytes
+primary-vertical-white.png                11,710 bytes
+primary-vertical-white.svg                   782 bytes</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../jupyter/website-logo.html" class="pagination-link" aria-label="Logo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Logo</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../jupyter/bars.html" class="pagination-link" aria-label="Bar plot">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bar plot</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -221,6 +221,21 @@ Main features:
 <!-- ------------------------------------- -->
 <!-- ------------------------------------- -->
 
+## Logo system
+
+[Jupyter notebook](/jupyter/new_logo.ipynb){.btn .btn-outline-primary role="button"}
+
+The new logo of this website, built from a right triangle with legs 1 and 2, a circle of diameter 1, and the golden ratio. The notebook doubles as the brand document: geometry, orientations, a small-size φ mark, colour, rules of use, and export to SVG, PNG and favicons.  
+Main features:
+`matplotlib.path.Path, Bezier arcs, compound paths, Affine2D, PIL, SVG export`
+
+![](/jupyter/new_logo.png)
+
+<hr class="my_hr">
+
+<!-- ------------------------------------- -->
+<!-- ------------------------------------- -->
+
 ## Bars
 
 [Jupyter notebook](/jupyter/bars.ipynb){.btn .btn-outline-primary role="button"}

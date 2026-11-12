@@ -25,6 +25,7 @@ book:
     - jupyter/contour_plot.ipynb
     - jupyter/best_path.ipynb
     - jupyter/website-logo.ipynb
+    - jupyter/new_logo.ipynb
     - jupyter/bars.ipynb
 
 
