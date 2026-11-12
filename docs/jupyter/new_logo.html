@@ -369,7 +369,7 @@ window.Quarto = {
 <section id="ingredients" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="ingredients"><span class="header-section-number">16.1</span> Ingredients</h2>
 <p>Two numbers in this cell are design decisions: the weight of the ring in the primary mark, and the weight of the φ mark. Everything else is dictated by the geometry. Lengths are in the units of the construction, where the triangle’s short leg is 1.</p>
-<div id="107506f6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:02.210497Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:02.209853Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.207885Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.206608Z&quot;}}" data-execution_count="1">
+<div id="107506f6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:53.302910Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:53.302401Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.005319Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.004251Z&quot;}}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path <span class="im">as</span> FilePath</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -415,7 +415,7 @@ window.Quarto = {
 <li><strong>The circle touches the long leg at a single point.</strong> Its center sits 0.5 from that leg, exactly its radius. This is the most delicate spot in the design, and <em>The mark</em> below deals with it.</li>
 <li><strong>The hypotenuse leans 26.6° away from vertical</strong> (<span class="math inline">\arctan\tfrac12</span>). <em>Two readings</em> below explains why that number matters.</li>
 </ul>
-<div id="00adcdf8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.212309Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.211782Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.542646Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.541384Z&quot;}}" data-execution_count="2">
+<div id="00adcdf8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.009870Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.009420Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.349522Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.348674Z&quot;}}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>upper, lower <span class="op">=</span> CENTER <span class="op">+</span> R <span class="op">*</span> U, CENTER <span class="op">-</span> R <span class="op">*</span> U   <span class="co"># where the hypotenuse crosses the circle</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="dv">6</span>))</span>
@@ -465,7 +465,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <li><strong>There are no hairlines and no spikes.</strong> Left alone, the circle would touch the long leg at a point, and the wedge would taper into two needle-thin horns. Making the void slightly smaller than the circle (radius <span class="math inline">0.5 -</span> <code>WIDTH</code>) leaves a wall at that spot as thick as the ring itself. One weight governs the whole mark: nothing is thinner than the ring.</li>
 </ul>
 <p>The mark is drawn as a single shape, so exported files are clean.</p>
-<div id="966294ee" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.547508Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.547070Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.621436Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.620473Z&quot;}}" data-execution_count="3">
+<div id="966294ee" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.356008Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.355664Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.418105Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.417243Z&quot;}}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> arc(center, radius, theta1, theta2):</span>
 <span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">"""Vertices of a counterclockwise circular arc (cubic Bezier segments), from theta1 to theta2 in degrees."""</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> center <span class="op">+</span> radius <span class="op">*</span> Path.arc(theta1, theta2).vertices</span>
@@ -537,7 +537,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <section id="one-rule" class="level3" data-number="16.4.3">
 <h3 data-number="16.4.3" class="anchored" data-anchor-id="one-rule"><span class="header-section-number">16.4.3</span> One rule</h3>
 <p><strong>The slope always falls in the reading direction.</strong> Next to a name, the round void bulges toward the text, and in the horizontal version the ball would roll toward it. Both versions are transformations of the same shape, so they can never drift apart. In the rare case of right-to-left text, mirror the vertical mark so it still falls toward the words.</p>
-<div id="abae8442" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.625522Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.625166Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.775057Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.774202Z&quot;}}" data-execution_count="4">
+<div id="abae8442" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.422147Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.421780Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.543342Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.542547Z&quot;}}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>ORIENTATIONS <span class="op">=</span> {</span>
 <span id="cb5-2"><a href="#cb5-2"></a>    <span class="st">"vertical"</span>: Affine2D(),</span>
 <span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">"horizontal"</span>: Affine2D(np.array([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>]])),        <span class="co"># swap x and y</span></span>
@@ -571,7 +571,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <li><strong>The slash falls the same way as in the mark.</strong> A “\” slash reads as φ, the golden-ratio symbol. A “/” slash would read as ∅, the empty set.</li>
 <li><strong>It is drawn heavier</strong> (<code>PHI_RING</code>), because it lives in browser tabs and sidebars and has to survive at 16 pixels.</li>
 </ul>
-<div id="55f5fd40" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.779322Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.778932Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:06.870796Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:06.869950Z&quot;}}" data-execution_count="5">
+<div id="55f5fd40" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.547194Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.546837Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.625116Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.623945Z&quot;}}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> phi_mark(ring<span class="op">=</span>PHI_RING):</span>
 <span id="cb6-2"><a href="#cb6-2"></a>    <span class="co">"""Ring of outer diameter 1 centered at the origin, with two poles along the hypotenuse direction."""</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>    reach <span class="op">=</span> np.sqrt(<span class="dv">5</span>) <span class="op">/</span> <span class="dv">2</span>  <span class="co"># center to pole tip: each pole is 1/phi beyond the circle</span></span>
@@ -622,7 +622,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <li><strong>White when reversed</strong> out of navy or any dark background.</li>
 <li><strong>Never link blue.</strong> In this system blue means “you can click this”, and the logo is not a link to anywhere.</li>
 </ul>
-<div id="78b804d2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:06.874550Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:06.874192Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:07.244504Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:07.242923Z&quot;}}" data-execution_count="6">
+<div id="78b804d2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.630885Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.630223Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:57.937348Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:57.936318Z&quot;}}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>swatches <span class="op">=</span> [(<span class="st">"navy"</span>, NAVY), (<span class="st">"ink"</span>, INK), (<span class="st">"link blue"</span>, LINK_BLUE), (<span class="st">"white"</span>, WHITE)]</span>
 <span id="cb8-2"><a href="#cb8-2"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="bu">len</span>(swatches), figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">1.4</span>))</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="cf">for</span> ax, (name, hex_) <span class="kw">in</span> <span class="bu">zip</span>(axes, swatches):</span>
@@ -659,7 +659,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <h2 data-number="16.7" class="anchored" data-anchor-id="stress-test"><span class="header-section-number">16.7</span> Stress test</h2>
 <p>A mark is only as good as its smallest appearance. Each tile below is rendered at the size shown and then enlarged, so every pixel is visible.</p>
 <p>The primary mark needs room: its ring is <code>WIDTH</code>/2 of its height, so below about 64 pixels the ring falls under one and a half pixels and starts to dissolve. That is the φ mark’s territory, and it stays crisp down to 16.</p>
-<div id="6f783f42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:07.249354Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:07.248430Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:08.779302Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:08.778233Z&quot;}}" data-execution_count="7">
+<div id="6f783f42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:57.940979Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:57.940605Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:26:59.222188Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:26:59.221279Z&quot;}}" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> raster(path, height_px, color<span class="op">=</span>NAVY, background<span class="op">=</span><span class="va">None</span>, square<span class="op">=</span><span class="va">False</span>, pad<span class="op">=</span><span class="fl">0.06</span>, supersample<span class="op">=</span><span class="dv">8</span>):</span>
 <span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">"""Render a mark to a PIL image of the given pixel height, antialiased by supersampling."""</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a>    box <span class="op">=</span> path.get_extents()</span>
@@ -758,7 +758,7 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="f0ab3cbd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:09:08.783786Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:09:08.783193Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:09:13.124769Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:09:13.124030Z&quot;}}" data-execution_count="8">
+<div id="f0ab3cbd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-12T21:26:59.227688Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-12T21:26:59.227101Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-12T21:27:04.280305Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-12T21:27:04.278910Z&quot;}}" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> svg_d(path):</span>
 <span id="cb10-2"><a href="#cb10-2"></a>    <span class="co">"""SVG path data for a matplotlib Path, with y flipped to point down."""</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>    parts <span class="op">=</span> []</span>
@@ -781,48 +781,51 @@ tip to far side of circle: 1.6180   phi = 1.6180</code></pre>
 <span id="cb10-20"><a href="#cb10-20"></a>    <span class="cf">if</span> dark_color:</span>
 <span id="cb10-21"><a href="#cb10-21"></a>        style <span class="op">=</span> (<span class="ss">f"&lt;style&gt;path</span><span class="ch">{{</span><span class="ss">fill:</span><span class="sc">{</span>color<span class="sc">}</span><span class="ch">}}</span><span class="ss">@media (prefers-color-scheme: dark)"</span></span>
 <span id="cb10-22"><a href="#cb10-22"></a>                 <span class="ss">f"</span><span class="ch">{{</span><span class="ss">path</span><span class="ch">{{</span><span class="ss">fill:</span><span class="sc">{</span>dark_color<span class="sc">}</span><span class="ch">}}}}</span><span class="ss">&lt;/style&gt;"</span>)</span>
-<span id="cb10-23"><a href="#cb10-23"></a>    svg <span class="op">=</span> (<span class="ss">f'&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="</span><span class="sc">{</span>x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span><span class="op">-</span>y1<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>x1 <span class="op">-</span> x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>y1 <span class="op">-</span> y0<span class="sc">:.4f}</span><span class="ss">"&gt;'</span></span>
-<span id="cb10-24"><a href="#cb10-24"></a>           <span class="ss">f'</span><span class="sc">{</span>style<span class="sc">}</span><span class="ss">&lt;path fill="</span><span class="sc">{</span>color<span class="sc">}</span><span class="ss">" d="</span><span class="sc">{</span>svg_d(path)<span class="sc">}</span><span class="ss">"/&gt;&lt;/svg&gt;</span><span class="ch">\n</span><span class="ss">'</span>)</span>
-<span id="cb10-25"><a href="#cb10-25"></a>    (OUT <span class="op">/</span> filename).write_text(svg)</span>
-<span id="cb10-26"><a href="#cb10-26"></a></span>
-<span id="cb10-27"><a href="#cb10-27"></a></span>
-<span id="cb10-28"><a href="#cb10-28"></a><span class="cf">if</span> EXPORT:</span>
-<span id="cb10-29"><a href="#cb10-29"></a>    OUT.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-30"><a href="#cb10-30"></a>    <span class="cf">for</span> name <span class="kw">in</span> ORIENTATIONS:</span>
-<span id="cb10-31"><a href="#cb10-31"></a>        <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
-<span id="cb10-32"><a href="#cb10-32"></a>            write_svg(oriented(name), <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
-<span id="cb10-33"><a href="#cb10-33"></a>            raster(oriented(name), <span class="dv">512</span>, colour, pad<span class="op">=</span><span class="dv">0</span>).save(OUT <span class="op">/</span> <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.png"</span>)</span>
-<span id="cb10-34"><a href="#cb10-34"></a>    <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
-<span id="cb10-35"><a href="#cb10-35"></a>        write_svg(icon, <span class="ss">f"phi-mark-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
-<span id="cb10-36"><a href="#cb10-36"></a></span>
-<span id="cb10-37"><a href="#cb10-37"></a>    write_svg(icon, <span class="st">"favicon.svg"</span>, NAVY, dark_color<span class="op">=</span>WHITE, pad<span class="op">=</span><span class="fl">0.04</span>, square<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-38"><a href="#cb10-38"></a>    <span class="co"># each size is rendered on its own, rather than shrunk from the largest</span></span>
-<span id="cb10-39"><a href="#cb10-39"></a>    raster(icon, <span class="dv">48</span>, NAVY, square<span class="op">=</span><span class="va">True</span>).save(OUT <span class="op">/</span> <span class="st">"favicon.ico"</span>, sizes<span class="op">=</span>[(<span class="dv">16</span>, <span class="dv">16</span>), (<span class="dv">32</span>, <span class="dv">32</span>), (<span class="dv">48</span>, <span class="dv">48</span>)],</span>
-<span id="cb10-40"><a href="#cb10-40"></a>                                             append_images<span class="op">=</span>[raster(icon, s, NAVY, square<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> s <span class="kw">in</span> (<span class="dv">16</span>, <span class="dv">32</span>)])</span>
-<span id="cb10-41"><a href="#cb10-41"></a></span>
-<span id="cb10-42"><a href="#cb10-42"></a>    touch <span class="op">=</span> Image.new(<span class="st">"RGBA"</span>, (<span class="dv">180</span>, <span class="dv">180</span>), NAVY)</span>
-<span id="cb10-43"><a href="#cb10-43"></a>    glyph <span class="op">=</span> raster(icon, <span class="dv">132</span>, WHITE, square<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-44"><a href="#cb10-44"></a>    touch.alpha_composite(glyph, ((<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>, (<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>))</span>
-<span id="cb10-45"><a href="#cb10-45"></a>    touch.convert(<span class="st">"RGB"</span>).save(OUT <span class="op">/</span> <span class="st">"apple-touch-icon.png"</span>)</span>
-<span id="cb10-46"><a href="#cb10-46"></a></span>
-<span id="cb10-47"><a href="#cb10-47"></a>    <span class="cf">for</span> f <span class="kw">in</span> <span class="bu">sorted</span>(OUT.iterdir()):</span>
-<span id="cb10-48"><a href="#cb10-48"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>name<span class="sc">:40s}</span><span class="ss"> </span><span class="sc">{</span>f<span class="sc">.</span>stat()<span class="sc">.</span>st_size<span class="sc">:&gt;7,d}</span><span class="ss"> bytes"</span>)</span>
-<span id="cb10-49"><a href="#cb10-49"></a><span class="cf">else</span>:</span>
-<span id="cb10-50"><a href="#cb10-50"></a>    <span class="bu">print</span>(<span class="st">"EXPORT is False: nothing written"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-23"><a href="#cb10-23"></a>    <span class="co"># width and height give the file an intrinsic size: without them, browsers may draw it at zero size as an &lt;img&gt;</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a>    w_px, h_px <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> (x1 <span class="op">-</span> x0), <span class="dv">100</span> <span class="op">*</span> (y1 <span class="op">-</span> y0)</span>
+<span id="cb10-25"><a href="#cb10-25"></a>    svg <span class="op">=</span> (<span class="ss">f'&lt;svg xmlns="http://www.w3.org/2000/svg" width="</span><span class="sc">{</span>w_px<span class="sc">:.1f}</span><span class="ss">" height="</span><span class="sc">{</span>h_px<span class="sc">:.1f}</span><span class="ss">" '</span></span>
+<span id="cb10-26"><a href="#cb10-26"></a>           <span class="ss">f'viewBox="</span><span class="sc">{</span>x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span><span class="op">-</span>y1<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>x1 <span class="op">-</span> x0<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>y1 <span class="op">-</span> y0<span class="sc">:.4f}</span><span class="ss">"&gt;'</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a>           <span class="ss">f'</span><span class="sc">{</span>style<span class="sc">}</span><span class="ss">&lt;path fill="</span><span class="sc">{</span>color<span class="sc">}</span><span class="ss">" d="</span><span class="sc">{</span>svg_d(path)<span class="sc">}</span><span class="ss">"/&gt;&lt;/svg&gt;</span><span class="ch">\n</span><span class="ss">'</span>)</span>
+<span id="cb10-28"><a href="#cb10-28"></a>    (OUT <span class="op">/</span> filename).write_text(svg)</span>
+<span id="cb10-29"><a href="#cb10-29"></a></span>
+<span id="cb10-30"><a href="#cb10-30"></a></span>
+<span id="cb10-31"><a href="#cb10-31"></a><span class="cf">if</span> EXPORT:</span>
+<span id="cb10-32"><a href="#cb10-32"></a>    OUT.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-33"><a href="#cb10-33"></a>    <span class="cf">for</span> name <span class="kw">in</span> ORIENTATIONS:</span>
+<span id="cb10-34"><a href="#cb10-34"></a>        <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
+<span id="cb10-35"><a href="#cb10-35"></a>            write_svg(oriented(name), <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
+<span id="cb10-36"><a href="#cb10-36"></a>            raster(oriented(name), <span class="dv">512</span>, colour, pad<span class="op">=</span><span class="dv">0</span>).save(OUT <span class="op">/</span> <span class="ss">f"primary-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.png"</span>)</span>
+<span id="cb10-37"><a href="#cb10-37"></a>    <span class="cf">for</span> colour_name, colour <span class="kw">in</span> ((<span class="st">"navy"</span>, NAVY), (<span class="st">"white"</span>, WHITE)):</span>
+<span id="cb10-38"><a href="#cb10-38"></a>        write_svg(icon, <span class="ss">f"phi-mark-</span><span class="sc">{</span>colour_name<span class="sc">}</span><span class="ss">.svg"</span>, colour)</span>
+<span id="cb10-39"><a href="#cb10-39"></a></span>
+<span id="cb10-40"><a href="#cb10-40"></a>    write_svg(icon, <span class="st">"favicon.svg"</span>, NAVY, dark_color<span class="op">=</span>WHITE, pad<span class="op">=</span><span class="fl">0.04</span>, square<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-41"><a href="#cb10-41"></a>    <span class="co"># each size is rendered on its own, rather than shrunk from the largest</span></span>
+<span id="cb10-42"><a href="#cb10-42"></a>    raster(icon, <span class="dv">48</span>, NAVY, square<span class="op">=</span><span class="va">True</span>).save(OUT <span class="op">/</span> <span class="st">"favicon.ico"</span>, sizes<span class="op">=</span>[(<span class="dv">16</span>, <span class="dv">16</span>), (<span class="dv">32</span>, <span class="dv">32</span>), (<span class="dv">48</span>, <span class="dv">48</span>)],</span>
+<span id="cb10-43"><a href="#cb10-43"></a>                                             append_images<span class="op">=</span>[raster(icon, s, NAVY, square<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> s <span class="kw">in</span> (<span class="dv">16</span>, <span class="dv">32</span>)])</span>
+<span id="cb10-44"><a href="#cb10-44"></a></span>
+<span id="cb10-45"><a href="#cb10-45"></a>    touch <span class="op">=</span> Image.new(<span class="st">"RGBA"</span>, (<span class="dv">180</span>, <span class="dv">180</span>), NAVY)</span>
+<span id="cb10-46"><a href="#cb10-46"></a>    glyph <span class="op">=</span> raster(icon, <span class="dv">132</span>, WHITE, square<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-47"><a href="#cb10-47"></a>    touch.alpha_composite(glyph, ((<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>, (<span class="dv">180</span> <span class="op">-</span> <span class="dv">132</span>) <span class="op">//</span> <span class="dv">2</span>))</span>
+<span id="cb10-48"><a href="#cb10-48"></a>    touch.convert(<span class="st">"RGB"</span>).save(OUT <span class="op">/</span> <span class="st">"apple-touch-icon.png"</span>)</span>
+<span id="cb10-49"><a href="#cb10-49"></a></span>
+<span id="cb10-50"><a href="#cb10-50"></a>    <span class="cf">for</span> f <span class="kw">in</span> <span class="bu">sorted</span>(OUT.iterdir()):</span>
+<span id="cb10-51"><a href="#cb10-51"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>name<span class="sc">:40s}</span><span class="ss"> </span><span class="sc">{</span>f<span class="sc">.</span>stat()<span class="sc">.</span>st_size<span class="sc">:&gt;7,d}</span><span class="ss"> bytes"</span>)</span>
+<span id="cb10-52"><a href="#cb10-52"></a><span class="cf">else</span>:</span>
+<span id="cb10-53"><a href="#cb10-53"></a>    <span class="bu">print</span>(<span class="st">"EXPORT is False: nothing written"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>apple-touch-icon.png                       4,117 bytes
 favicon.ico                                2,941 bytes
-favicon.svg                                1,879 bytes
-phi-mark-navy.svg                          1,791 bytes
-phi-mark-white.svg                         1,791 bytes
+favicon.svg                                1,908 bytes
+phi-mark-navy.svg                          1,820 bytes
+phi-mark-white.svg                         1,820 bytes
 primary-horizontal-navy.png               30,530 bytes
-primary-horizontal-navy.svg                  782 bytes
+primary-horizontal-navy.svg                  811 bytes
 primary-horizontal-white.png              23,507 bytes
-primary-horizontal-white.svg                 782 bytes
+primary-horizontal-white.svg                 811 bytes
 primary-vertical-navy.png                 15,230 bytes
-primary-vertical-navy.svg                    782 bytes
+primary-vertical-navy.svg                    811 bytes
 primary-vertical-white.png                11,710 bytes
-primary-vertical-white.svg                   782 bytes</code></pre>
+primary-vertical-white.svg                   811 bytes</code></pre>
 </div>
 </div>
 
